@@ -87,7 +87,7 @@ const MotionText = () => {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/fRh_vgS2dFE?autoplay=1&mute=1&loop=1&playlist=fRh_vgS2dFE"
+                  src="https://www.youtube.com/embed/t865KSKdSDk?autoplay=1&mute=1&loop=1&playlist=t865KSKdSDk"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

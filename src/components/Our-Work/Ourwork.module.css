@@ -1,0 +1,157 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 5vw;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.centerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none; /* Let clicks pass through to cards */
+  width: 100%;
+}
+
+.centerText h2 {
+  font-family: var(--font-main);
+  font-size: clamp(40px, 6vw, 80px);
+  color: var(--accent-color);
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(171, 255, 79, 0.2); 
+  margin: 0;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 40px;
+}
+
+/* Stagger the columns to create the scattered look */
+.col1 {
+  margin-top: 50px;
+}
+.col2 {
+  margin-top: 0px;
+  gap: 250px; /* Big gap in middle column to leave room for center text */
+}
+.col3 {
+  margin-top: 250px; /* Push down to avoid center text */
+}
+.col4 {
+  margin-top: 80px;
+}
+
+/* Card Styles */
+.card {
+  background-color: #1a0b2e; /* dark purple background */
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.cardImageWrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.cardFooter {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  font-family: var(--font-main);
+}
+
+.cardYear {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cardTags {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid {
+    flex-wrap: wrap;
+  }
+  .column {
+    min-width: 45%;
+    gap: 30px;
+  }
+  .col1, .col2, .col3, .col4 {
+    margin-top: 0;
+    gap: 30px;
+  }
+  .centerText {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-bottom: 50px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+    min-width: 100%;
+  }
+}

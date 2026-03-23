@@ -1,10 +1,11 @@
 :root {
   --bg-color: #0b0217;
   --text-color: #ffffff;
-  --accent-color: #b1ff00;
+  --accent-color: #ABFF4F;
   --nav-bg: rgba(20, 10, 35, 0.4);
   --nav-border: rgba(255, 255, 255, 0.1);
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-albert: 'Albert Sans', sans-serif;
 }
 
 * {

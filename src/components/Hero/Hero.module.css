@@ -11,7 +11,8 @@
 }
 
 .content {
-  margin-top: -10vh; /* slightly pull up */
+  margin-top: -10vh;
+  /* slightly pull up */
   max-width: 1000px;
   position: relative;
   z-index: 10;
@@ -50,7 +51,7 @@
 
 .bottomSection {
   position: absolute;
-  bottom: 40px;
+  bottom: 120px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -78,29 +79,49 @@
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }
 }
 
 .bottomNav {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 539px;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
+  background-color: #2A0B4B;
+
   gap: 30px;
   background: var(--nav-bg);
-  padding: 15px 40px;
-  border-radius: 50px;
+
+  border-radius: 8px;
   border: 1px solid var(--nav-border);
   backdrop-filter: blur(10px);
+  border-color: var(--accent-color);
 }
 
 .navLink {
-  font-size: 14px;
+  font-family: var(--font-albert);
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
   transition: color 0.2s ease;
@@ -111,15 +132,21 @@
 }
 
 /* Media Queries */
+@media (max-width: 1024px) {
+  .bottomNav {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 36px;
   }
-  
-  .bottomNav {
-    display: none; /* Hide bottom nav on mobile */
+
+  .downArrows {
+    display: none;
   }
-  
+
   .subtitleContainer {
     justify-content: center;
     padding-right: 0;

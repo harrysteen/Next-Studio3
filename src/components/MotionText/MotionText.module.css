@@ -54,8 +54,6 @@
 .videoInner {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
-  border: 3px solid #00A3FF; /* matching the blue border from reference design */
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   transform-origin: center center;
