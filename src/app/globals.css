@@ -1,0 +1,39 @@
+:root {
+  --bg-color: #0b0217;
+  --text-color: #ffffff;
+  --accent-color: #b1ff00;
+  --nav-bg: rgba(20, 10, 35, 0.4);
+  --nav-border: rgba(255, 255, 255, 0.1);
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .logoMain {
+  font-family: var(--font-bai-jamjuree), sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  background-image: radial-gradient(circle at 50% 40%, rgba(68, 23, 116, 0.4) 0%, var(--bg-color) 60%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
