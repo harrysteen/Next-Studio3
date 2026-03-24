@@ -1,9 +1,14 @@
 /* Container styles */
 .scrollWrapper {
   width: 100%;
-  min-height: 100vh;
   position: relative;
   background-color: var(--bg-color); /* Matches theme */
+}
+
+@media (min-width: 769px) {
+  .scrollWrapper {
+    padding-bottom: 50vh; /* gives the last card a natural pause before articles appear */
+  }
 }
 
 /* Header Section styling matching FAQ */
@@ -50,6 +55,14 @@
   justify-content: center;
   background-color: transparent;
   will-change: transform;
+}
+
+@media (min-width: 769px) {
+  .panel {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 }
 
 /* CARD */

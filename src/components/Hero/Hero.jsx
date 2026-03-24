@@ -26,7 +26,7 @@ export default function Hero() {
         <Link href="/work" className={styles.navLink}>Work</Link>
         <Link href="/team" className={styles.navLink}>Get Your Own Team</Link>
         <Link href="/about" className={styles.navLink}>About</Link>
-        <Link href="/dezu" className={styles.navLink}>Dezu</Link>
+        <Link href="https://dezu.in/" className={styles.navLink}>Dezu</Link>
       </nav>
     </section>
   );

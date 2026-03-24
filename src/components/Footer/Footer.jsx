@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -12,7 +13,7 @@ export default function Footer() {
             <span className={styles.greenText}>INTENTIONAL</span><br />
             <span className={styles.darkText}>BY DESIGN</span>
           </h2>
-          <button className={styles.talkBtn}>Let's Talk</button>
+          <Link href="/contact" tabIndex="-1"><button className={styles.talkBtn}>Let's Talk</button></Link>
         </div>
 
         {/* Right Side Links */}

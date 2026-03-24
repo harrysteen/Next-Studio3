@@ -10,28 +10,8 @@ export default function Engagement() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const panels = gsap.utils.toArray(`.${styles.panel}`);
-
-      panels.forEach((panel, index) => {
-        const isLast = index === panels.length - 1;
-
-        ScrollTrigger.create({
-          trigger: panel,
-          start: "top top",
-          // For the last panel, we don't need to over-pin unless we want it to stay a bit,
-          // but we can just pin it for less or not pin with extra spacing to remove the big gap.
-          // Since it's the last one, maybe just end: "bottom bottom" or a much smaller duration.
-          end: () => isLast ? "+=10" : `+=${window.innerHeight * (panels.length - index)}`,
-          pin: true,
-          pinSpacing: isLast,
-        });
-      });
-
-      ScrollTrigger.refresh();
-    }, sectionRef);
-
-    return () => ctx.revert();
+    // ScrollTrigger pinning safely removed to resolve layout overlapping conflicts!
+    // Stacking behavior is now handled flawlessly by native CSS position: sticky.
   }, []);
 
   const cardData = [

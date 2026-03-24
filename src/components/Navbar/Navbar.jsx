@@ -19,12 +19,14 @@ export default function Navbar() {
 
       {/* Desktop / Tablet actions */}
       <div className={styles.desktopActions}>
-        <button className={styles.contactBtn} aria-label="Contact us">
-          LET&apos;S TALK
-          <span className={styles.arrow} aria-hidden="true">
-            <Image src={arrow} alt="" width={20} height={20} />
-          </span>
-        </button>
+        <Link href="/contact" tabIndex="-1">
+          <button className={styles.contactBtn} aria-label="Contact us">
+            LET&apos;S TALK
+            <span className={styles.arrow} aria-hidden="true">
+              <Image src={arrow} alt="" width={20} height={20} />
+            </span>
+          </button>
+        </Link>
       </div>
 
       {/* Hamburger - visible on mobile */}
@@ -53,12 +55,14 @@ export default function Navbar() {
           <Link href="/dezu" onClick={closeMenu}>Dezu</Link>
         </nav>
 
-        <button className={styles.contactBtnMobile} onClick={closeMenu} aria-label="Contact us">
-          LET&apos;S TALK
-          <span className={styles.arrow}>
-            <Image src={arrow} alt="" width={24} height={24} />
-          </span>
-        </button>
+        <Link href="/contact" tabIndex="-1">
+          <button className={styles.contactBtnMobile} onClick={closeMenu} aria-label="Contact us">
+            LET&apos;S TALK
+            <span className={styles.arrow}>
+              <Image src={arrow} alt="" width={24} height={24} />
+            </span>
+          </button>
+        </Link>
       </div>
     </header>
   );
