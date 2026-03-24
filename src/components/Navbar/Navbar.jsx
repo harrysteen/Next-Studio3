@@ -44,6 +44,7 @@ export default function Navbar() {
         className={`${styles.mobileMenu} ${isOpen ? styles.show : ''}`}
         aria-hidden={!isOpen}
       >
+        <button className={styles.mobileClose} onClick={closeMenu} aria-label="Close menu">&times;</button>
 
         <nav className={styles.mobileNav} aria-label="Main Navigation">
           <Link href="/work" onClick={closeMenu}>Work</Link>

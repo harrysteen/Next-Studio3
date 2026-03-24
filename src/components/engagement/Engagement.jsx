@@ -19,9 +19,10 @@ export default function Engagement() {
         ScrollTrigger.create({
           trigger: panel,
           start: "top top",
-          // Calculate the end so all previous panels stay securely pinned 
-          // until the last panel completes its scroll duration!
-          end: () => `+=${window.innerHeight * (panels.length - index)}`,
+          // For the last panel, we don't need to over-pin unless we want it to stay a bit,
+          // but we can just pin it for less or not pin with extra spacing to remove the big gap.
+          // Since it's the last one, maybe just end: "bottom bottom" or a much smaller duration.
+          end: () => isLast ? "+=10" : `+=${window.innerHeight * (panels.length - index)}`,
           pin: true,
           pinSpacing: isLast,
         });

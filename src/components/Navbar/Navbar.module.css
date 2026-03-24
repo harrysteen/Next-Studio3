@@ -90,7 +90,8 @@
 .mobileMenu {
   position: fixed;
   top: 0;
-  right: -100%;
+  left: 0;
+  transform: translateX(100%);
   width: 100vw;
   height: 100vh;
   background-color: var(--bg-color);
@@ -98,12 +99,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: right 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 10;
 }
 
 .mobileMenu.show {
-  right: 0;
+  transform: translateX(0);
 }
 
 .mobileNav {
