@@ -12,11 +12,11 @@ import Footer from "../../components/Footer/Footer";
 // (e.g., my-next-studio/public/Silicon.webp)
 const projects = [
   {
-    img: "https://picsum.photos/600/400?random=1", 
+    img: "/tie_silicon_valley_hero.png",
     title: "TIE silicon valley",
     category: "Rebranding, UI/UX Design, Content Strategy",
     year: "2024",
-    path: "/Venture",
+    path: "/TieSiliconValley",
   },
   {
     img: "https://picsum.photos/600/400?random=2",

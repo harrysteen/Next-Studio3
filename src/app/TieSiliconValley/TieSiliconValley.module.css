@@ -1,0 +1,516 @@
+/* CSS Module for TIE Silicon Valley Project Detail Page */
+
+.container {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(61, 16, 108, 0.5), transparent 20%),
+    radial-gradient(circle at 70% 40%, rgba(61, 16, 108, 0.5), transparent 20%),
+    #130323;
+  color: #FFFFFF;
+  padding-top: 0;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Absolute header styling to cover the navbar section transparently */
+.container header {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+.contentWrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Back Link styling */
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #B0B0B0;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.backLink:hover {
+  color: #9cff00;
+  transform: translateX(-5px);
+}
+
+.backArrow {
+  font-size: 18px;
+}
+
+/* SECTION 1: HERO SECTION */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 550px;
+  background-image: url('/tie_herosection_img.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 5% 100px 5%;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroTitle {
+  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  color: #9cff00;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.heroBio {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #CCCCCC;
+  margin-bottom: 30px;
+}
+
+/* Social icons horizontal layout */
+.socialRow {
+  display: flex;
+  gap: 20px;
+}
+
+.socialIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  background-color: transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socialIcon:hover {
+  border-color: #9cff00;
+  color: #130323;
+  background-color: #9cff00;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 15px rgba(156, 255, 0, 0.3);
+}
+
+.socialIcon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Right side Hero portrait image wrapper */
+.heroImageWrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  aspect-ratio: 4 / 5;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.heroImageWrapper:hover .heroImage {
+  transform: scale(1.04);
+}
+
+/* SECTION 2: STATISTICS ROW */
+.statsSection {
+  background-color: #1b0634;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statCard:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statNumber {
+  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+  color: #9cff00;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #cfcfcf;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* SECTION 3: ABOUT / OUTCOMES ROW (2 COLUMNS) */
+.detailsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 60px;
+}
+
+.detailLeft h2 {
+  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.detailLeftText {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #BBBBBB;
+}
+
+.detailRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTag {
+  color: #9cff00;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+}
+
+.experienceItem {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: padding-left 0.3s ease;
+}
+
+.experienceItem:first-child {
+  padding-top: 0;
+}
+
+.experienceItem:hover {
+  padding-left: 10px;
+}
+
+.experienceCompany {
+  font-size: 19px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.experienceRole {
+  font-size: 15px;
+  color: #9cff00;
+  font-weight: 500;
+}
+
+/* SECTION 4: SELECTED OUTCOMES (2 COLUMNS) */
+.publicationsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 60px;
+}
+
+.publicationsLeft h2 {
+  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.publicationsRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookList {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookItem {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: padding-left 0.3s ease;
+  cursor: pointer;
+}
+
+.bookItem:first-child {
+  padding-top: 0;
+}
+
+.bookItem:hover {
+  padding-left: 10px;
+}
+
+.bookTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.4;
+  max-width: 90%;
+  transition: color 0.3s ease;
+}
+
+.bookItem:hover .bookTitle {
+  color: #9cff00;
+}
+
+.bookArrow {
+  font-size: 20px;
+  color: #9cff00;
+  transition: transform 0.3s ease;
+}
+
+.bookItem:hover .bookArrow {
+  transform: translateX(6px);
+}
+
+/* SECTION 5: ADVISORY & BOARD ROLES */
+.advisorySection {
+  margin-bottom: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 60px;
+}
+
+.advisoryTitle {
+  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.boardGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.boardCard {
+  background-color: #1b0634;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.boardCard:hover {
+  border-color: #9cff00;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(156, 255, 0, 0.1);
+  background-color: #240944;
+}
+
+/* Custom minimal logo style for companies */
+.boardLogoPlaceholder {
+  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.boardCard:hover .boardLogoPlaceholder {
+  color: #9cff00;
+}
+
+.boardCompanyName {
+  font-size: 13px;
+  color: #cfcfcf;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* BOTTOM NAV */
+.bottomNav {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 539px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
+  background-color: #2A0B4B;
+  gap: 30px;
+  background: rgba(20, 10, 35, 0.8) !important;
+  border-radius: 8px;
+  border: 1px solid #9cff00;
+  backdrop-filter: blur(10px);
+  border-color: #9cff00;
+}
+
+.navLink {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: #9cff00;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .heroImageWrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .statsSection {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+
+  .statCard:nth-child(2) {
+    border-right: none;
+  }
+
+  .detailsSection,
+  .publicationsSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .boardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bottomNav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 80px;
+  }
+
+  .heroTitle {
+    font-size: 50px;
+  }
+
+  .boardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 38px;
+  }
+
+  .statsSection {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .statCard:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+  }
+
+  .boardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .detailLeft h2,
+  .publicationsLeft h2,
+  .advisoryTitle {
+    font-size: 30px;
+  }
+}
