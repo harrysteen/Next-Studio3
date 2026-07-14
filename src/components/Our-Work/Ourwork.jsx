@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Ourwork.module.css';
@@ -8,38 +9,50 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     // Col 1
-    { id: 1, title: 'Ventura Pranas', year: '2024', tags: 'UI/UX Design, Development', img: 'https://picsum.photos/400/300?random=1', col: 1 },
-    { id: 2, title: 'The Kshatriyas', year: '2025', tags: 'UI/UX, Product Design, Development', img: 'https://picsum.photos/400/600?random=2', col: 1 },
-    { id: 3, title: 'Dashboard', year: '2024', tags: 'SaaS Design', img: 'https://picsum.photos/400/300?random=3', col: 1 },
+    { id: 1, title: 'Ventura Pranas', year: '2024', tags: 'UI/UX Design, Development', img: '/ourwork/venturawork.webp', col: 1 },
+    { id: 2, title: 'The Kshatriyas', year: '2025', tags: 'UI/UX, Product Design, Development', img: '/ourwork/kshatriyaswork.webp', col: 1 },
+    { id: 3, title: 'High Cloud', year: '2024', tags: 'SaaS Design', img: '/ourwork/highcloudwork.webp', col: 1 },
 
     // Col 2
-    { id: 4, title: 'TIE Silicon Valley', year: '2024', tags: 'Rebranding, UI/UX Design', img: 'https://picsum.photos/400/500?random=4', col: 2 },
-    { id: 5, title: 'Naeem Zafar', year: '2025', tags: 'Branding, UI/UX Design', img: 'https://picsum.photos/400/400?random=5', col: 2 },
+    { id: 4, title: 'TIE Silicon Valley', year: '2024', tags: 'Rebranding, UI/UX Design', img: '/ourwork/siliconvalley.webp', col: 2, href: '/TieSiliconValley' },
+    { id: 5, title: 'Naeem Zafar', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/naeeamzafar.webp', col: 2 },
 
     // Col 3
-    { id: 6, title: 'Mall 360', year: '2025', tags: 'Branding, UI/UX Design', img: 'https://picsum.photos/400/300?random=6', col: 3 },
-    { id: 7, title: 'Mad Box', year: '2022', tags: 'Branding, Packaging Design', img: 'https://picsum.photos/400/400?random=7', col: 3 },
+    { id: 6, title: 'Mall 360', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/mall360.webp', col: 3 },
+    { id: 7, title: 'Mad Box', year: '2022', tags: 'Branding, Packaging Design', img: '/ourwork/madboxwork.webp', col: 3 },
 
     // Col 4
-    { id: 8, title: 'Ecomall', year: '2025', tags: 'Branding, UI/UX Design', img: 'https://picsum.photos/400/300?random=8', col: 4 },
-    { id: 9, title: 'Leiutis', year: '2023', tags: 'Content Design', img: 'https://picsum.photos/400/600?random=9', col: 4 },
-    { id: 10, title: 'Eco Shop', year: '2024', tags: 'E-Commerce, Web Design', img: 'https://picsum.photos/400/300?random=10', col: 4 },
+    { id: 8, title: 'Ecomall', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/ecomallwork.webp', col: 4 },
+    { id: 9, title: 'Leiutis', year: '2023', tags: 'Content Design', img: '/ourwork/leiutis.webp', col: 4 },
+    { id: 10, title: 'Ventura Pranas', year: '2024', tags: 'UI/UX Design, Development', img: '/ourwork/venturawork.webp', col: 4 },
 ];
 
-const ProjectCard = ({ project }) => (
-    <div className={styles.card}>
-        <div className={styles.cardImageWrap}>
-            <img src={project.img} alt={project.title} className={styles.cardImage} />
-        </div>
-        <div className={styles.cardFooter}>
-            <div className={styles.cardHeader}>
-                <h3 className={styles.cardTitle}>{project.title}</h3>
-                <span className={styles.cardYear}>{project.year}</span>
+const ProjectCard = ({ project }) => {
+    const cardContent = (
+        <div className={`${styles.card} ${project.href ? styles.cardClickable : ''}`}>
+            <div className={styles.cardImageWrap}>
+                <img src={project.img} alt={project.title} className={styles.cardImage} />
             </div>
-            <p className={styles.cardTags}>{project.tags}</p>
+            <div className={styles.cardFooter}>
+                <div className={styles.cardHeader}>
+                    <h3 className={styles.cardTitle}>{project.title}</h3>
+                    <span className={styles.cardYear}>{project.year}</span>
+                </div>
+                <p className={styles.cardTags}>{project.tags}</p>
+            </div>
         </div>
-    </div>
-);
+    );
+
+    if (project.href) {
+        return (
+            <Link href={project.href} style={{ textDecoration: 'none', display: 'block' }}>
+                {cardContent}
+            </Link>
+        );
+    }
+
+    return cardContent;
+};
 
 export default function Ourwork() {
     const containerRef = useRef(null);
