@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Engagement.module.css";
+import SplitText from "../FAQ/SplitText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,20 @@ export default function Engagement() {
           <span>✦</span> OUR SERVICES
         </div>
         <h2 className={styles.title}>
-          <span className={styles.titleHighlight}>ENGAGEMENT MODELS</span> - FLEXIBLE BY DESIGN
+          <SplitText
+            text="ENGAGEMENT MODELS - FLEXIBLE BY DESIGN"
+            className={styles.splitTextHeading}
+            delay={50}
+            duration={1.25}
+            ease="power3.out"
+            splitType="words,chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="left"
+            tag="span"
+          />
         </h2>
       </div>
 

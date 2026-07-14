@@ -1,16 +1,102 @@
-import React from 'react';
+"use client";
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import styles from './Footer.module.css';
 
+gsap.registerPlugin(ScrollTrigger, useGSAP);
+
 export default function Footer() {
+  const headlineRef = useRef(null);
+  const wordRef = useRef(null);
+  const [currentWord, setCurrentWord] = useState("INTENTIONAL");
+
+  useEffect(() => {
+    const words = ["INTENTIONAL", "IMPACTFUL", "STRATEGIC", "CREATIVE", "DRIVEN"];
+    let index = 0;
+    let timeoutId;
+
+    const rotate = () => {
+      timeoutId = setTimeout(() => {
+        if (!wordRef.current) return;
+        // Fade out and slide up
+        gsap.to(wordRef.current, {
+          opacity: 0,
+          y: -15,
+          duration: 0.3,
+          ease: "power2.in",
+          onComplete: () => {
+            index = (index + 1) % words.length;
+            setCurrentWord(words[index]);
+            // Reset position to bottom
+            gsap.set(wordRef.current, { y: 15 });
+            // Fade in and slide up to center
+            gsap.to(wordRef.current, {
+              opacity: 1,
+              y: 0,
+              duration: 0.3,
+              ease: "power2.out"
+            });
+            rotate();
+          }
+        });
+      }, 2500);
+    };
+
+    rotate();
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  useGSAP(() => {
+    const container = headlineRef.current;
+    if (!container) return;
+
+    const line1 = container.querySelector(`.${styles.greenTextContainer}`);
+    const line2 = container.querySelector(`.${styles.darkText}`);
+    const button = container.parentElement.querySelector(`.${styles.talkBtn}`);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        start: "top 90%",
+        once: true
+      }
+    });
+
+    tl.fromTo([line1, line2],
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: "power3.out"
+      }
+    )
+    .fromTo(button,
+      { opacity: 0, scale: 0.9 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 0.4,
+        ease: "back.out(1.7)"
+      },
+      "-=0.4"
+    );
+  }, { scope: headlineRef });
+
   return (
     <footer className={styles.footer}>
       <div className={styles.topSection}>
         
         {/* Left Side */}
         <div className={styles.left}>
-          <h2 className={styles.headline}>
-            <span className={styles.greenText}>INTENTIONAL</span><br />
+          <h2 ref={headlineRef} className={styles.headline}>
+            <span ref={wordRef} className={styles.greenTextContainer}>
+              {currentWord}
+            </span><br />
             <span className={styles.darkText}>BY DESIGN</span>
           </h2>
           <Link href="/contact" tabIndex="-1"><button className={styles.talkBtn}>Let's Talk</button></Link>

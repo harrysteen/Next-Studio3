@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./Faq.module.css";
+import SplitText from "./SplitText";
 
 const services = [
   {
@@ -64,8 +65,20 @@ export default function Faq() {
           <span className={styles.sparkle}>✦</span> OUR SERVICES
         </div>
         <h2 className={styles.title}>
-          <span className={styles.titleHighlight}>CREATING IMPACT</span> THROUGH<br />
-          CONSISTENT COLLABORATION
+          <SplitText
+            text="CREATING IMPACT THROUGH CONSISTENT COLLABORATION"
+            className={styles.splitTextHeading}
+            delay={50}
+            duration={1.25}
+            ease="power3.out"
+            splitType="words,chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            tag="span"
+          />
         </h2>
       </div>
 

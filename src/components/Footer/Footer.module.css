@@ -24,17 +24,21 @@
   font-family: var(--font-main);
   font-size: clamp(36px, 4vw, 54px);
   line-height: 1.1;
-  font-weight: 600;
+  font-weight: 800;
   margin: 0 0 30px 0;
   text-transform: uppercase;
 }
 
-.greenText {
+.greenTextContainer {
   color: var(--accent-color);
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
 .darkText {
   color: #1a0b2e;
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
 .talkBtn {
