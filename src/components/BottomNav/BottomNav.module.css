@@ -1,0 +1,44 @@
+.bottomNav {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 539px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
+  background: #2A0B4B;
+  gap: 30px;
+  border-radius: 8px;
+  border: 1px solid #ABFF4F66;
+  backdrop-filter: blur(10px);
+}
+
+.navLink {
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.navLink:hover,
+.navLink.active {
+  background-color: var(--accent-color);
+  color: #2A0B4B;
+}
+
+@media (max-width: 1024px) {
+  .bottomNav {
+    display: none;
+  }
+}

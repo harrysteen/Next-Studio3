@@ -291,6 +291,7 @@ class ImageTrailVariant3 {
     const handlePointerMove = ev => {
       const rect = container.getBoundingClientRect();
       this.mousePos = getLocalPointerPos(ev, rect);
+      this.overInteractive = !!ev.target.closest('a, button, [role="button"], input, select, textarea, nav, header, footer');
     };
     container.addEventListener('mousemove', handlePointerMove);
     container.addEventListener('touchmove', handlePointerMove);
@@ -299,6 +300,7 @@ class ImageTrailVariant3 {
       const rect = container.getBoundingClientRect();
       this.mousePos = getLocalPointerPos(ev, rect);
       this.cacheMousePos = { ...this.mousePos };
+      this.overInteractive = !!ev.target.closest('a, button, [role="button"], input, select, textarea, nav, header, footer');
 
       requestAnimationFrame(() => this.render());
       container.removeEventListener('mousemove', initRender);
@@ -314,7 +316,9 @@ class ImageTrailVariant3 {
     this.cacheMousePos.y = lerp(this.cacheMousePos.y, this.mousePos.y, 0.1);
 
     if (distance > this.threshold) {
-      this.showNextImage();
+      if (!this.overInteractive) {
+        this.showNextImage();
+      }
       this.lastMousePos = { ...this.mousePos };
     }
     if (this.isIdle && this.zIndexVal !== 1) {

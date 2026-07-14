@@ -97,46 +97,7 @@
   }
 }
 
-.bottomNav {
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  width: 539px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 55px;
-  background-color: #2A0B4B;
-
-  gap: 30px;
-  background: var(--nav-bg);
-
-  border-radius: 8px;
-  border: 1px solid var(--nav-border);
-  backdrop-filter: blur(10px);
-  border-color: var(--accent-color);
-}
-
-.navLink {
-  font-family: var(--font-albert);
-  font-size: 16px;
-  font-weight: 500;
-  color: #fff;
-  transition: color 0.2s ease;
-}
-
-.navLink:hover {
-  color: var(--accent-color);
-}
-
 /* Media Queries */
-@media (max-width: 1024px) {
-  .bottomNav {
-    display: none;
-  }
-}
 
 @media (max-width: 768px) {
   .title {

@@ -11,25 +11,30 @@ import Testmonials from "../components/testmonials/Testmonials";
 import Transformtext from "../components/Transformtext/Transformtext";
 import Footer from "../components/Footer/Footer";
 
-import img2 from "../herossection-animation-assets/img2.png";
-import img3 from "../herossection-animation-assets/img3.png";
-import img4 from "../herossection-animation-assets/img4.png";
-import img5 from "../herossection-animation-assets/img5.png";
-import img6 from "../herossection-animation-assets/img6.png";
+import ecomallwork from "../herossection-animation-assets/ecomallwork.webp";
+import highcloudWork from "../herossection-animation-assets/highcloud work.webp";
+import kshatriyasWork from "../herossection-animation-assets/kshatriyas work.webp";
+import leiutis from "../herossection-animation-assets/leiutis.webp";
+import madboxwork from "../herossection-animation-assets/madboxwork.webp";
+import mall360 from "../herossection-animation-assets/mall360.webp";
+import naeeamzafar from "../herossection-animation-assets/naeeamzafar.webp";
+import tieSiliconValley from "../herossection-animation-assets/tie silicon valley.webp";
+import venturaWork from "../herossection-animation-assets/ventura work.webp";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <ImageTrail
         items={[
-          img2.src,
-          img3.src,
-          img4.src,
-          img5.src,
-          img6.src,
-          img2.src,
-          img3.src,
-          img4.src,
+          ecomallwork.src,
+          highcloudWork.src,
+          kshatriyasWork.src,
+          leiutis.src,
+          madboxwork.src,
+          mall360.src,
+          naeeamzafar.src,
+          tieSiliconValley.src,
+          venturaWork.src,
         ]}
         variant="3"
       >  

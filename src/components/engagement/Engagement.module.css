@@ -2,12 +2,14 @@
 .scrollWrapper {
   width: 100%;
   position: relative;
-  background-color: var(--bg-color); /* Matches theme */
+  background-color: var(--bg-color);
+  /* Matches theme */
 }
 
 @media (min-width: 769px) {
   .scrollWrapper {
-    padding-bottom: 50vh; /* gives the last card a natural pause before articles appear */
+    padding-bottom: 50vh;
+    /* gives the last card a natural pause before articles appear */
   }
 }
 
@@ -81,7 +83,8 @@
 .leftContent {
   flex: 1;
   padding: 50px 40px;
-  background-color: #0d0614; /* very dark background inside card to match image */
+  background-color: #0d0614;
+  /* very dark background inside card to match image */
   border-top: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
@@ -149,7 +152,8 @@
 
 /* RIGHT IMAGE */
 .rightImage {
-  flex: 1.2; /* make image slightly wider if needed, or 1 to match */
+  flex: 1.2;
+  /* make image slightly wider if needed, or 1 to match */
   margin: 0;
   padding: 0;
   border-radius: 0 12px 12px 0;
@@ -170,14 +174,14 @@
     height: auto;
     padding: 10px 5vw;
   }
-  
+
   .leftContent {
     border-radius: 12px 12px 0 0;
     border: 1px solid var(--accent-color);
     border-bottom: none;
     padding: 30px 20px;
   }
-  
+
   .rightImage {
     border-radius: 0 0 12px 12px;
     height: 300px;

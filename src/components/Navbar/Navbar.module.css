@@ -15,11 +15,12 @@
 }
 
 .logoMain {
-
-  font-size: 55px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.5px;
+  font-family: var(--font-bakbak), 'Bakbak One', sans-serif;
+  font-size: 55.24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
 }
 
 .logoSub {
@@ -36,12 +37,15 @@
 .contactBtn {
   width: 185px;
   background-color: var(--accent-color);
-  font-family: var(--font-main);
+  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
   color: #2A0B4B;
   padding: 10px 20px;
   border-radius: 4px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,9 +134,12 @@
   color: #2A0B4B;
   padding: 14px 30px;
   border-radius: 4px;
-  font-weight: 600;
-  font-size: 16px;
-  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 18px;
+  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./MotionText.module.css";
 
- 
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,15 +27,15 @@ const MotionText = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top top",
-            end: "+=1200", 
+            end: "+=1200",
             scrub: 1.2,
             pin: true,
             anticipatePin: 1,
-            invalidateOnRefresh: true, 
+            invalidateOnRefresh: true,
           }
         });
 
-        tl.fromTo(videoRef.current, 
+        tl.fromTo(videoRef.current,
           {
             x: () => {
               const vRect = wrapperRef.current.getBoundingClientRect();
@@ -49,7 +49,7 @@ const MotionText = () => {
               const vCenterRelY = (vRect.top - sRect.top) + vRect.height / 2;
               return (window.innerHeight / 2) - vCenterRelY;
             },
-            scale: 2.2, 
+            scale: 2.2,
           },
           {
             x: 0,
@@ -59,12 +59,12 @@ const MotionText = () => {
             duration: 1
           }
         )
-        // Fade in the text wrapping around it when video is shrinking
-        .to(textRef.current, {
-          opacity: 1,
-          ease: "power2.inOut",
-          duration: 0.5
-        }, "<0.5"); 
+          // Fade in the text wrapping around it when video is shrinking
+          .to(textRef.current, {
+            opacity: 1,
+            ease: "power2.inOut",
+            duration: 0.5
+          }, "<0.5");
       });
 
       mm.add("(max-width: 1023px)", () => {
@@ -84,18 +84,24 @@ const MotionText = () => {
           <h2 className={styles.textHeading}>
             <div className={styles.videoFloat} ref={wrapperRef}>
               <div className={styles.videoInner} ref={videoRef}>
-                <iframe
+                <video
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/t865KSKdSDk?autoplay=1&mute=1&loop=1&playlist=t865KSKdSDk"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  style={{ objectFit: "cover", width: "100%", height: "100%", borderRadius: "8px" }}
+                >
+                  <source
+                    src="https://www.dropbox.com/scl/fi/ffqkap8xoe469vfd6u4ua/18069232-uhd_3840_2160_24fps.mp4?rlkey=xylgikojt656pmmy0ua8or8lb&st=f3q4uup0&raw=1"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
-            
+
             <span ref={textRef} className={styles.textContent}>
               DESIGN moved from Pixels to Strategy and Speed. Today’s companies need
               strategic function, dynamic communication and

@@ -14,7 +14,8 @@
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 10;
-  pointer-events: none; /* Let clicks pass through to cards */
+  pointer-events: none;
+  /* Let clicks pass through to cards */
   width: 100%;
 }
 
@@ -25,7 +26,7 @@
   line-height: 1.1;
   text-transform: uppercase;
   font-weight: 700;
-  text-shadow: 0 0 20px rgba(171, 255, 79, 0.2); 
+  text-shadow: 0 0 20px rgba(171, 255, 79, 0.2);
   margin: 0;
 }
 
@@ -49,32 +50,38 @@
 .col1 {
   margin-top: 50px;
 }
+
 .col2 {
   margin-top: 0px;
-  gap: 250px; /* Big gap in middle column to leave room for center text */
+  gap: 250px;
+  /* Big gap in middle column to leave room for center text */
 }
+
 .col3 {
-  margin-top: 250px; /* Push down to avoid center text */
+  margin-top: 250px;
+  /* Push down to avoid center text */
 }
+
 .col4 {
   margin-top: 80px;
 }
 
 /* Card Styles */
 .card {
-  background-color: #1a0b2e; /* dark purple background */
+  background-color: #1a0b2e;
+  /* dark purple background */
   border-radius: 4px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .cardImageWrap {
@@ -129,14 +136,20 @@
   .grid {
     flex-wrap: wrap;
   }
+
   .column {
     min-width: 45%;
     gap: 30px;
   }
-  .col1, .col2, .col3, .col4 {
+
+  .col1,
+  .col2,
+  .col3,
+  .col4 {
     margin-top: 0;
     gap: 30px;
   }
+
   .centerText {
     position: relative;
     top: auto;
@@ -144,6 +157,7 @@
     transform: none;
     margin-bottom: 50px;
   }
+
   .container {
     display: flex;
     flex-direction: column;

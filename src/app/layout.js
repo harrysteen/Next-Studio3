@@ -1,20 +1,23 @@
-import { Geist, Geist_Mono, Bai_Jamjuree } from "next/font/google";
+import { Bai_Jamjuree, Albert_Sans, Bakbak_One } from "next/font/google";
 import "./globals.css";
+import BottomNav from "../components/BottomNav/BottomNav";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const albertSans = Albert_Sans({
+  weight: ['300', '400', '500', '600', '700', '800'],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-albert",
 });
 
 const baiJamjuree = Bai_Jamjuree({
   weight: ['400', '500', '600', '700'],
   subsets: ["latin"],
   variable: "--font-bai-jamjuree",
+});
+
+const bakbakOne = Bakbak_One({
+  weight: ['400'],
+  subsets: ["latin"],
+  variable: "--font-bakbak",
 });
 
 export const metadata = {
@@ -52,8 +55,11 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${baiJamjuree.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${albertSans.variable} ${baiJamjuree.variable} ${bakbakOne.variable}`}>
+      <body>
+        {children}
+        <BottomNav />
+      </body>
     </html>
   );
 }

@@ -4,8 +4,7 @@
   --accent-color: #ABFF4F;
   --nav-bg: rgba(20, 10, 35, 0.4);
   --nav-border: rgba(255, 255, 255, 0.1);
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-albert: 'Albert Sans', sans-serif;
+  --font-main: var(--font-albert), 'Albert Sans', sans-serif;
 }
 
 * {
@@ -14,17 +13,28 @@
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, .logoMain {
-  font-family: var(--font-bai-jamjuree), sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
 }
 
+html,
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: var(--font-main);
-  background-image: radial-gradient(circle at 50% 40%, rgba(68, 23, 116, 0.4) 0%, var(--bg-color) 60%);
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
+  background-image: 
+    radial-gradient(circle at 25% 250px, rgba(61, 16, 108, 0.6) 0%, transparent 500px),
+    radial-gradient(circle at 50% 350px, rgba(68, 23, 116, 0.45) 0%, var(--bg-color) 700px);
+  background-repeat: no-repeat;
   min-height: 100vh;
+  width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 a {

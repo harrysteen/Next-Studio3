@@ -43,10 +43,13 @@
   border: none;
   padding: 15px 40px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: var(--font-albert);
+  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .talkBtn:hover {
@@ -101,7 +104,8 @@
 .socialIcon {
   width: 40px;
   height: 40px;
-  background-color: #2b1154; /* Deep purple matching design */
+  background-color: #2b1154;
+  /* Deep purple matching design */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -133,7 +137,8 @@
 
 .massiveText {
   font-family: var(--font-main);
-  font-size: 12vw; /* Scaled down slightly to fit on one line perfectly */
+  font-size: 12vw;
+  /* Scaled down slightly to fit on one line perfectly */
   font-weight: 700;
   color: #05010e;
   margin: 0;
@@ -170,6 +175,7 @@
   .right {
     gap: 40px;
   }
+
   .massiveText {
     text-shadow: 4px 4px 0 var(--accent-color);
   }

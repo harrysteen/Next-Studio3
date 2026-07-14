@@ -7,17 +7,17 @@
   /* Next.js globals already handle body margin and background, 
      but adding this overlay gradient to just this section as requested */
   background:
-    radial-gradient(circle at 35% 70%, rgba(61,16,108,0.5), transparent 20%),
-    radial-gradient(circle at 100% 40%, rgba(61,16,108,0.5), transparent 20%);
+    radial-gradient(circle at 35% 70%, rgba(61, 16, 108, 0.5), transparent 20%),
+    radial-gradient(circle at 100% 40%, rgba(61, 16, 108, 0.5), transparent 20%);
 }
 
 /* ================= CONTENT SECTION ================= */
 
 .contentSection {
   min-height: 100vh;
-  padding: 15vh 5vw; 
+  padding: 15vh 5vw;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   position: relative;
   z-index: 10;
@@ -29,12 +29,13 @@
 }
 
 .textHeading {
-  font-family: inherit; 
+  font-family: inherit;
   font-size: clamp(24px, 3vw, 42px);
-  line-height: 1.5;
+  line-height: 1.3;
   font-weight: 500;
   margin: 0;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .textContent {
@@ -48,14 +49,15 @@
   aspect-ratio: 16 / 9;
   margin-right: 3vw;
   margin-bottom: 1.5vw;
-  margin-top: 0.5vw; /* aligned nicely with first line text */
+  margin-top: 0.5vw;
+  /* aligned nicely with first line text */
 }
 
 .videoInner {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transform-origin: center center;
   will-change: transform;
 }

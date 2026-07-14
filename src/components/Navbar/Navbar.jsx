@@ -5,13 +5,13 @@ import Image from 'next/image';
 import styles from './Navbar.module.css';
 import arrow from "./navassets/Arrow.png";
 
-export default function Navbar() {
+export default function Navbar({ style }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className={styles.navbar}>
+    <header className={styles.navbar} style={style}>
       <Link href="/" className={styles.logo} aria-label="Dezu Studio Home">
         <span className={styles.logoMain}>Dezu.</span>
         <span className={styles.logoSub}>STUDIO</span>
