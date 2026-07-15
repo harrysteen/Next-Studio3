@@ -2,34 +2,56 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styles from './Testmonials.module.css';
 
+// Import client logos
+import venturaLogo from '../../home assets/ventura.jpg';
+import highCloudLogo from '../../home assets/high cloud.jpg';
+import tieLogo from '../../home assets/tie.jpg';
+import brewshotLogo from '../../home assets/brewshot.jpg';
+import kshatriyasLogo from '../../home assets/kshatriyass.jpg';
+import leiutisLogo from '../../home assets/leiutis.jpg';
+
 const testimonials = [
   {
     id: 1,
     text: "The team at Studio Dezu helped break down our complex financial content into easily understandable navigation for our clients. Their team worked closely with us to get everything right and ready for our clients.",
     name: "Prabha Srinivasan",
     role: "CEO, Ventura Pranas.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg", // Using generic placeholders
+    logo: venturaLogo.src,
   },
   {
     id: 2,
     text: "We planned to rebrand after eight years. Our goal was to convey impact and relevance to the newer audiences. Studio Dezu built our new brand and website, without compromising on our original story or look and feel.",
     name: "Raghu Chejarla",
     role: "CEO and Co-Founder",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    logo: highCloudLogo.src,
   },
   {
     id: 3,
-    text: "Their strategic approach to product design completely revolutionized how our users interact with our platform. The metrics speak for themselves: a 40% increase in retention within three months of the redesign.",
-    name: "Sarah Jenkins",
-    role: "VP of Product, High Cloud",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+    text: "We worked with Studio Dezu to revamp TiE Silicon Valley's website and they have done a great job in delivering our brief. They had elaborate discovery sessions with all our team members and helped redo our brand and storytelling narrative.",
+    name: "Anita Manwani",
+    role: "President of TiE Silicon Valley & Vice Chair of TiE Global",
+    logo: tieLogo.src,
   },
   {
     id: 4,
-    text: "Absolutely phenomenal workflow. The communication was pristine from day one, and they delivered pixel-perfect interfaces that our development team could immediately begin building without any friction.",
-    name: "Michael Chang",
-    role: "CTO, NextGen Systems",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+    text: "They created a fun and appealing website for our cafe.",
+    name: "Arun Nanda",
+    role: "Founder of Brewshot Cafe",
+    logo: brewshotLogo.src,
+  },
+  {
+    id: 5,
+    text: "Studio Dezu executed our vision perfectly. Our brand and website redesign came out the way we had envisioned",
+    name: "Ravi Mudunuri",
+    role: "CEO of Keylent",
+    logo: kshatriyasLogo.src,
+  },
+  {
+    id: 6,
+    text: "Studio Dezu helped us create interesting communication material for our team. They were very analytical and strategic about the whole process. We got what we wanted in the end.",
+    name: "K Chadrasekhar Rao",
+    role: "CEO and Founder Leiutis",
+    logo: leiutisLogo.src,
   }
 ];
 
@@ -106,9 +128,7 @@ export default function Testmonials() {
               <h4 className={styles.authorName}>{t.name}</h4>
               <p className={styles.authorRole}>{t.role}</p>
             </div>
-            <div className={styles.companyLogoWrap}>
-              <img src={t.logo} alt="Company Logo" />
-            </div>
+            <img src={t.logo} alt="Company Logo" className={styles.companyLogo} />
           </div>
         </div>
       ))}

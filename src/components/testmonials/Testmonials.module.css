@@ -1,5 +1,6 @@
 .container {
-  padding: 100px 5vw; /* Added padding right and left */
+  padding: 100px 5vw;
+  /* Added padding right and left */
   background-color: var(--bg-color);
   overflow: hidden;
   font-family: var(--font-main);
@@ -37,7 +38,7 @@
   overflow-x: auto;
   cursor: grab;
   /* Hide scrollbar */
-  scrollbar-width: none; 
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
@@ -52,21 +53,23 @@
 .trackInner {
   display: flex;
   gap: 30px;
-  padding-right: 30px; /* Matches gap to ensure seamless loop */
+  padding-right: 30px;
+  /* Matches gap to ensure seamless loop */
 }
 
 /* CARDS */
 .card {
   width: 600px;
   min-height: 380px;
-  background-color: #2b1154; /* Deep purple */
+  background-color: #2b1154;
+  /* Deep purple */
   border-radius: 8px;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .quoteIcon {
@@ -113,30 +116,24 @@
   margin: 0;
 }
 
-.companyLogoWrap {
-  background-color: #fff;
-  border-radius: 6px;
-  width: 160px;
+.companyLogo {
   height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-.companyLogoWrap img {
-  max-width: 100%;
-  max-height: 100%;
+  width: auto;
+  max-width: 160px;
   object-fit: contain;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .card {
-    width: 85vw; /* Almost full width but scaled for mobile */
+    width: 85vw;
+    /* Almost full width but scaled for mobile */
     min-height: auto;
     padding: 30px;
   }
+
   .quoteText {
     font-size: 16px;
   }

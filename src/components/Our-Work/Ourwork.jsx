@@ -9,22 +9,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     // Col 1
-    { id: 1, title: 'Ventura Pranas', year: '2024', tags: 'UI/UX Design, Development', img: '/ourwork/venturawork.webp', col: 1 },
-    { id: 2, title: 'The Kshatriyas', year: '2025', tags: 'UI/UX, Product Design, Development', img: '/ourwork/kshatriyaswork.webp', col: 1 },
-    { id: 3, title: 'High Cloud', year: '2024', tags: 'SaaS Design', img: '/ourwork/highcloudwork.webp', col: 1 },
+    { id: 1, title: 'Ventura Pranas', year: '2024', tags: 'UI/UX Design, Development', img: '/ourwork/venturawork.webp', col: 1, href: '/VenturaPranas' },
+    { id: 2, title: 'The Kshatriyas', year: '2025', tags: 'UI/UX, Product Design, Development', img: '/ourwork/kshatriyaswork.webp', col: 1, href: '/TheKshatriyas' },
+    { id: 3, title: 'High Cloud', year: '2024', tags: 'SaaS Design', img: '/ourwork/highcloudwork.webp', col: 1, href: '/HighCloud' },
 
     // Col 2
     { id: 4, title: 'TIE Silicon Valley', year: '2024', tags: 'Rebranding, UI/UX Design', img: '/ourwork/siliconvalley.webp', col: 2, href: '/TieSiliconValley' },
-    { id: 5, title: 'Naeem Zafar', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/naeeamzafar.webp', col: 2 },
+    { id: 5, title: 'Naeem Zafar', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/naeeamzafar.webp', col: 2, href: '/NaeemZafar' },
 
     // Col 3
-    { id: 6, title: 'Mall 360', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/mall360.webp', col: 3 },
-    { id: 7, title: 'Mad Box', year: '2022', tags: 'Branding, Packaging Design', img: '/ourwork/madboxwork.webp', col: 3 },
+    { id: 6, title: 'Mall 360', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/mall360.webp', col: 3, href: '/Mall360' },
+    { id: 7, title: 'Mad Box', year: '2022', tags: 'Branding, Packaging Design', img: '/ourwork/madboxwork.webp', col: 3, href: '/Madbox' },
 
     // Col 4
-    { id: 8, title: 'Ecomall', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/ecomallwork.webp', col: 4 },
-    { id: 9, title: 'Leiutis', year: '2023', tags: 'Content Design', img: '/ourwork/leiutis.webp', col: 4 },
-    { id: 10, title: 'Ventura Pranas', year: '2024', tags: 'UI/UX Design, Development', img: '/ourwork/venturawork.webp', col: 4 },
+    { id: 8, title: 'Ecomall', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/ecomallwork.webp', col: 4, href: '/Ecomall' },
+    { id: 9, title: 'Leiutis', year: '2023', tags: 'Content Design', img: '/ourwork/leiutis.webp', col: 4, href: '/Leiutis' },
+    { id: 10, title: 'Ventura Pranas', year: '2024', tags: 'UI/UX Design, Development', img: '/ourwork/venturawork.webp', col: 4, href: '/VenturaPranas' },
 ];
 
 const ProjectCard = ({ project }) => {
