@@ -6,7 +6,7 @@ import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
-export default function TieSiliconValley() {
+export default function TheKshatriyas() {
   const scopeOfWork = [
     { company: "Brand Strategy & Positioning", role: "Rebranding" },
     { company: "UI/UX Design Systems", role: "Design" },
@@ -65,7 +65,7 @@ export default function TieSiliconValley() {
     width: "100%",
     height: "100vh",
     minHeight: "550px",
-    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/tie_herosection_img.jpg')",
+    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/kshatriyas work.webp')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
@@ -427,7 +427,7 @@ export default function TieSiliconValley() {
       <section style={heroSectionStyle}>
         <div style={{}}>
           <h1 style={heroTitleStyle}>
-            TIE SILICON <br /> VALLEY
+            THE<br />KSHATRIYAS
           </h1>
           <span style={heroTaglineStyle}>@USA~2025</span>
         </div>
@@ -460,7 +460,7 @@ export default function TieSiliconValley() {
               fontFamily: "'Albert Sans', sans-serif",
               fontWeight: 400,
             }}>
-              TiE Silicon Valley Is One Of The World&apos;s Largest Startup Ecosystems, Built To Support Entrepreneurs At Every Stage Of Their Journey. From Idea Validation To Global Expansion, It Provides Access To Mentorship, Funding, And Powerful Networks Of Investors And Industry Experts. TiE Silicon Valley Helps Founders Turn Bold Ideas Into Successful Companies.
+              The Kshatriyas Of N.A Is An Expansive Community Of Kshatriyas Residing In North America. They Have Chapters In All The Major Cities Of The Country. Their Mission Is To Foster An Enduring Connection And Family-Like Communication Within The Community Through Regular Meetups, Cultural Events, And Gatherings Locally And Nationally.
             </p>
           </div>
 
@@ -484,7 +484,7 @@ export default function TieSiliconValley() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Rebranding, UI/UX Design,<br/>Content Strategy
+                Rebranding, UI/UX Design, Product Design, Development
               </p>
             </div>
             <div>

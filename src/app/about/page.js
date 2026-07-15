@@ -16,16 +16,12 @@ const map = "https://picsum.photos/800/400?random=6";
 const girl = "https://picsum.photos/400/600?random=7";
 
 const teamData = [
-  { role: "Developer" },
-  { role: "Designer" },
-  { role: "UI Engineer" },
-  { role: "Frontend Dev" },
-  { role: "Backend Dev" },
-  { role: "Product Designer" },
-  { role: "QA Engineer" },
-  { role: "UX Researcher" },
-  { role: "DevOps" },
-  { role: "Project Manager" }
+  { name: "Bhanu", role: "Developer", image: "/team images/bhanu.png" },
+  { name: "Bunny", role: "Designer", image: "/team images/bunny.png" },
+  { name: "Rakesh", role: "UI Engineer", image: "/team images/rakesh.png" },
+  { name: "Risitha", role: "Frontend Dev", image: "/team images/risitha.png" },
+  { name: "Sunny", role: "Backend Dev", image: "/team images/sunny.png" },
+  { name: "Vishawa", role: "Product Designer", image: "/team images/vishawa.png" }
 ];
 
 const About2 = () => {
@@ -205,13 +201,16 @@ const About2 = () => {
             <div className={styles["flip-card"]} key={index}>
               <div className={styles["flip-inner"]}>
                 {/* FRONT */}
-                <div className={styles["flip-front"]}>
+                <div 
+                  className={styles["flip-front"]}
+                  style={{ backgroundImage: `url('${member.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                >
                 </div>
                 {/* BACK */}
                 <div className={styles["flip-back"]}>
                   <h3>Hi 👋</h3>
-                  <p>I am the {member.role}</p>
-                  <p>in this team</p>
+                  <p>I am {member.name}</p>
+                  <p>The {member.role}</p>
                 </div>
               </div>
             </div>
