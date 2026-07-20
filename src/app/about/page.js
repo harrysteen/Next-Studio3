@@ -16,6 +16,8 @@ const map = "https://picsum.photos/800/400?random=6";
 const girl = "https://picsum.photos/400/600?random=7";
 
 const teamData = [
+  { name: "Hemaja", role: "CEO", image: "/team images/hemaja.jpeg" },
+  { name: "Kumar", role: "Full Stack Developer", image: "/team images/kumar profile.jpeg" },
   { name: "Bhanu", role: "Developer", image: "/team images/bhanu.png" },
   { name: "Bunny", role: "Designer", image: "/team images/bunny.png" },
   { name: "Rakesh", role: "UI Engineer", image: "/team images/rakesh.png" },

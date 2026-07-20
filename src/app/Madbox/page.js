@@ -5,6 +5,18 @@ import Link from "next/link";
 import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import Image from "next/image";
+import madboxImg1 from "../../work individual page assets/madbox img1.jpg";
+import madboxImg2 from "../../work individual page assets/madbox img2.jpg";
+import madboxImg3 from "../../work individual page assets/madbox img3.png";
+import madboxImg4 from "../../work individual page assets/madbox img4.png";
+import madboxImg5 from "../../work individual page assets/madbox img5.jpg";
+import madboxImg6 from "../../work individual page assets/madbox img6.jpg";
+import madboxImg7 from "../../work individual page assets/madbox img7.png";
+import madboxImg8 from "../../work individual page assets/madbox img8.png";
+import madboxImg9 from "../../work individual page assets/madbox img9.png";
+import madboxImg10 from "../../work individual page assets/madbox img10.png";
+import madboxHero from "../../work individual page assets/madbox individual page hero section img.png";
 
 export default function Madbox() {
   const scopeOfWork = [
@@ -65,7 +77,7 @@ export default function Madbox() {
     width: "100%",
     height: "100vh",
     minHeight: "550px",
-    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/madboxwork.webp')",
+    backgroundImage: `linear-gradient(#000000B2, #000000B2), url('${madboxHero.src}')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
@@ -452,7 +464,7 @@ export default function Madbox() {
               textTransform: "uppercase",
               marginBottom: "24px",
               fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
-            }}>Project Overview</h2>
+            }}>THE PROJECT SUMMARY</h2>
             <p style={{
               fontSize: width <= 480 ? "16px" : "18px",
               lineHeight: "1.8",
@@ -460,7 +472,7 @@ export default function Madbox() {
               fontFamily: "'Albert Sans', sans-serif",
               fontWeight: 400,
             }}>
-              Mad Box Project Overview.
+              MadBox Is A Dynamic Fast-Food Company Known For Its Commitment To Quality Ingredients, Bold Flavors, And Innovative Menu Offerings. With A Focus On Culinary Experimentation, MadBox Keeps Customers Engaged With Limited-Time Specials And Seasonal Creations.
             </p>
           </div>
 
@@ -484,7 +496,7 @@ export default function Madbox() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Food
+                Branding, Packaging Design
               </p>
             </div>
             <div>
@@ -508,197 +520,222 @@ export default function Madbox() {
           </div>
         </section>
 
-        {/* VIDEO SECTION */}
-        <section style={{
-          width: "100%",
-          height: width <= 768 ? "400px" : "80vh",
-          minHeight: "400px",
-          borderRadius: "16px",
+        {/* WORK PAGE IMAGES COLUMN SECTION */}
+        <div style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "40px",
           marginBottom: "80px",
-          position: "relative",
-          overflow: "hidden"
+          width: "100%"
         }}>
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          >
-            <source
-              src="https://www.dropbox.com/scl/fi/ffqkap8xoe469vfd6u4ua/18069232-uhd_3840_2160_24fps.mp4?rlkey=xylgikojt656pmmy0ua8or8lb&st=f3q4uup0&raw=1"
-              type="video/mp4"
+          <div style={{
+            position: "relative",
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={madboxImg1} 
+              alt="Madbox Brand Identity Design 1" 
+              style={{ width: "100%", height: "auto", display: "block" }}
+              sizes="100vw"
+              priority
             />
-            Your browser does not support the video tag.
-          </video>
-        </section>
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={madboxImg2} 
+              alt="Madbox Brand Identity Design 2" 
+              style={{ width: "100%", height: "auto", display: "block" }}
+              sizes="100vw"
+            />
+          </div>
+        </div>
+
+        {/* WORK PAGE IMAGES ROW SECTION */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: width <= 768 ? "1fr" : "1fr 1fr",
+          gap: "40px",
+          marginBottom: "80px",
+          width: "100%"
+        }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={madboxImg3} 
+              alt="Madbox Brand Identity Design 3" 
+              style={{ width: "100%", height: "auto", display: "block" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={madboxImg4} 
+              alt="Madbox Brand Identity Design 4" 
+              style={{ width: "100%", height: "auto", display: "block" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+
+        {/* WORK PAGE IMAGES ROW 3-COLUMN SECTION */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: width <= 480 ? "1fr" : width <= 768 ? "repeat(2, 1fr)" : "repeat(3, 1fr)",
+          gap: "30px",
+          marginBottom: "80px",
+          width: "100%"
+        }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "1/1",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={madboxImg5} 
+              alt="Madbox Brand Identity Design 5" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "1/1",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={madboxImg6} 
+              alt="Madbox Brand Identity Design 6" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "1/1",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={madboxImg7} 
+              alt="Madbox Brand Identity Design 7" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+        </div>
+
+        {/* VIDEO SECTION */}
+        
 
         {/* HOW WE HANDLED THE SITUATION */}
-        <section style={{
-          marginBottom: "120px",
-          display: "grid",
-          gridTemplateColumns: width <= 1024 ? "1fr" : "1fr 1.2fr",
-          gap: width <= 1024 ? "40px" : "80px",
-          alignItems: "center"
-        }}>
-          <div>
-            <h2 style={{
-              fontSize: width <= 480 ? "32px" : "40px",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              marginBottom: "40px",
-              fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
-              lineHeight: 1.2
-            }}>
-              HOW WE <span style={{ color: "#9cff00" }}>HANDLED</span> <br /> THE SITUATION
-            </h2>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
-                {
-                  title: "RESEARCH & DISCOVERY",
-                  desc: "We Conducted In-Depth Research By Analyzing Competitors, Identifying Key User Pain Points, And Mapping Out Detailed Customer Journeys To Uncover Opportunities For A More Intuitive And Impactful Experience."
-                },
-                { title: "WIREFRAMING & UX DESIGN", desc: "" },
-                { title: "UI DESIGN & BRANDING", desc: "" },
-                { title: "DEVELOPMENT & TESTING", desc: "" }
-              ].map((item, idx) => (
-                <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
-                  <h3 style={{
-                    color: activeProcess === idx ? "#9cff00" : "#ffffff",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
-                  }}>
-                    <span style={{ fontSize: "24px" }}>+</span> {item.title}
-                  </h3>
-                  {activeProcess === idx && item.desc && (
-                    <p style={{
-                      marginTop: "16px",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      color: "#b0b0b0",
-                      fontFamily: "'Albert Sans', sans-serif",
-                    }}>
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
-            <img 
-              src="https://picsum.photos/800/600?random=10" 
-              alt="Design Process" 
-              style={{ width: "100%", height: "auto", display: "block" }} 
-            />
-          </div>
-        </section>
+       
 
         {/* SUCCESS IN NUMBERS SECTION */}
-        <section style={{ marginBottom: "120px" }}>
-          <h2 style={{
-            fontSize: width <= 480 ? "32px" : "40px",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            marginBottom: "40px",
-            fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
-            lineHeight: 1.2
-          }}>
-            <span style={{ color: "#9cff00" }}>SUCCESS</span> IN <br /> NUMBERS & EXPERIENCE
-          </h2>
-
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: width <= 768 ? "1fr" : "repeat(3, 1fr)",
-            gap: "20px",
-          }}>
-            {/* Card 1 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>95%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>HUMAN-CENTERED <br/> DESIGN</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>87%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>PROVEN EXPERTISE <br/> RECORD</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 3 (Spans 2 rows) */}
-            <div style={{
-              gridRow: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between"
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "40px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>100%</div>
-              <div>
-                <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>MEASURABLE <br/> IMPACT</h3>
-                <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                  We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 (Spans 2 cols) */}
-            <div style={{
-              gridColumn: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>25X</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>STARTUPS&apos;S SCALABLE SOLUTION</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-          </div>
-        </section>
+        
       </main>
 
       {/* FINAL MOCKUP IMAGE SECTION (FULL WIDTH) */}
       <section style={{
         width: "100%",
-        marginBottom: "120px",
+        marginBottom: "80px",
+        padding: "0 5%"
       }}>
-        <img 
-          src="https://picsum.photos/1200/800?random=11" 
-          alt="Project Mockups" 
-          style={{ width: "100vw", height: "auto", display: "block", objectFit: "cover" }} 
-        />
+        <div style={{
+          position: "relative",
+          width: "100%",
+          borderRadius: "16px",
+          overflow: "hidden",
+          border: "1px solid rgba(255, 255, 255, 0.1)",
+          boxShadow: "0 20px 45px rgba(0, 0, 0, 0.3)"
+        }}>
+          <Image 
+            src={madboxImg8} 
+            alt="Madbox Final Brand Showcase Presentation" 
+            style={{ width: "100%", height: "auto", display: "block" }}
+            sizes="100vw"
+          />
+        </div>
+      </section>
+      {/* FINAL MOCKUP ROW SECTION (IMAGES 9 & 10) */}
+      <section style={{
+        width: "100%",
+        marginBottom: "80px",
+        padding: "0 5%"
+      }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: width <= 768 ? "1fr" : "1fr 1fr",
+          gap: "40px",
+          width: "100%"
+        }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "16/10",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={madboxImg9} 
+              alt="Madbox Brand Identity Design 9" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "16/10",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={madboxImg10} 
+              alt="Madbox Brand Identity Design 10" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
       </section>
 
       <Footer />

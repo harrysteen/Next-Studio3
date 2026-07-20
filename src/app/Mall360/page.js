@@ -606,7 +606,7 @@ export default function Mall360() {
         </section>
 
         {/* SUCCESS IN NUMBERS SECTION */}
-        <section style={{ marginBottom: "120px" }}>
+        <section style={{ marginBottom: "0px" }}>
           <h2 style={{
             fontSize: width <= 480 ? "32px" : "40px",
             fontWeight: 700,
@@ -689,16 +689,139 @@ export default function Mall360() {
         </section>
       </main>
 
-      {/* FINAL MOCKUP IMAGE SECTION (FULL WIDTH) */}
-      <section style={{
-        width: "100%",
-        marginBottom: "120px",
-      }}>
-        <img 
-          src="https://picsum.photos/1200/800?random=11" 
-          alt="Project Mockups" 
-          style={{ width: "100vw", height: "auto", display: "block", objectFit: "cover" }} 
-        />
+      {/* INFINITE SCROLLING MARQUEE SECTION */}
+      <section className="marqueeContainer">
+        <style dangerouslySetInnerHTML={{ __html: `
+          @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @keyframes scrollRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+          .marqueeWrapper {
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 0px;
+            margin-bottom: 100px;
+          }
+          .marqueeRow {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+          }
+          .marqueeTrack {
+            display: flex;
+            width: max-content;
+            gap: 30px;
+          }
+          .marqueeLeft {
+            animation: scrollLeft 40s linear infinite;
+          }
+          .marqueeRight {
+            animation: scrollRight 40s linear infinite;
+          }
+          .marqueeItem {
+            flex-shrink: 0;
+            width: 340px;
+            height: 220px;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+          }
+          .marqueeItem:hover {
+            transform: scale(1.03);
+          }
+          .marqueeImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        ` }} />
+        <div className="marqueeWrapper">
+          {/* Row 1 (moving right) */}
+          <div className="marqueeRow">
+            <div className="marqueeTrack marqueeRight">
+              {[
+                "/ourwork/ecomallwork.webp",
+                "/ourwork/highcloudwork.webp",
+                "/ourwork/kshatriyaswork.webp",
+                "/ourwork/leiutis.webp",
+                "/ourwork/madboxwork.webp",
+                "/ourwork/mall360.webp"
+              ].concat([
+                "/ourwork/ecomallwork.webp",
+                "/ourwork/highcloudwork.webp",
+                "/ourwork/kshatriyaswork.webp",
+                "/ourwork/leiutis.webp",
+                "/ourwork/madboxwork.webp",
+                "/ourwork/mall360.webp"
+              ]).map((src, index) => (
+                <div key={`row1-${index}`} className="marqueeItem">
+                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2 (moving left) */}
+          <div className="marqueeRow">
+            <div className="marqueeTrack marqueeLeft">
+              {[
+                "/ourwork/naeeamzafar.webp",
+                "/ourwork/siliconvalley.webp",
+                "/ourwork/venturawork.webp",
+                "/tie_herosection_img.jpg",
+                "/tie_silicon_valley_hero.png",
+                "/ourwork/madboxwork.webp"
+              ].concat([
+                "/ourwork/naeeamzafar.webp",
+                "/ourwork/siliconvalley.webp",
+                "/ourwork/venturawork.webp",
+                "/tie_herosection_img.jpg",
+                "/tie_silicon_valley_hero.png",
+                "/ourwork/madboxwork.webp"
+              ]).map((src, index) => (
+                <div key={`row2-${index}`} className="marqueeItem">
+                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 3 (moving right) */}
+          <div className="marqueeRow">
+            <div className="marqueeTrack marqueeRight">
+              {[
+                "/ourwork/leiutis.webp",
+                "/ourwork/madboxwork.webp",
+                "/ourwork/mall360.webp",
+                "/ourwork/naeeamzafar.webp",
+                "/ourwork/siliconvalley.webp",
+                "/ourwork/venturawork.webp"
+              ].concat([
+                "/ourwork/leiutis.webp",
+                "/ourwork/madboxwork.webp",
+                "/ourwork/mall360.webp",
+                "/ourwork/naeeamzafar.webp",
+                "/ourwork/siliconvalley.webp",
+                "/ourwork/venturawork.webp"
+              ]).map((src, index) => (
+                <div key={`row3-${index}`} className="marqueeItem">
+                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       <Footer />
