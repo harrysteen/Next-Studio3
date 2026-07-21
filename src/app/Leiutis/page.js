@@ -2,9 +2,28 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import leiutisHero from "../../work individual page assets/Leiutis individual page hero section img.png";
+import leiutisImg1 from "../../work individual page assets/leiutis image1.png";
+import leiutisImg2 from "../../work individual page assets/leiutis image2.png";
+import leiutisImg3 from "../../work individual page assets/leiutis image3.png";
+import leiutisImg4 from "../../work individual page assets/leiutis image4.png";
+import leiutisImg5 from "../../work individual page assets/leiutis image5.png";
+import leiutisImg7 from "../../work individual page assets/leiutis image7.png";
+import leiutisImg8 from "../../work individual page assets/leiutis image8.png";
+import leiutisImg9 from "../../work individual page assets/leiutis image9.png";
+import leiutisImg10 from "../../work individual page assets/leiutis image10.png";
+import leiutisImg11 from "../../work individual page assets/leiutis image11.png";
+import leiutisImg12 from "../../work individual page assets/leiutis image12.jpg";
+import leiutisImg13 from "../../work individual page assets/leiutis image13.png";
+import leiutisImg14 from "../../work individual page assets/leiutis image14.png";
+import leiutisImg15 from "../../work individual page assets/leiutis image15.png";
+import leiutisImg16 from "../../work individual page assets/leiutis image16.png";
+import leiutisImg17 from "../../work individual page assets/leiutis image17.png";
+import leiutisImg18 from "../../work individual page assets/leiutis image18.png";
 
 export default function Leiutis() {
   const scopeOfWork = [
@@ -65,7 +84,7 @@ export default function Leiutis() {
     width: "100%",
     height: "100vh",
     minHeight: "550px",
-    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/leiutis.webp')",
+    backgroundImage: `linear-gradient(#000000B2, #000000B2), url('${leiutisHero.src}')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
@@ -429,7 +448,7 @@ export default function Leiutis() {
           <h1 style={heroTitleStyle}>
             LEIUTIS
           </h1>
-          <span style={heroTaglineStyle}>@USA~2025</span>
+          <span style={heroTaglineStyle}>@Hyderabad~2023</span>
         </div>
       </section>
 
@@ -452,7 +471,7 @@ export default function Leiutis() {
               textTransform: "uppercase",
               marginBottom: "24px",
               fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
-            }}>Project Overview</h2>
+            }}>THE PROJECT SUMMARY</h2>
             <p style={{
               fontSize: width <= 480 ? "16px" : "18px",
               lineHeight: "1.8",
@@ -460,7 +479,7 @@ export default function Leiutis() {
               fontFamily: "'Albert Sans', sans-serif",
               fontWeight: 400,
             }}>
-              Leiutis Project Overview.
+              Leiutis Is A Pharmaceutical Innovation Company With Track Record Of Successful Commercialized Product Alliance Partnerships Globally.They Create Innovative Products That Provide Advancement In Treatment In Specific Therapeutic Areas.
             </p>
           </div>
 
@@ -484,7 +503,9 @@ export default function Leiutis() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Healthcare
+                Branding, Content Design, Copy Writing
+                <br />
+                Book Design
               </p>
             </div>
             <div>
@@ -509,196 +530,382 @@ export default function Leiutis() {
         </section>
 
         {/* VIDEO SECTION */}
-        <section style={{
-          width: "100%",
-          height: width <= 768 ? "400px" : "80vh",
-          minHeight: "400px",
-          borderRadius: "16px",
-          marginBottom: "80px",
-          position: "relative",
-          overflow: "hidden"
-        }}>
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          >
-            <source
-              src="https://www.dropbox.com/scl/fi/ffqkap8xoe469vfd6u4ua/18069232-uhd_3840_2160_24fps.mp4?rlkey=xylgikojt656pmmy0ua8or8lb&st=f3q4uup0&raw=1"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-        </section>
+
 
         {/* HOW WE HANDLED THE SITUATION */}
-        <section style={{
-          marginBottom: "120px",
-          display: "grid",
-          gridTemplateColumns: width <= 1024 ? "1fr" : "1fr 1.2fr",
-          gap: width <= 1024 ? "40px" : "80px",
-          alignItems: "center"
-        }}>
-          <div>
-            <h2 style={{
-              fontSize: width <= 480 ? "32px" : "40px",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              marginBottom: "40px",
-              fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
-              lineHeight: 1.2
-            }}>
-              HOW WE <span style={{ color: "#9cff00" }}>HANDLED</span> <br /> THE SITUATION
-            </h2>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
-                {
-                  title: "RESEARCH & DISCOVERY",
-                  desc: "We Conducted In-Depth Research By Analyzing Competitors, Identifying Key User Pain Points, And Mapping Out Detailed Customer Journeys To Uncover Opportunities For A More Intuitive And Impactful Experience."
-                },
-                { title: "WIREFRAMING & UX DESIGN", desc: "" },
-                { title: "UI DESIGN & BRANDING", desc: "" },
-                { title: "DEVELOPMENT & TESTING", desc: "" }
-              ].map((item, idx) => (
-                <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
-                  <h3 style={{
-                    color: activeProcess === idx ? "#9cff00" : "#ffffff",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
-                  }}>
-                    <span style={{ fontSize: "24px" }}>+</span> {item.title}
-                  </h3>
-                  {activeProcess === idx && item.desc && (
-                    <p style={{
-                      marginTop: "16px",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      color: "#b0b0b0",
-                      fontFamily: "'Albert Sans', sans-serif",
-                    }}>
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
-            <img 
-              src="https://picsum.photos/800/600?random=10" 
-              alt="Design Process" 
-              style={{ width: "100%", height: "auto", display: "block" }} 
-            />
-          </div>
-        </section>
 
         {/* SUCCESS IN NUMBERS SECTION */}
-        <section style={{ marginBottom: "120px" }}>
-          <h2 style={{
-            fontSize: width <= 480 ? "32px" : "40px",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            marginBottom: "40px",
-            fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
-            lineHeight: 1.2
-          }}>
-            <span style={{ color: "#9cff00" }}>SUCCESS</span> IN <br /> NUMBERS & EXPERIENCE
-          </h2>
 
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: width <= 768 ? "1fr" : "repeat(3, 1fr)",
-            gap: "20px",
-          }}>
-            {/* Card 1 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>95%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>HUMAN-CENTERED <br/> DESIGN</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>87%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>PROVEN EXPERTISE <br/> RECORD</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 3 (Spans 2 rows) */}
-            <div style={{
-              gridRow: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between"
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "40px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>100%</div>
-              <div>
-                <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>MEASURABLE <br/> IMPACT</h3>
-                <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                  We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 (Spans 2 cols) */}
-            <div style={{
-              gridColumn: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>25X</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>STARTUPS&apos;S SCALABLE SOLUTION</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
 
       {/* FINAL MOCKUP IMAGE SECTION (FULL WIDTH) */}
       <section style={{
         width: "100%",
-        marginBottom: "120px",
+        marginBottom: "80px",
+        padding: "0 5%"
       }}>
-        <img 
-          src="https://picsum.photos/1200/800?random=11" 
-          alt="Project Mockups" 
-          style={{ width: "100vw", height: "auto", display: "block", objectFit: "cover" }} 
-        />
+        <div style={{
+          position: "relative",
+          width: "100%",
+          borderRadius: "16px",
+          overflow: "hidden",
+          border: "1px solid rgba(255, 255, 255, 0.1)",
+          boxShadow: "0 20px 45px rgba(0, 0, 0, 0.3)"
+        }}>
+          <Image
+            src={leiutisImg1}
+            alt="Leiutis Brand Showcase Presentation"
+            style={{ width: "100%", height: "auto", display: "block" }}
+            sizes="100vw"
+          />
+        </div>
+      </section>
+
+      {/* FINAL MOCKUP ROW SECTION (IMAGES 2 & 3) */}
+      <section style={{
+        width: "100%",
+        marginBottom: "80px",
+        padding: "0 5%"
+      }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: width <= 768 ? "1fr" : "1fr 1fr",
+          gap: "40px",
+          width: "100%"
+        }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "16/10",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image
+              src={leiutisImg2}
+              alt="Leiutis Brand Identity Design 2"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "16/10",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image
+              src={leiutisImg3}
+              alt="Leiutis Brand Identity Design 3"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL MOCKUP ROW SECTION (IMAGES 4 & 5) */}
+      <section style={{
+        width: "100%",
+        marginBottom: "80px",
+        padding: "0 5%"
+      }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: width <= 768 ? "1fr" : "1fr 1fr",
+          gap: "40px",
+          width: "100%"
+        }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "16/10",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image
+              src={leiutisImg4}
+              alt="Leiutis Brand Identity Design 4"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "16/10",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image
+              src={leiutisImg5}
+              alt="Leiutis Brand Identity Design 5"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL MOCKUP ROW SECTION (IMAGES 7 & 8 & 9) */}
+      <section style={{
+        width: "100%",
+        marginBottom: "80px",
+        padding: "0 5%"
+      }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: width <= 480 ? "1fr" : width <= 768 ? "1fr 1fr" : "1fr 1fr 1fr",
+          gap: "40px",
+          width: "100%"
+        }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg7} 
+              alt="Leiutis Brand Identity Design 7" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg8} 
+              alt="Leiutis Brand Identity Design 8" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg9} 
+              alt="Leiutis Brand Identity Design 9" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL MOCKUP ROW SECTION (IMAGES 10 & 11 & 12) */}
+      <section style={{
+        width: "100%",
+        marginBottom: "80px",
+        padding: "0 5%"
+      }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: width <= 480 ? "1fr" : width <= 768 ? "1fr 1fr" : "1fr 1fr 1fr",
+          gap: "40px",
+          width: "100%"
+        }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg10} 
+              alt="Leiutis Brand Identity Design 10" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg11} 
+              alt="Leiutis Brand Identity Design 11" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg12} 
+              alt="Leiutis Brand Identity Design 12" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL MOCKUP ROW SECTION (IMAGES 13 & 14 & 15) */}
+      <section style={{
+        width: "100%",
+        marginBottom: "80px",
+        padding: "0 5%"
+      }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: width <= 480 ? "1fr" : width <= 768 ? "1fr 1fr" : "1fr 1fr 1fr",
+          gap: "40px",
+          width: "100%"
+        }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg13} 
+              alt="Leiutis Brand Identity Design 13" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg14} 
+              alt="Leiutis Brand Identity Design 14" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg15} 
+              alt="Leiutis Brand Identity Design 15" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL MOCKUP ROW SECTION (IMAGES 16 & 17 & 18) */}
+      <section style={{
+        width: "100%",
+        marginBottom: "80px",
+        padding: "0 5%"
+      }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: width <= 480 ? "1fr" : width <= 768 ? "1fr 1fr" : "1fr 1fr 1fr",
+          gap: "40px",
+          width: "100%"
+        }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg16} 
+              alt="Leiutis Brand Identity Design 16" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg17} 
+              alt="Leiutis Brand Identity Design 17" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image 
+              src={leiutisImg18} 
+              alt="Leiutis Brand Identity Design 18" 
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+        </div>
       </section>
 
       <Footer />
