@@ -84,7 +84,7 @@ export default function Leiutis() {
     width: "100%",
     height: "100vh",
     minHeight: "550px",
-    backgroundImage: `linear-gradient(#000000B2, #000000B2), url('${leiutisHero.src}')`,
+    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/work individual page assets/Leiutis individual page hero section img.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",

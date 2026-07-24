@@ -27,7 +27,7 @@ export default function Engagement() {
         "Need a fresh perspective",
         "Have fixed deadlines"
       ],
-      img: "https://picsum.photos/800/600?random=30",
+      img: "/home assets/ONE-TIME ENGAGEMENTS.webp",
       ctaText: "Talk to us",
       ctaLink: "/contact"
     },
@@ -41,7 +41,7 @@ export default function Engagement() {
         "Continuous product iterations",
         "Long-term strategic growth"
       ],
-      img: "https://picsum.photos/800/600?random=31",
+      img: "/home assets/ONGOING PARTNERSHIP.webp",
       ctaText: "Talk to us",
       ctaLink: "/contact"
     },
@@ -55,7 +55,7 @@ export default function Engagement() {
         "Predictable monthly budgets",
         "Maintenance & minor updates"
       ],
-      img: "https://picsum.photos/800/600?random=32",
+      img: "/home assets/RETAINER MODEL.webp",
       ctaText: "Talk to us",
       ctaLink: "/contact"
     }

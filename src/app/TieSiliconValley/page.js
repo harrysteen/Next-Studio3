@@ -65,7 +65,7 @@ export default function TieSiliconValley() {
     width: "100%",
     height: "100vh",
     minHeight: "550px",
-    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/tie_herosection_img.jpg')",
+    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/tie_silicon_valley_hero.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
@@ -484,7 +484,7 @@ export default function TieSiliconValley() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Rebranding, UI/UX Design,<br/>Content Strategy
+                Rebranding, UI/UX Design,<br />Content Strategy
               </p>
             </div>
             <div>
@@ -597,10 +597,10 @@ export default function TieSiliconValley() {
           </div>
 
           <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
-            <img 
-              src="https://picsum.photos/800/600?random=10" 
-              alt="Design Process" 
-              style={{ width: "100%", height: "auto", display: "block" }} 
+            <img
+              src="https://picsum.photos/800/600?random=10"
+              alt="Design Process"
+              style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
         </section>
@@ -631,7 +631,7 @@ export default function TieSiliconValley() {
               backgroundColor: "rgba(0, 0, 0, 0.2)",
             }}>
               <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>95%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>HUMAN-CENTERED <br/> DESIGN</h3>
+              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>HUMAN-CENTERED <br /> DESIGN</h3>
               <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
                 We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
               </p>
@@ -645,7 +645,7 @@ export default function TieSiliconValley() {
               backgroundColor: "rgba(0, 0, 0, 0.2)",
             }}>
               <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>87%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>PROVEN EXPERTISE <br/> RECORD</h3>
+              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>PROVEN EXPERTISE <br /> RECORD</h3>
               <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
                 We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
               </p>
@@ -664,7 +664,7 @@ export default function TieSiliconValley() {
             }}>
               <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "40px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>100%</div>
               <div>
-                <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>MEASURABLE <br/> IMPACT</h3>
+                <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>MEASURABLE <br /> IMPACT</h3>
                 <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
                   We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
                 </p>
@@ -691,7 +691,8 @@ export default function TieSiliconValley() {
 
       {/* INFINITE SCROLLING MARQUEE SECTION */}
       <section className="marqueeContainer">
-        <style dangerouslySetInnerHTML={{ __html: `
+        <style dangerouslySetInnerHTML={{
+          __html: `
           @keyframes scrollLeft {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -718,32 +719,48 @@ export default function TieSiliconValley() {
             display: flex;
             width: max-content;
             gap: 30px;
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
           }
           .marqueeLeft {
-            animation: scrollLeft 40s linear infinite;
+            animation: scrollLeft 45s linear infinite;
           }
           .marqueeRight {
-            animation: scrollRight 40s linear infinite;
+            animation: scrollRight 45s linear infinite;
+          }
+          .marqueeWrapper:hover .marqueeLeft,
+          .marqueeWrapper:hover .marqueeRight {
+            animation-play-state: paused;
           }
           .marqueeItem {
             flex-shrink: 0;
-            width: 340px;
-            height: 220px;
+            width: 460px;
+            height: 290px;
             position: relative;
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease;
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
           }
           .marqueeItem:hover {
-            transform: scale(1.03);
+            transform: scale(1.03) translateZ(0);
           }
           .marqueeImg {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top center;
             display: block;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            transform: translateZ(0);
+            backface-visibility: hidden;
           }
         ` }} />
         <div className="marqueeWrapper">
@@ -751,22 +768,20 @@ export default function TieSiliconValley() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/tie loop scroll img1.webp",
+                "/work individual page assets/tie loop scroll img2.webp",
+                "/work individual page assets/tie loop scroll img3.webp",
+                "/work individual page assets/tie loop scroll img4.webp",
+                "/work individual page assets/tie loop scroll img5.webp"
               ].concat([
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/tie loop scroll img1.webp",
+                "/work individual page assets/tie loop scroll img2.webp",
+                "/work individual page assets/tie loop scroll img3.webp",
+                "/work individual page assets/tie loop scroll img4.webp",
+                "/work individual page assets/tie loop scroll img5.webp"
               ]).map((src, index) => (
                 <div key={`row1-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="TiE Silicon Valley Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -776,22 +791,20 @@ export default function TieSiliconValley() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeLeft">
               {[
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/tie loop scroll img6.webp",
+                "/work individual page assets/tie loop scroll img7.webp",
+                "/work individual page assets/tie loop scroll img8.webp",
+                "/work individual page assets/tie loop scroll img9.webp",
+                "/work individual page assets/tie loop scroll img10.webp"
               ].concat([
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/tie loop scroll img6.webp",
+                "/work individual page assets/tie loop scroll img7.webp",
+                "/work individual page assets/tie loop scroll img8.webp",
+                "/work individual page assets/tie loop scroll img9.webp",
+                "/work individual page assets/tie loop scroll img10.webp"
               ]).map((src, index) => (
                 <div key={`row2-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="TiE Silicon Valley Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -801,22 +814,20 @@ export default function TieSiliconValley() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
+                "/work individual page assets/tie loop scroll img12.webp",
+                "/work individual page assets/tie loop scroll img13.webp",
+                "/work individual page assets/tie loop scroll img14.webp",
+                "/work individual page assets/tie loop scroll img15.webp",
+                "/work individual page assets/tie loop scroll img1.webp"
               ].concat([
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
+                "/work individual page assets/tie loop scroll img12.webp",
+                "/work individual page assets/tie loop scroll img13.webp",
+                "/work individual page assets/tie loop scroll img14.webp",
+                "/work individual page assets/tie loop scroll img15.webp",
+                "/work individual page assets/tie loop scroll img1.webp"
               ]).map((src, index) => (
                 <div key={`row3-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="TiE Silicon Valley Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>

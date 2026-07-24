@@ -16,13 +16,43 @@ const map = "https://picsum.photos/800/400?random=6";
 const girl = "https://picsum.photos/400/600?random=7";
 
 const teamData = [
-  { name: "Hemaja", role: "CEO", image: "/team images/hemaja.jpeg" },
-  { name: "Kumar", role: "Full Stack Developer", image: "/team images/kumar profile.jpeg" },
-  { name: "Bhanu", role: "Developer", image: "/team images/bhanu.png" },
+  {
+    name: "Himajaa",
+    role: "CEO",
+    bio: "Hi, I am the CEO. I am obsessed with reading and dissecting perspectives.",
+    image: "/team images/hemaja.jpeg"
+  },
+  {
+    name: "Kumar",
+    role: "Senior Developer",
+    bio: "Hi, I am the Senior Developer. Everything about technology excites me. I love learning and building exciting things.",
+    image: "/team images/kumar profile.jpeg"
+  },
+  {
+    name: "Bhanu",
+    role: "Senior Designer",
+    bio: "Hey, I am a Senior Designer. I love solving creative challenges and driving teams to achieve our best output.",
+    image: "/team images/bhanu.png"
+  },
   { name: "Bunny", role: "Designer", image: "/team images/bunny.png" },
-  { name: "Rakesh", role: "UI Engineer", image: "/team images/rakesh.png" },
-  { name: "Risitha", role: "Frontend Dev", image: "/team images/risitha.png" },
-  { name: "Sunny", role: "Backend Dev", image: "/team images/sunny.png" },
+  {
+    name: "Rakesh",
+    role: "Senior Designer",
+    bio: "Hi, I am a Senior Designer. I thrive on building visually stunning brands and identities for various companies.",
+    image: "/team images/rakesh.png"
+  },
+  {
+    name: "Rishita",
+    role: "Senior Designer",
+    bio: "Hi, I am a Senior Designer. I enjoy strategy and designing for processes and doing little art pieces as a hobby.",
+    image: "/team images/risitha.png"
+  },
+  {
+    name: "Sunny",
+    role: "Senior Designer",
+    bio: "Hello, I am a Senior Designer and I love exploring and implementing new design trends and methods.",
+    image: "/team images/sunny.png"
+  },
   { name: "Vishawa", role: "Product Designer", image: "/team images/vishawa.png" }
 ];
 
@@ -41,10 +71,10 @@ const About2 = () => {
         line.style.setProperty("--progress", progress);
       });
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -52,267 +82,254 @@ const About2 = () => {
 
   return (
     <>
-    <div className={styles["About-us"]}>
-      <Navbar />
-      {/* <StickyNav /> */}
+      <div className={styles["About-us"]}>
+        <Navbar />
+        {/* <StickyNav /> */}
 
-      <section className={styles["About-us-section"]}>
-        <h2 className={styles["about-heading"]}>
-          WE WORK AT THE INTERSECTION OF STRATEGY AND DESIGN FOR EMERGING TECHNOLOGIES.
-        </h2>
-        <div className={styles.slider}>
-          <div className={styles["slide-track"]}>
-            <img src={img1} className={styles["img-tall"]} alt="" />
-            <img src={img2} className={styles["img-small"]} alt="" />
-            <img src={img3} className={styles["img-tall"]} alt="" />
-            <img src={img4} className={styles["img-tall"]} alt="" />
-            <img src={img4} className={styles["img-small"]} alt="" />
-            {/* duplicate for infinite loop */}
-            <img src={img1} className={styles["img-tall"]} alt="" />
-            <img src={img2} className={styles["img-small"]} alt="" />
-            <img src={img3} className={styles["img-tall"]} alt="" />
-            <img src={img4} className={styles["img-tall"]} alt="" />
-            <img src={img4} className={styles["img-small"]} alt="" />
-          </div>
-        </div>
-      </section>
-
-      {/* ********************* section-2 ********************* */}
-      <section className={styles["story-section"]}>
-        <div className={styles["story-container"]}>
-          <p className={styles["story-label"]}>✦ Our Story</p>
-          <h2 className={styles["story-text"]}>
-            WE STARTED STUDIO DEZU TO HELP COMPANIES THINK BETTER,
-            NOT JUST LOOK BETTER.
-            <span>
-              WE UNDERSTAND EVOLVING TECHNOLOGIES, MARKETS AND EXPECTATIONS
-            </span>
-            TO DESIGN FOR CLARITY, MOMENTUM AND LONG-TERM ADVANTAGE.
+        <section className={styles["About-us-section"]}>
+          <h2 className={styles["about-heading"]}>
+            WE WORK AT THE INTERSECTION OF STRATEGY AND DESIGN FOR EMERGING TECHNOLOGIES.
           </h2>
-          <div className={styles["story-image"]}>
-            <img src={img5} alt="design workspace"/>
+          <div className={styles.slider}>
+            <div className={styles["slide-track"]}>
+              <img src={img1} className={styles["img-tall"]} alt="" />
+              <img src={img2} className={styles["img-small"]} alt="" />
+              <img src={img3} className={styles["img-tall"]} alt="" />
+              <img src={img4} className={styles["img-tall"]} alt="" />
+              <img src={img4} className={styles["img-small"]} alt="" />
+              {/* duplicate for infinite loop */}
+              <img src={img1} className={styles["img-tall"]} alt="" />
+              <img src={img2} className={styles["img-small"]} alt="" />
+              <img src={img3} className={styles["img-tall"]} alt="" />
+              <img src={img4} className={styles["img-tall"]} alt="" />
+              <img src={img4} className={styles["img-small"]} alt="" />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ********************* section-3 ********************* */}
-      <section className={styles["future-section"]}>
-        <div className={styles["future-container"]}>
-          <h2 className={styles["future-title"]}>
-            SHAPING THE <br />
-            <span>FUTURE</span> TOGETHER
-          </h2>
-          <div className={styles.timeline}>
-
-            {/* Item 1 */}
-            <div className={styles["timeline-item"]}>
-              <div className={styles["timeline-left"]}>
-                <div className={styles.circle}>
-                  <span className={styles.star}>✦</span>
-                </div>
-                <div className={styles.line}></div>
-              </div>
-              <div className={styles["timeline-label"]}>
-                What We Believe
-              </div>
-              <div className={styles["timeline-content"]}>
-                <h3>STRONG OPINIONS. CLEAR DIRECTION.</h3>
-                <p>
-                  We believe design without strategy is guesswork. If it doesn't
-                  move the business forward or scale with it, it's not finished.
-                </p>
-              </div>
+        {/* ********************* section-2 ********************* */}
+        <section className={styles["story-section"]}>
+          <div className={styles["story-container"]}>
+            <p className={styles["story-label"]}>✦ Our Story</p>
+            <h2 className={styles["story-text"]}>
+              <span>IN A WORLD THAT IS BECOMING INCREASINGLY AI DISRUPTED, THE COMPANIES THAT THRIVE ARE THE ONES THAT PRIORITISE THEIR USER.</span>{" "}
+              AT STUDIO DEZU, WE BELIEVE IN A HUMAN-FIRST APPROACH. OUR PROCESSES ARE ROOTED IN EMPATHY AND GENUINE DISCOVERY. WE UNDERSTAND THE COMPLEXITY AND DYNAMISM OF DIFFERENT TEAMS AND BUILD STRATEGIC PARTNERSHIPS THAT WORK AND ADAPT WITH TIME.
+            </h2>
+            <div className={styles["story-image"]}>
+              <img src={img5} alt="design workspace" />
             </div>
-
-            {/* Item 2 */}
-            <div className={styles["timeline-item"]}>
-              <div className={styles["timeline-left"]}>
-                <div className={styles.circle}>
-                  <span className={styles.star}>✦</span>
-                </div>
-                <div className={styles.line}></div>
-              </div>
-              <div className={styles["timeline-label"]}>
-                What We Do
-              </div>
-              <div className={styles["timeline-content"]}>
-                <h3>HELPING COMPANIES DRIVE IMPACT <br/> THROUGH DESIGN</h3>
-                <p>
-                  Our work starts with defining direction and ends with systems,
-                  products and brands that teams can run with.
-                </p>
-              </div>
-            </div>
-
-            {/* Item 3 */}
-            <div className={styles["timeline-item"]}>
-              <div className={styles["timeline-left"]}>
-                <div className={styles.circle}>
-                  <span className={styles.star}>✦</span>
-                </div>
-              </div>
-              <div className={styles["timeline-label"]}>
-                Who We're For
-              </div>
-              <div className={styles["timeline-content"]}>
-                <h3>FOR BUILDERS WHO THINK IN SYSTEMS</h3>
-                <p>
-                  We work with founders, leaders and institutions building for
-                  the long term — where design is capability, not cosmetic.
-                </p>
-              </div>
-            </div>
-
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* **************           section -4           *************** */}
-      <section className={styles["global-section"]}>
-      <h2 className={styles["global-title"]}>
+        {/* ********************* section-3 ********************* */}
+        <section className={styles["future-section"]}>
+          <div className={styles["future-container"]}>
+            <h2 className={styles["future-title"]}>
+              TIMESTAMPS FROM OUR <span>JOURNEY</span>
+            </h2>
+            <div className={styles.timeline}>
+
+              {/* Item 1 */}
+              <div className={styles["timeline-item"]}>
+                <div className={styles["timeline-left"]}>
+                  <div className={styles.circle}>
+                    <span className={styles.star}>✦</span>
+                  </div>
+                  <div className={styles.line}></div>
+                </div>
+                <div className={styles["timeline-label"]}>
+                  2021
+                </div>
+                <div className={styles["timeline-content"]}>
+                  <h3>WHEN WE STARTED</h3>
+                  <p>
+                    Studio Dezu was started as a passion project. The idea was to use strategy and storytelling to help businesses transform.
+                  </p>
+                </div>
+              </div>
+
+              {/* Item 2 */}
+              <div className={styles["timeline-item"]}>
+                <div className={styles["timeline-left"]}>
+                  <div className={styles.circle}>
+                    <span className={styles.star}>✦</span>
+                  </div>
+                  <div className={styles.line}></div>
+                </div>
+                <div className={styles["timeline-label"]}>
+                  45+
+                </div>
+                <div className={styles["timeline-content"]}>
+                  <h3>CLIENTS THAT WE HELPED</h3>
+                  <p>
+                    We worked with companies with vastly different requirements and complexities over the years.
+                  </p>
+                </div>
+              </div>
+
+              {/* Item 3 */}
+              <div className={styles["timeline-item"]}>
+                <div className={styles["timeline-left"]}>
+                  <div className={styles.circle}>
+                    <span className={styles.star}>✦</span>
+                  </div>
+                </div>
+                <div className={styles["timeline-label"]}>
+                  10+
+                </div>
+                <div className={styles["timeline-content"]}>
+                  <h3>INDUSTRIES WE HAVE TOUCHED</h3>
+                  <p>
+                    Our work spreads across multiple key industries. Our experience is rich and varied.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* **************           section -4           *************** */}
+        <section className={styles["global-section"]}>
+          <h2 className={styles["global-title"]}>
             <span>GLOBAL</span> BY DEFAULT.
           </h2>
-      <div className={styles["global-container"]}>
-        {/* LEFT CONTENT */}
-        <div className={styles["global-left"]}>
-          <h3 className={styles["global-subtitle"]}>BUILT IN INDIA.</h3>
-          <h4 className={styles["global-heading"]}>
-            OPERATING ACROSS THE <br /> OCEANS
-          </h4>
-          <p className={styles["global-text"]}>
-            We collaborate with teams across geographies, cultures and time zones
-            designing with global ambition and local context. Logistics are
-            solvable. Alignment is the real work.
-          </p>
-        </div>
-        {/* MAP */}
-        <div className={styles["global-map"]}>
-          <img src={map} alt="world map" />
-        </div>
+          <div className={styles["global-container"]}>
+            {/* LEFT CONTENT */}
+            <div className={styles["global-left"]}>
+              <h3 className={styles["global-subtitle"]}>OUR HOME BASE IS IN INDIA BUT WE OPERATE ACROSS THE GLOBE.</h3>
+              <p className={styles["global-text"]}>
+                Our obsession with understanding users expanded our horizons. We ventured far out from our home base to solve for different problems in different countries. Our work now spans across India, USA, APAC and UAE.
+              </p>
+            </div>
+            {/* MAP */}
+            <div className={styles["global-map"]}>
+              <img src={map} alt="world map" />
+            </div>
+          </div>
+        </section>
+
+        {/* *********************** secton-5 ****************************** */}
+        <section className={styles["team-section"]}>
+          <h2 className={styles["team-title"]}>
+            MULTIPLE MINDS. ONE ORGANISM.
+          </h2>
+          <div className={styles["team-grid"]}>
+            {teamData.map((member, index) => (
+              <div className={styles["flip-card"]} key={index}>
+                <div className={styles["flip-inner"]}>
+                  {/* FRONT */}
+                  <div
+                    className={styles["flip-front"]}
+                    style={{ backgroundImage: `url('${member.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                  >
+                  </div>
+                  {/* BACK */}
+                  <div className={styles["flip-back"]}>
+                    <h3>{member.name}</h3>
+                    <p className={styles["member-role"]}>{member.role}</p>
+                    {member.bio && <p className={styles["member-bio"]}>{member.bio}</p>}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* /*****************section-6 ************************************** */}
+        <section className={styles["trust-section"]}>
+          <h2 className={styles["trust-title"]}>
+            WE BUILD TRUST <br />
+            AND <span>DRIVE RESULTS</span>
+          </h2>
+          <div className={styles["trust-grid"]}>
+            <div className={styles.card}>
+              <div className={styles.icon}>⬢</div>
+              <h3>PROOF OVER PROMISES</h3>
+              <p>
+                We measure our work by what changes after it ships clarity improves,
+                teams move faster, and growth becomes easier to sustain.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.icon}>⬢</div>
+              <h3>OWNERSHIP WITH OUTCOME</h3>
+              <p>
+                We take responsibility for impact, stay close to the work, and optimize until
+                it does what it’s meant to do in the real world.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.icon}>⬢</div>
+              <h3>DESIGNED TO PERFORM</h3>
+              <p>
+                Everything we create is built to drive real outcomes adoption,
+                scale, and momentum. Not just visual approval.
+              </p>
+            </div>
+            {/* IMAGE */}
+            <div className={styles["image-box"]}>
+              <img src={girl} alt="team" />
+              <div className={styles.stats}>
+                <div className={styles.stat}>
+                  <h3>45+</h3>
+                  <p>Successful projects</p>
+                </div>
+                <div className={styles.stat}>
+                  <h3>4+</h3>
+                  <p>Countries</p>
+                </div>
+                <div className={styles.stat}>
+                  <h3>10x</h3>
+                  <p>Impact Created</p>
+                </div>
+              </div>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.icon}>⬢</div>
+              <h3>HUMAN BY DESIGN</h3>
+              <p>
+                We design for how humans think, feel, and behave. So our products are intuitive,
+                communication is clear, and systems actually get used.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* *********************** section-7 ****************************** */}
+        <section className={styles["behind-section"]}>
+          <h2 className={styles["behind-title"]}>
+            Behind the <span>scenes</span>
+          </h2>
+          <div className={styles["behind-gallery"]}>
+            <div className={`${styles["behind-card"]} ${styles.card1}`}>
+              <img src={img1} alt="" />
+            </div>
+            <div className={`${styles["behind-card"]} ${styles.card2}`}>
+              <img src={img2} alt="" />
+            </div>
+            <div className={`${styles["behind-card"]} ${styles.card3}`}>
+              <img src={img3} alt="" />
+            </div>
+            <div className={`${styles["behind-card"]} ${styles.card4}`}>
+              <img src={img4} alt="" />
+            </div>
+            <div className={`${styles["behind-card"]} ${styles.card5}`}>
+              <img src={img5} alt="" />
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+
+        {/* Bottom Nav for Desktop/Tablet Consistency */}
+        <nav className={styles.bottomNav} aria-label="Primary Navigation">
+          <Link href="/work" className={styles.navLink}>Work</Link>
+          <Link href="/team" className={styles.navLink}>Get Your Own Team</Link>
+          <Link href="/about" className={styles.navLink}>About</Link>
+          <Link href="/dezu" className={styles.navLink}>Dezu</Link>
+        </nav>
       </div>
-      </section>
-
-      {/* *********************** secton-5 ****************************** */}
-      <section className={styles["team-section"]}>
-        <h2 className={styles["team-title"]}>
-          MULTIPLE MINDS. ONE ORGANISM.
-        </h2>
-        <div className={styles["team-grid"]}>
-          {teamData.map((member, index) => (
-            <div className={styles["flip-card"]} key={index}>
-              <div className={styles["flip-inner"]}>
-                {/* FRONT */}
-                <div 
-                  className={styles["flip-front"]}
-                  style={{ backgroundImage: `url('${member.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-                >
-                </div>
-                {/* BACK */}
-                <div className={styles["flip-back"]}>
-                  <h3>Hi 👋</h3>
-                  <p>I am {member.name}</p>
-                  <p>The {member.role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* /*****************section-6 ************************************** */ }
-      <section className={styles["trust-section"]}>
-        <h2 className={styles["trust-title"]}>
-          WE BUILD TRUST <br />
-          AND <span>DRIVE RESULTS</span>
-        </h2>
-        <div className={styles["trust-grid"]}>
-          <div className={styles.card}>
-            <div className={styles.icon}>⬢</div>
-            <h3>PROOF OVER PROMISES</h3>
-            <p>
-            We measure our work by what changes after it ships clarity improves, 
-            teams move faster, and growth becomes easier to sustain.
-            </p>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.icon}>⬢</div>
-            <h3>OWNERSHIP WITH OUTCOME</h3>
-            <p>
-            We take responsibility for impact, stay close to the work, and optimize until
-             it does what it’s meant to do in the real world.
-            </p>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.icon}>⬢</div>
-            <h3>DESIGNED TO PERFORM</h3>
-            <p>
-            Everything we create is built to drive real outcomes adoption,
-            scale, and momentum. Not just visual approval.
-            </p>
-          </div>
-          {/* IMAGE */}
-          <div className={styles["image-box"]}>
-            <img src={girl} alt="team" />
-            <div className={styles.stats}>
-              <div className={styles.stat}>
-                <h3>45+</h3>
-                <p>Successful projects</p>
-              </div>
-              <div className={styles.stat}>
-                <h3>4+</h3>
-                <p>Countries</p>
-              </div>
-              <div className={styles.stat}>
-                <h3>10x</h3>
-                <p>Impact Created</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.icon}>⬢</div>
-            <h3>HUMAN BY DESIGN</h3>
-            <p>
-            We design for how humans think, feel, and behave. So our products are intuitive,
-             communication is clear, and systems actually get used.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* *********************** section-7 ****************************** */}
-      <section className={styles["behind-section"]}>
-        <h2 className={styles["behind-title"]}>
-          Behind the <span>scenes</span>
-        </h2>
-        <div className={styles["behind-gallery"]}>
-          <div className={`${styles["behind-card"]} ${styles.card1}`}>
-            <img src={img1} alt="" />
-          </div>
-          <div className={`${styles["behind-card"]} ${styles.card2}`}>
-            <img src={img2} alt="" />
-          </div>
-          <div className={`${styles["behind-card"]} ${styles.card3}`}>
-            <img src={img3} alt="" />
-          </div>
-          <div className={`${styles["behind-card"]} ${styles.card4}`}>
-            <img src={img4} alt="" />
-          </div>
-          <div className={`${styles["behind-card"]} ${styles.card5}`}>
-            <img src={img5} alt="" />
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-
-      {/* Bottom Nav for Desktop/Tablet Consistency */}
-      <nav className={styles.bottomNav} aria-label="Primary Navigation">
-        <Link href="/work" className={styles.navLink}>Work</Link>
-        <Link href="/team" className={styles.navLink}>Get Your Own Team</Link>
-        <Link href="/about" className={styles.navLink}>About</Link>
-        <Link href="/dezu" className={styles.navLink}>Dezu</Link>
-      </nav>
-    </div>
     </>
   );
 };

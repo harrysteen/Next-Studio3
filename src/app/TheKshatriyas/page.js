@@ -65,7 +65,7 @@ export default function TheKshatriyas() {
     width: "100%",
     height: "100vh",
     minHeight: "550px",
-    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/kshatriyas work.webp')",
+    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/work individual page assets/kastriya indivudial page hero image.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
