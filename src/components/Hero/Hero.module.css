@@ -13,7 +13,8 @@
 .content {
   margin-top: -10vh;
   /* slightly pull up */
-  max-width: 1000px;
+  max-width: 1200px;
+  width: 100%;
   position: relative;
   z-index: 10;
 }
@@ -25,6 +26,30 @@
   letter-spacing: -1px;
   margin-bottom: 20px;
   color: #fff;
+}
+
+.wordRotator {
+  display: inline-block;
+  min-width: 260px;
+  text-align: left;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.underlined {
+  text-decoration: underline;
+  text-decoration-color: #ABFF4F;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+}
+
+.subline {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 12px;
+  margin-bottom: 24px;
+  letter-spacing: -0.2px;
 }
 
 .arrowIcon {
@@ -43,10 +68,14 @@
 }
 
 .accentText {
-  color: var(--accent-color);
-  font-size: 20px;
-  font-weight: 500;
-  font-family: monospace;
+  color: #ABFF4F;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  leading-trim: none;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .bottomSection {
@@ -102,6 +131,15 @@
 @media (max-width: 768px) {
   .title {
     font-size: 36px;
+  }
+
+  .wordRotator {
+    min-width: 170px;
+  }
+
+  .subline {
+    font-size: 16px;
+    margin-bottom: 16px;
   }
 
   .downArrows {

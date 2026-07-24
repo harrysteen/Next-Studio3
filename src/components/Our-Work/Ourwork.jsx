@@ -139,8 +139,8 @@ export default function Ourwork() {
             {/* Absolute Centered Text */}
             <div className={styles.centerText}>
                 <h2>
-                    OUR WORK<br />
-                    <span>YOUR SUCCESS</span>
+                    GROWTH PARTNER<br />
+                    <span>FROM DAY ZERO.</span>
                 </h2>
             </div>
 

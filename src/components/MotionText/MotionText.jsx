@@ -103,11 +103,9 @@ const MotionText = () => {
             </div>
 
             <span ref={textRef} className={styles.textContent}>
-              DESIGN moved from Pixels to Strategy and Speed. Today’s companies need
-              strategic function, dynamic communication and
+              Studio Dezu builds human-first digital products and systems that thrust innovative companies to success in the AI-first world.
               <span style={{ color: "#ABFF4F" }}>
-                {" "}connection. We fuse strategy, design, and storytelling to build brands
-                and digital products built for growth.
+                {" "}We build brands, products and systems that understand, adapt and evolve with your users and their preferences.
               </span>
             </span>
           </h2>

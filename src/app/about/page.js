@@ -58,8 +58,7 @@ const About2 = () => {
 
       <section className={styles["About-us-section"]}>
         <h2 className={styles["about-heading"]}>
-          GOOD DESIGN SOLVES TODAY. <br />
-          GREAT DESIGN SCALES TOMORROW.
+          WE WORK AT THE INTERSECTION OF STRATEGY AND DESIGN FOR EMERGING TECHNOLOGIES.
         </h2>
         <div className={styles.slider}>
           <div className={styles["slide-track"]}>

@@ -5,47 +5,57 @@ import SplitText from "./SplitText";
 
 const services = [
   {
-    title: "RESEARCH & DISCOVERY",
+    title: "STRATEGY",
     metrics: [
-      "Competitor & Market Analayis",
-      "Usability & Accessbility Review",
-      "User interviews & Surveys",
+      "Strategic Research and Discovery",
+      "User Experience Research",
+      "Brand Strategy and Positioning",
+      "Marketing and Execution Strategy",
+      "Product Strategy",
     ],
     image: "https://picsum.photos/900/400?random=20",
   },
   {
-    title: "BRANDING & CREATIVE",
+    title: "BRANDING",
     metrics: [
-      "Brand Identity",
-      "Logo Design",
-      "Visual Strategy",
+      "Visual Identity Systems",
+      "Brand & Marketing Collateral",
+      "Illustration & Mascot Design",
+      "Motion Design",
     ],
     image: "https://picsum.photos/900/400?random=21",
   },
   {
-    title: "DESIGNING USER EXPERIENCE",
+    title: "WEB",
     metrics: [
-      "Wireframing",
-      "Prototyping",
-      "User Flows",
+      "Information Architecture & User Flows",
+      "Interface Design & Interactions",
+      "Web Animations & Transitions",
+      "Design Systems & Documentation",
+      "Web Copywriting & UX Writing",
     ],
     image: "https://picsum.photos/900/400?random=22",
   },
   {
-    title: "USER INTERFACE DESIGN",
+    title: "PRODUCT",
     metrics: [
-      "High-Fidelity Mockups",
-      "Design Systems",
-      "Interaction Design",
+      "Interaction Architecture & Product Flows",
+      "Interface Design & Micro-interactions",
+      "Design Systems & Component Libraries",
+      "Animated Product Visualisations",
+      "Prototyping, Testing & User Validation",
     ],
     image: "https://picsum.photos/900/400?random=23",
   },
   {
     title: "DEVELOPMENT",
     metrics: [
-      "Frontend Engineering",
-      "Backend Architecture",
-      "CMS Integration",
+      "Backend Development",
+      "Front-end Development",
+      "Mobile Development",
+      "CMS Development",
+      "Generative AI & Machine Learning",
+      "Quality Assurance & Maintenance",
     ],
     image: "https://picsum.photos/900/400?random=24",
   },
@@ -62,7 +72,7 @@ export default function Faq() {
     <section className={styles.container} id="services">
       <div className={styles.header}>
         <div className={styles.subtitle}>
-          <span className={styles.sparkle}>✦</span> OUR SERVICES
+          <span className={styles.sparkle}>✦</span> WHAT WE OFFER
         </div>
         <h2 className={styles.title}>
           <SplitText
@@ -80,6 +90,9 @@ export default function Faq() {
             tag="span"
           />
         </h2>
+        <p className={styles.headerDesc}>
+          We work at individual intersections as well as the overall vision to drive results.
+        </p>
       </div>
 
       <div className={styles.faqList}>
@@ -105,17 +118,12 @@ export default function Faq() {
                 {isOpen && (
                   <div className={styles.innerContent}>
                     <div className={styles.metrics}>
-                      <span className={styles.metricText}>
-                        {service.metrics[0]}
-                      </span>
-                      <div className={styles.metricLine}></div>
-                      <span className={styles.metricText}>
-                        {service.metrics[1]}
-                      </span>
-                      <div className={styles.metricLine}></div>
-                      <span className={styles.metricText}>
-                        {service.metrics[2]}
-                      </span>
+                      {service.metrics.map((metric, i) => (
+                        <React.Fragment key={i}>
+                          {i > 0 && <div className={styles.metricLine}></div>}
+                          <span className={styles.metricText}>{metric}</span>
+                        </React.Fragment>
+                      ))}
                     </div>
 
                     <div className={styles.imageWrap}>

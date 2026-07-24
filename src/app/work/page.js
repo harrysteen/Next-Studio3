@@ -103,7 +103,7 @@ const Work = () => {
 
       <section className={styles.workSection}>
         <h1 className={styles.workTitle}>
-          SHOWCASING <br /> CREATIVE EXCELLENCE
+          THE WORK WE DID AND <br /> THE IMPACT WE CREATED
         </h1>
 
         {/* FILTER BUTTONS */}

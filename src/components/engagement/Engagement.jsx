@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Engagement.module.css";
@@ -18,36 +19,45 @@ export default function Engagement() {
   const cardData = [
     {
       type: "ONE-TIME ENGAGEMENTS",
-      title: "For clarity, speed, and decisive momentum.",
-      desc: "Ideal when you need sharp thinking, fast alignment, or a strong starting point. We step in, diagnose, design, and hand over with precision—no loose ends.",
+      title: "For clarity, speed and decisive momentum.",
+      desc: "This is ideal when the requirement is clear and timelines are specific. We jump in, discover and deliver with precision.",
+      bestForTitle: "Best for teams that",
       bestFor: [
-        "Have clear requirements",
-        "Need fresh perspective",
-        "Need clarity and quick strategy"
+        "Need quick strategy and delivery",
+        "Need a fresh perspective",
+        "Have fixed deadlines"
       ],
-      img: "https://picsum.photos/800/600?random=30"
+      img: "https://picsum.photos/800/600?random=30",
+      ctaText: "Talk to us",
+      ctaLink: "/contact"
     },
     {
       type: "ONGOING PARTNERSHIP",
       title: "Continuous design evolution and support.",
       desc: "Perfect for scaling startups and enterprise teams needing a reliable, fully integrated design arm. We become an extension of your own product squad.",
+      bestForTitle: "Best for teams that",
       bestFor: [
         "Need a dedicated design team",
         "Continuous product iterations",
         "Long-term strategic growth"
       ],
-      img: "https://picsum.photos/800/600?random=31"
+      img: "https://picsum.photos/800/600?random=31",
+      ctaText: "Talk to us",
+      ctaLink: "/contact"
     },
     {
       type: "RETAINER MODEL",
       title: "Flexible bandwidth. Uncompromising quality.",
       desc: "Reserve guaranteed hours per month for whatever design needs arise. A predictable, cost-effective way to keep your product aesthetics perfectly tuned.",
+      bestForTitle: "Best for teams that",
       bestFor: [
         "Fluctuating design needs",
         "Predictable monthly budgets",
         "Maintenance & minor updates"
       ],
-      img: "https://picsum.photos/800/600?random=32"
+      img: "https://picsum.photos/800/600?random=32",
+      ctaText: "Talk to us",
+      ctaLink: "/contact"
     }
   ];
 
@@ -57,11 +67,11 @@ export default function Engagement() {
       {/* Absolute header that sits at the top of the stack */}
       <div className={styles.header}>
         <div className={styles.subtitle}>
-          <span>✦</span> OUR SERVICES
+          <span>✦</span> MODES OF ENGAGEMENT
         </div>
         <h2 className={styles.title}>
           <SplitText
-            text="ENGAGEMENT MODELS - FLEXIBLE BY DESIGN"
+            text="WE UNDERSTAND THAT DYNAMIC PROBLEMS NEED ADAPTIVE WORK MODES."
             className={styles.splitTextHeading}
             delay={50}
             duration={1.25}
@@ -85,17 +95,19 @@ export default function Engagement() {
               <h3>{card.type}</h3>
               <h2>{card.title}</h2>
               <p className={styles.desc}>{card.desc}</p>
-              <h4>Best for Teams that</h4>
+              <h4>{card.bestForTitle}</h4>
               <ul>
                 {card.bestFor.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
+              <Link href={card.ctaLink} className={styles.ctaButton}>
+                {card.ctaText} →
+              </Link>
             </div>
 
             {/* RIGHT IMAGE */}
             <div className={styles.rightImage}>
-              {/* Note: In production you would use next/image imported assets */}
               <img src={card.img} alt={card.type} />
             </div>
           </div>
