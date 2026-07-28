@@ -57,7 +57,7 @@ const services = [
       "Generative AI & Machine Learning",
       "Quality Assurance & Maintenance",
     ],
-    image: "/home assets/development.webp",
+    image: "/home assets/development.jpg",
   },
 ];
 
@@ -117,21 +117,25 @@ export default function Faq() {
               >
                 {isOpen && (
                   <div className={styles.innerContent}>
-                    <div className={styles.metrics}>
-                      {service.metrics.map((metric, i) => (
-                        <React.Fragment key={i}>
-                          {i > 0 && <div className={styles.metricLine}></div>}
-                          <span className={styles.metricText}>{metric}</span>
-                        </React.Fragment>
-                      ))}
-                    </div>
-
                     <div className={styles.imageWrap}>
                       <img
                         src={service.image}
                         alt={service.title}
                         className={styles.image}
                       />
+                    </div>
+
+                    <div className={styles.contentWrap}>
+                      <div className={styles.pillGrid}>
+                        {service.metrics.map((metric, i) => (
+                          <div key={i} className={styles.pillBadge}>
+                            <span className={styles.pillBadgeNumber}>
+                              {String(i + 1).padStart(2, "0")}
+                            </span>
+                            <span className={styles.pillBadgeText}>{metric}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 )}

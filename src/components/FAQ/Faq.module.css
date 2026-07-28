@@ -129,40 +129,107 @@
 
 .faqContent.open {
   height: auto;
+  overflow: visible;
   opacity: 1;
   padding-bottom: 40px;
 }
 
-.metrics {
-  display: flex;
-  justify-content: space-between;
+.innerContent {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 40px;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 6px;
-  margin-bottom: 30px;
-  padding: 0 5px;
+  padding-top: 15px;
 }
 
-.metricText {
-  color: #fff;
-  font-size: clamp(11.5px, 0.95vw, 13px);
-  font-weight: 400;
-  white-space: nowrap;
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.metricLine {
-  flex-grow: 1;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 0 8px;
-  min-width: 10px;
+.pillGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 6px 16px 6px 4px;
+}
+
+.pillBadge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pillBadge:hover {
+  background: rgba(156, 255, 0, 0.08);
+  border-color: #9cff00;
+  transform: translateX(6px);
+  box-shadow: 0 6px 20px rgba(156, 255, 0, 0.2);
+}
+
+.pillBadgeNumber {
+  font-size: 13px;
+  font-weight: 700;
+  color: #9cff00;
+  background: rgba(156, 255, 0, 0.12);
+  border: 1px solid rgba(156, 255, 0, 0.3);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-albert), sans-serif;
+  transition: all 0.3s ease;
+}
+
+.pillBadge:hover .pillBadgeNumber {
+  background: #9cff00;
+  color: #130323;
+}
+
+.pillBadgeText {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-family: var(--font-albert), sans-serif;
+  transition: color 0.3s ease;
+}
+
+.pillBadge:hover .pillBadgeText {
+  color: #ffffff;
 }
 
 .imageWrap {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  height: 600px;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  max-height: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  background-color: #18052e;
+}
+
+.imageWrap:hover {
+  border-color: rgba(156, 255, 0, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(156, 255, 0, 0.1);
 }
 
 .image {
@@ -170,32 +237,43 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .metrics {
-    flex-wrap: wrap;
-    gap: 12px 0;
-  }
-  .metricLine {
-    margin: 0 10px;
+  .innerContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
   .imageWrap {
-    height: 450px;
+    max-height: 340px;
   }
 }
 
 @media (max-width: 768px) {
-  .metrics {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+  .innerContent {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
-  .metricLine {
-    display: none;
+
+  .pillGrid {
+    gap: 10px;
   }
+
+  .pillBadge {
+    padding: 12px 18px;
+  }
+
+  .pillBadge:hover {
+    transform: translateY(-2px);
+  }
+
   .imageWrap {
-    height: 300px;
+    max-height: 280px;
   }
 }
