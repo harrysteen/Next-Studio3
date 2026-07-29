@@ -18,42 +18,84 @@ const girl = "https://picsum.photos/400/600?random=7";
 const teamData = [
   {
     name: "Himajaa",
-    role: "CEO",
-    bio: "Hi, I am the CEO. I am obsessed with reading and dissecting perspectives.",
+    role: "",
+    bio: (
+      <>
+        Hi, I am the <span style={{ color: "#9cff3b", fontWeight: "bold" }}>CEO</span>. I am obsessed with reading and dissecting perspectives.
+      </>
+    ),
     image: "/team images/hemaja.jpeg"
   },
   {
     name: "Kumar",
-    role: "Senior Developer",
-    bio: "Hi, I am the Senior Developer. Everything about technology excites me. I love learning and building exciting things.",
+    role: "",
+    bio: (
+      <>
+        Hi, I am the <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Developer</span>. Everything about technology excites me. I love learning and building exciting things.
+      </>
+    ),
     image: "/team images/kumar profile.jpeg"
   },
   {
     name: "Bhanu",
-    role: "Senior Designer",
-    bio: "Hey, I am a Senior Designer. I love solving creative challenges and driving teams to achieve our best output.",
+    role: "",
+    bio: (
+      <>
+        Hey, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I love solving creative challenges and driving teams to achieve our best output.
+      </>
+    ),
     image: "/team images/bhanu.png"
   },
-  { name: "Bunny", role: "Designer", image: "/team images/bunny.png" },
+  {
+    name: "Bunny",
+    role: "",
+    bio: (
+      <>
+        Hey, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>UI/UX Designer</span>. I enjoy creating unique, user-centered experiences that are visually engaging, easy to use, and designed to leave a lasting impression.
+      </>
+    ),
+    image: "/team images/bunny.png"
+  },
   {
     name: "Rakesh",
-    role: "Senior Designer",
-    bio: "Hi, I am a Senior Designer. I thrive on building visually stunning brands and identities for various companies.",
+    role: "",
+    bio: (
+      <>
+        Hi, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I thrive on building visually stunning brands and identities for various companies.
+      </>
+    ),
     image: "/team images/rakesh.png"
   },
   {
     name: "Rishita",
-    role: "Senior Designer",
-    bio: "Hi, I am a Senior Designer. I enjoy strategy and designing for processes and doing little art pieces as a hobby.",
+    role: "",
+    bio: (
+      <>
+        Hi, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I enjoy strategy and designing for processes and doing little art pieces as a hobby.
+      </>
+    ),
     image: "/team images/risitha.png"
   },
   {
     name: "Sunny",
-    role: "Senior Designer",
-    bio: "Hello, I am a Senior Designer and I love exploring and implementing new design trends and methods.",
+    role: "",
+     bio: (
+      <>
+        Hello, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I love exploring and implementing new design trends and methods.
+      </>
+    ),
     image: "/team images/sunny.png"
   },
-  { name: "Vishawa", role: "Product Designer", image: "/team images/vishawa.png" }
+  {
+    name: "Vishwambhar",
+    role: "",
+    bio: (
+      <>
+        Hi, I'm a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>UI/UX Designer</span>. I enjoy creating unique, user-centered experiences that are visually engaging, easy to use, and designed to leave a lasting impression.
+      </>
+    ),
+    image: "/team images/vishawa.png"
+  }
 ];
 
 const About2 = () => {
