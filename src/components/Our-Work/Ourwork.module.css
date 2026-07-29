@@ -128,9 +128,15 @@
 
 .cardImage {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.1);
 }
 
 .cardFooter {

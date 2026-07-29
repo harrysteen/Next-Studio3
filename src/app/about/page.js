@@ -11,7 +11,7 @@ const img1 = "https://picsum.photos/400/600?random=1";
 const img2 = "https://picsum.photos/400/600?random=2";
 const img3 = "https://picsum.photos/400/600?random=3";
 const img4 = "https://picsum.photos/400/600?random=4";
-const img5 = "https://picsum.photos/800/400?random=5";
+const img5 = "/team images/Team Image.png";
 const map = "https://picsum.photos/800/400?random=6";
 const girl = "https://picsum.photos/400/600?random=7";
 
@@ -79,7 +79,7 @@ const teamData = [
   {
     name: "Sunny",
     role: "",
-     bio: (
+    bio: (
       <>
         Hello, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I love exploring and implementing new design trends and methods.
       </>
@@ -158,7 +158,7 @@ const About2 = () => {
               AT STUDIO DEZU, WE BELIEVE IN A HUMAN-FIRST APPROACH. OUR PROCESSES ARE ROOTED IN EMPATHY AND GENUINE DISCOVERY. WE UNDERSTAND THE COMPLEXITY AND DYNAMISM OF DIFFERENT TEAMS AND BUILD STRATEGIC PARTNERSHIPS THAT WORK AND ADAPT WITH TIME.
             </h2>
             <div className={styles["story-image"]}>
-              <img src={img5} alt="design workspace" />
+              <img src={img5} alt="Studio Dezu Team" />
             </div>
           </div>
         </section>

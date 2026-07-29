@@ -37,7 +37,7 @@ export default function Hero() {
           </span>
         </h1>
         <p className={styles.subline}>
-          Your full-cycle design and technology partner
+          YOUR FULL-CYCLE DESIGN AND TECHNOLOGY PARTNER
         </p>
         <div className={styles.subtitleContainer}>
           <span className={styles.accentText}>@Since~2021</span>

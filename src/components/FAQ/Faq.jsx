@@ -78,8 +78,8 @@ export default function Faq() {
           <SplitText
             text="CREATING IMPACT THROUGH CONSISTENT COLLABORATION"
             className={styles.splitTextHeading}
-            delay={50}
-            duration={1.25}
+            delay={30}
+            duration={0.8}
             ease="power3.out"
             splitType="words,chars"
             from={{ opacity: 0, y: 40 }}

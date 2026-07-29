@@ -19,7 +19,7 @@
 }
 
 .workTitle {
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-weight: 600;
   font-size: 68px;
   line-height: 132%;
@@ -35,7 +35,7 @@
 }
 
 .workFilters button {
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
@@ -84,11 +84,12 @@
   width: 100%;
   display: block;
   object-fit: cover;
+  transform: scale(1.05);
   transition: transform .5s ease;
 }
 
 .workCard:hover img {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 .workInfo {
