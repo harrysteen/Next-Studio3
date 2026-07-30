@@ -10,8 +10,7 @@ export default function Articals() {
     <section className={styles.container} id="articles">
       <div className={styles.header}>
         <div className={styles.titleGroup}>
-          <h2 className={styles.subtitle}>OUR LATEST</h2>
-          <h2 className={styles.title}>ARTICLES & RESOURCES</h2>
+          <h2 className={styles.title}>Our thoughts, ideas and perspectives.</h2>
         </div>
         <Link href="/blogs" className={styles.viewAll}>
           VIEW ALL

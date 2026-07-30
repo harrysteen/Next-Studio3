@@ -7,33 +7,34 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 // import StickyNav from "../../components/StickyNav";
 import teamImg from "./team-assets/team.png";
+import get1Img from "../../team images/get-1.png";
+import tokenMindImg from "../../team images/token_mind.png";
 
 // Replaced static imports with standard public paths (using picsum wrappers for safety).
 const heroImg = "https://picsum.photos/1200/800?random=1";
 const sricity = "https://picsum.photos/100/100?random=2";
 const Getimg2 = "https://picsum.photos/800/600?random=3";
-const icon = "https://picsum.photos/50/50?random=4";
 
 const items = [
-  { title: "STARTUPS", img: Getimg2 },
-  { title: "FOUNDERS", img: heroImg },
-  { title: "NON-TECHNICAL FOUNDERS", img: Getimg2 },
-  { title: "PRODUCT TEAMS", img: heroImg },
-  { title: "GROWING COMPANIES", img: Getimg2 },
-  { title: "AGENCIES", img: heroImg },
-  { title: "IT COMPANIES", img: Getimg2 },
-  { title: "ENTERPRISES", img: heroImg },
-  { title: "SAAS TEAMS", img: Getimg2 },
-  { title: "GLOBAL CLIENTS", img: heroImg },
+  { title: "STARTUPS", img: "/home assets/statage.webp" },
+  { title: "FOUNDERS", img: "/home assets/ONGOING PARTNERSHIP.webp" },
+  { title: "NON-TECHNICAL FOUNDERS", img: "/home assets/ONE-TIME ENGAGEMENTS.webp" },
+  { title: "PRODUCT TEAMS", img: "/home assets/production.webp" },
+  { title: "GROWING COMPANIES", img: "/ourwork/venturawork.webp" },
+  { title: "AGENCIES", img: "/home assets/Branding.webp" },
+  { title: "IT COMPANIES", img: "/home assets/development.webp" },
+  { title: "ENTERPRISES", img: "/ourwork/siliconvalley.webp" },
+  { title: "SAAS TEAMS", img: "/ourwork/mall360.webp" },
+  { title: "GLOBAL CLIENTS", img: "/home assets/web.webp" },
 ];
 
 const services = [
-  { title: "BRANDING", icon: icon },
-  { title: "MARKETING", icon: icon },
-  { title: "TECH SUPPORT", icon: icon },
-  { title: "UX RESEARCH", icon: icon },
-  { title: "UI DESIGN", icon: icon },
-  { title: "BRANDING", icon: icon },
+  { title: "BRANDING", icon: tokenMindImg.src || tokenMindImg },
+  { title: "MARKETING", icon: tokenMindImg.src || tokenMindImg },
+  { title: "TECH SUPPORT", icon: tokenMindImg.src || tokenMindImg },
+  { title: "UX RESEARCH", icon: tokenMindImg.src || tokenMindImg },
+  { title: "UI DESIGN", icon: tokenMindImg.src || tokenMindImg },
+  { title: "DEVELOPMENT", icon: tokenMindImg.src || tokenMindImg },
 ];
 
 const steps = [
@@ -102,35 +103,38 @@ const GetyourownTeam = () => {
 
       {/* section -2 */}
       <section className={styles.designed}>
+        <div className={styles.sectionHeader}>
+          <h2>
+            <span>DESIGNED</span>
+            <br />
+            TO DELIVER
+          </h2>
+        </div>
+
         <div className={styles["designed-container"]}>
-          {/* LEFT CONTENT */}
+          {/* LEFT CONTENT - IMAGE */}
           <div className={styles["designed-left"]}>
-            <h2>
-              <span>DESIGNED</span>
-              <br />
-              TO DELIVER
-            </h2>
             <img
-              src={Getimg2}
+              src={get1Img.src || get1Img}
               alt="team"
               className={styles["team-img"]}
             />
           </div>
 
-          {/* RIGHT CONTENT */}
+          {/* RIGHT CONTENT - FEATURES */}
           <div className={styles["designed-right"]}>
             <div className={styles.feature}>
               <h3>FLEXIBILITY</h3>
               <p>
                 Scale your team up or down anytime based on your project needs. Whether you
-                need one specialist or a full cross-functional 
+                need one specialist or a full cross-functional
                 team, we adapt without long-term commitments, delays, or hiring overhead.
               </p>
             </div>
             <div className={styles.feature}>
               <h3>COHESIVE</h3>
               <p>
-                Our team works as a single unit, aligned with your goals, processes, and 
+                Our team works as a single unit, aligned with your goals, processes, and
                 culture. With clear communication and shared ownership,
                 you get consistent quality and faster execution—just like an in-house team.
               </p>
@@ -161,6 +165,8 @@ const GetyourownTeam = () => {
                 key={index}
                 ref={(el) => (refs.current[index] = el)}
                 className={active === index ? styles.active : ""}
+                onMouseEnter={() => setActive(index)}
+                style={{ cursor: "pointer" }}
               >
                 {item.title}
               </h3>
