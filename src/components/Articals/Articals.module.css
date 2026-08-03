@@ -21,7 +21,7 @@
 }
 
 .viewAll {
-  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 18px;
@@ -69,7 +69,8 @@
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  height: 500px; /* fixed height to match image proportions */
+  height: 500px;
+  /* fixed height to match image proportions */
   background-color: #1a0b2e;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -102,22 +103,22 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(11, 2, 23, 0.6) 0%,
-    rgba(11, 2, 23, 0.2) 50%,
-    rgba(11, 2, 23, 0.8) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(11, 2, 23, 0.6) 0%,
+      rgba(11, 2, 23, 0.2) 50%,
+      rgba(11, 2, 23, 0.8) 100%);
   z-index: 2;
   transition: background 0.4s ease;
 }
 
 .card:hover .overlay {
-  background: rgba(11, 2, 23, 0.8); /* Darker on hover */
+  background: rgba(11, 2, 23, 0.8);
+  /* Darker on hover */
 }
 
 /* Content wrappers */
-.contentNormal, .contentHover {
+.contentNormal,
+.contentHover {
   position: absolute;
   top: 0;
   left: 0;
@@ -232,6 +233,7 @@
   .grid {
     grid-template-columns: 1fr;
   }
+
   .card {
     height: 400px;
   }

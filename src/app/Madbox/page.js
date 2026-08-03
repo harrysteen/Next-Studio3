@@ -89,7 +89,7 @@ export default function Madbox() {
   };
 
   const heroTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "38px" : width <= 768 ? "50px" : "72px",
     fontWeight: 700,
     lineHeight: 1.1,
@@ -158,7 +158,7 @@ export default function Madbox() {
   };
 
   const statNumberStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: "54px",
     fontWeight: 700,
     color: "#9cff00",
@@ -184,7 +184,7 @@ export default function Madbox() {
   const detailLeftStyle = {};
 
   const detailLeftTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "30px" : "40px",
     fontWeight: 600,
     textTransform: "uppercase",
@@ -284,7 +284,7 @@ export default function Madbox() {
   const publicationsLeftStyle = {};
 
   const publicationsLeftTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "30px" : "40px",
     fontWeight: 600,
     textTransform: "uppercase",
@@ -345,7 +345,7 @@ export default function Madbox() {
   };
 
   const advisoryTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "30px" : "40px",
     fontWeight: 600,
     textTransform: "uppercase",
@@ -382,7 +382,7 @@ export default function Madbox() {
   const getBoardLogoPlaceholderStyle = (index) => {
     const isHovered = hoveredBoard === index;
     return {
-      fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+      fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
       fontSize: "22px",
       fontWeight: 700,
       color: isHovered ? "#9cff00" : "#FFFFFF",
@@ -463,7 +463,7 @@ export default function Madbox() {
               fontWeight: 600,
               textTransform: "uppercase",
               marginBottom: "24px",
-              fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+              fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
             }}>THE PROJECT SUMMARY</h2>
             <p style={{
               fontSize: width <= 480 ? "16px" : "18px",
@@ -488,7 +488,7 @@ export default function Madbox() {
                 fontWeight: 600,
                 textTransform: "uppercase",
                 marginBottom: "16px",
-                fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
               }}>What We Did</h2>
               <p style={{
                 fontSize: width <= 480 ? "16px" : "18px",
@@ -506,7 +506,7 @@ export default function Madbox() {
                 fontWeight: 600,
                 textTransform: "uppercase",
                 marginBottom: "16px",
-                fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
               }}>Industry</h2>
               <p style={{
                 fontSize: width <= 480 ? "16px" : "18px",
@@ -536,9 +536,9 @@ export default function Madbox() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={madboxImg1} 
-              alt="Madbox Brand Identity Design 1" 
+            <Image
+              src={madboxImg1}
+              alt="Madbox Brand Identity Design 1"
               style={{ width: "100%", height: "auto", display: "block" }}
               sizes="100vw"
               priority
@@ -552,9 +552,9 @@ export default function Madbox() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={madboxImg2} 
-              alt="Madbox Brand Identity Design 2" 
+            <Image
+              src={madboxImg2}
+              alt="Madbox Brand Identity Design 2"
               style={{ width: "100%", height: "auto", display: "block" }}
               sizes="100vw"
             />
@@ -577,9 +577,9 @@ export default function Madbox() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={madboxImg3} 
-              alt="Madbox Brand Identity Design 3" 
+            <Image
+              src={madboxImg3}
+              alt="Madbox Brand Identity Design 3"
               style={{ width: "100%", height: "auto", display: "block" }}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
@@ -592,9 +592,9 @@ export default function Madbox() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={madboxImg4} 
-              alt="Madbox Brand Identity Design 4" 
+            <Image
+              src={madboxImg4}
+              alt="Madbox Brand Identity Design 4"
               style={{ width: "100%", height: "auto", display: "block" }}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
@@ -618,9 +618,9 @@ export default function Madbox() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={madboxImg5} 
-              alt="Madbox Brand Identity Design 5" 
+            <Image
+              src={madboxImg5}
+              alt="Madbox Brand Identity Design 5"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -634,9 +634,9 @@ export default function Madbox() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={madboxImg6} 
-              alt="Madbox Brand Identity Design 6" 
+            <Image
+              src={madboxImg6}
+              alt="Madbox Brand Identity Design 6"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -650,9 +650,9 @@ export default function Madbox() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={madboxImg7} 
-              alt="Madbox Brand Identity Design 7" 
+            <Image
+              src={madboxImg7}
+              alt="Madbox Brand Identity Design 7"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -660,13 +660,13 @@ export default function Madbox() {
         </div>
 
         {/* VIDEO SECTION */}
-        
+
 
         {/* HOW WE HANDLED THE SITUATION */}
-       
+
 
         {/* SUCCESS IN NUMBERS SECTION */}
-        
+
       </main>
 
       {/* FINAL MOCKUP IMAGE SECTION (FULL WIDTH) */}
@@ -683,9 +683,9 @@ export default function Madbox() {
           border: "1px solid rgba(255, 255, 255, 0.1)",
           boxShadow: "0 20px 45px rgba(0, 0, 0, 0.3)"
         }}>
-          <Image 
-            src={madboxImg8} 
-            alt="Madbox Final Brand Showcase Presentation" 
+          <Image
+            src={madboxImg8}
+            alt="Madbox Final Brand Showcase Presentation"
             style={{ width: "100%", height: "auto", display: "block" }}
             sizes="100vw"
           />
@@ -712,9 +712,9 @@ export default function Madbox() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={madboxImg9} 
-              alt="Madbox Brand Identity Design 9" 
+            <Image
+              src={madboxImg9}
+              alt="Madbox Brand Identity Design 9"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
@@ -728,9 +728,9 @@ export default function Madbox() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={madboxImg10} 
-              alt="Madbox Brand Identity Design 10" 
+            <Image
+              src={madboxImg10}
+              alt="Madbox Brand Identity Design 10"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 768px) 100vw, 50vw"
             />

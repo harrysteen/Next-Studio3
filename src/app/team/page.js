@@ -5,8 +5,7 @@ import Link from "next/link";
 import styles from "./Team.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-// import StickyNav from "../../components/StickyNav";
-import teamImg from "./team-assets/team.png";
+import getYourTeamImg from "../../team images/get your team.webp";
 import get1Img from "../../team images/get-1.png";
 import tokenMindImg from "../../team images/token_mind.png";
 
@@ -29,20 +28,79 @@ const items = [
 ];
 
 const services = [
-  { title: "BRANDING", icon: tokenMindImg.src || tokenMindImg },
-  { title: "MARKETING", icon: tokenMindImg.src || tokenMindImg },
-  { title: "TECH SUPPORT", icon: tokenMindImg.src || tokenMindImg },
-  { title: "UX RESEARCH", icon: tokenMindImg.src || tokenMindImg },
-  { title: "UI DESIGN", icon: tokenMindImg.src || tokenMindImg },
-  { title: "DEVELOPMENT", icon: tokenMindImg.src || tokenMindImg },
+  {
+    title: "BRAND DESIGNERS",
+    desc: "They create brand identities that feel clear, consistent, and true to what the business stands for.",
+    icon: tokenMindImg.src || tokenMindImg
+  },
+  {
+    title: "DESIGN STRATEGISTS",
+    desc: "They work with your teams to understand the business and find the right design direction.",
+    icon: tokenMindImg.src || tokenMindImg
+  },
+  {
+    title: "MARKETING SPECIALISTS",
+    desc: "They help launch campaigns and content that help the brand reach the right people and grow.",
+    icon: tokenMindImg.src || tokenMindImg
+  },
+  {
+    title: "MOTION DESIGNERS",
+    desc: "They turn ideas into engaging animations and videos that make the brand and product more interesting.",
+    icon: tokenMindImg.src || tokenMindImg
+  },
+  {
+    title: "UX RESEARCHERS",
+    desc: "They understand your users and study their needs to understand what works and what needs to change.",
+    icon: tokenMindImg.src || tokenMindImg
+  },
+  {
+    title: "UI DESIGNERS",
+    desc: "They design clean, simple, and easy-to-use interfaces across websites and digital products.",
+    icon: tokenMindImg.src || tokenMindImg
+  },
+  {
+    title: "FRONT-END DEVELOPERS",
+    desc: "They turn designs into responsive websites and digital products that work smoothly across devices.",
+    icon: tokenMindImg.src || tokenMindImg
+  },
+  {
+    title: "BACK-END DEVELOPERS",
+    desc: "They build the systems behind the product that keep everything running reliably.",
+    icon: tokenMindImg.src || tokenMindImg
+  },
+  {
+    title: "PRODUCT MANAGERS",
+    desc: "They bring the team together, keep the work on track, and make sure the product solves the right problem.",
+    icon: tokenMindImg.src || tokenMindImg
+  }
 ];
 
 const steps = [
-  { number: 1, title: "DISCOVERY" },
-  { number: 2, title: "DISCOVERY" },
-  { number: 3, title: "DISCOVERY" },
-  { number: 4, title: "DISCOVERY" },
-  { number: 5, title: "DISCOVERY" }
+  {
+    number: "01",
+    title: "Tell Us What You Need",
+    desc: "Share your goals, project, timeline, and the kind of team you’re looking for."
+  },
+  {
+    number: "02",
+    title: "We Build Your Team",
+    desc: "We handpick the right designers, developers, strategists, and specialists for your needs."
+  },
+  {
+    number: "03",
+    title: "Meet Your Team",
+    desc: "Review the team, meet the people involved, and make sure they’re the right fit."
+  },
+  {
+    number: "04",
+    title: "Start Working",
+    desc: "Once you’re happy, your team gets to work and we manage the process from start to finish."
+  },
+  {
+    number: "05",
+    title: "Scale When You Need To",
+    desc: "Add new skills, change team size, or adjust your team as your business grows."
+  }
 ];
 
 const GetyourownTeam = () => {
@@ -85,17 +143,16 @@ const GetyourownTeam = () => {
 
         <div className={styles["hero-container"]}>
           <h1 className={styles["hero-title"]}>
-            GET YOUR OWN TEAM
+            GET YOUR OWN CREATIVE TEAM
           </h1>
           <p className={styles["hero-subtitle"]}>
-            Growing Companies Need Teams That Move Fast,<br />
-            Think Strategically, And Stay Aligned As Things Evolve.
+            Every company has creative requirements that are unique and evolving. We curate teams that understand and adapt to your constraints and complexity. <strong>They work and grow with your company under our expert guidance.</strong>
           </p>
           <button className={styles["hero-btn"]}>GET STARTED</button>
 
           {/* Illustrator Team Graphic */}
           <div className={styles["hero-graphic"]}>
-            <img src={teamImg.src} alt="Team Characters" className={styles["illustrator-img"]} />
+            <img src={getYourTeamImg.src || getYourTeamImg} alt="Team Characters" className={styles["illustrator-img"]} />
           </div>
         </div>
 
@@ -109,6 +166,9 @@ const GetyourownTeam = () => {
             <br />
             TO DELIVER
           </h2>
+          <p className={styles.sectionSub}>
+            We bring together expert teams with complementary skillsets. They collaborate and build as one extended unit.
+          </p>
         </div>
 
         <div className={styles["designed-container"]}>
@@ -124,26 +184,24 @@ const GetyourownTeam = () => {
           {/* RIGHT CONTENT - FEATURES */}
           <div className={styles["designed-right"]}>
             <div className={styles.feature}>
-              <h3>FLEXIBILITY</h3>
+              <h3>STRATEGISTS</h3>
+              <p className={styles.featureSub}>Strategy brings clarity.</p>
               <p>
-                Scale your team up or down anytime based on your project needs. Whether you
-                need one specialist or a full cross-functional
-                team, we adapt without long-term commitments, delays, or hiring overhead.
+                Our strategists delve deep into your user, company, requirement and results. They create a clear roadmap to drive results.
               </p>
             </div>
             <div className={styles.feature}>
-              <h3>COHESIVE</h3>
+              <h3>DESIGNERS</h3>
+              <p className={styles.featureSub}>Design brings creativity.</p>
               <p>
-                Our team works as a single unit, aligned with your goals, processes, and
-                culture. With clear communication and shared ownership,
-                you get consistent quality and faster execution—just like an in-house team.
+                Our designers bring the roadmap to vision. They create brands and products that ensure appealing experiences and measurable impact.
               </p>
             </div>
             <div className={styles.feature}>
-              <h3>ADAPTABLE</h3>
+              <h3>DEVELOPERS</h3>
+              <p className={styles.featureSub}>Technology brings scale.</p>
               <p>
-                We quickly adjust to changing requirements, tools, and timelines. As your business evolves,
-                your team evolves with it without slowing down delivery or compromising quality.
+                Our developers build technology that scales your business and experience. They are skilled across various technical disciplines.
               </p>
             </div>
           </div>
@@ -154,7 +212,7 @@ const GetyourownTeam = () => {
       <section className={styles["whos-for"]}>
         <div className={styles["whos-title"]}>
           <h2>
-            WHO’S <br /> THIS FOR
+            WHO’S THIS FOR
           </h2>
         </div>
         <div className={styles["whos-container"]}>
@@ -189,8 +247,8 @@ const GetyourownTeam = () => {
         <div className={styles["help-container"]}>
           <div className={styles["help-title"]}>
             <h2>
-              WE CAN <br />
-              <span>HELP</span> WITH
+              THE TEAM <br />
+              <span>CONSISTS OF</span>
             </h2>
           </div>
           <div className={styles["help-grid"]}>
@@ -200,10 +258,7 @@ const GetyourownTeam = () => {
                   <img src={item.icon} alt="" />
                 </div>
                 <h3>{item.title}</h3>
-                <p>
-                  We design with your audience in mind, ensuring every
-                  interaction is intuitive, engaging, and memorable.
-                </p>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -213,7 +268,10 @@ const GetyourownTeam = () => {
       {/* section-5 */}
       <section className={styles.engagement}>
         <div className={styles["engagement-title"]}>
-          <h2>ENGAGEMENT DETAILS</h2>
+          <h2>
+            HOW OUR TEAMS WORK AND <br />
+            <span>FIT INTO YOUR ORGANISATION</span>
+          </h2>
         </div>
         <div className={styles["engagement-grid"]}>
           {/* LEFT CARD */}
@@ -252,8 +310,8 @@ const GetyourownTeam = () => {
       <section className={styles["steps-section"]}>
         <div className={styles["steps-title"]}>
           <h2>
-            GET YOUR TEAM <br />
-            IN <span>5 STEPS</span>
+            GET YOUR EXTENDED <br />
+            CREATIVE UNIT IN <span>5 STEPS</span>
           </h2>
         </div>
         <div className={styles["steps-container"]}>
@@ -262,7 +320,8 @@ const GetyourownTeam = () => {
               <div className={styles["step-circle"]}>
                 {step.number}
               </div>
-              <p>{step.title}</p>
+              <h3 className={styles["step-item-title"]}>{step.title}</h3>
+              <p className={styles["step-item-desc"]}>{step.desc}</p>
             </div>
           ))}
         </div>
@@ -272,8 +331,8 @@ const GetyourownTeam = () => {
       <section className={styles["engagement-models"]}>
         <div className={styles["models-title"]}>
           <h2>
-            OTHER POPULAR <br />
-            <span>ENGAGEMENT</span> MODELS
+            EXPLORE OUR OTHER <br />
+            <span>MODES OF ENGAGEMENT</span>
           </h2>
         </div>
         <div className={styles["models-grid"]}>
@@ -294,6 +353,9 @@ const GetyourownTeam = () => {
               <li>Need fresh perspective</li>
               <li>Need clarity and quick strategy</li>
             </ul>
+            <Link href="/contact" className={styles["model-btn"]}>
+              TALK TO US <span>→</span>
+            </Link>
           </div>
 
           {/* CARD 2 */}
@@ -313,6 +375,9 @@ const GetyourownTeam = () => {
               <li>Growing teams</li>
               <li>Ongoing design leadership requirement</li>
             </ul>
+            <Link href="/contact" className={styles["model-btn"]}>
+              TALK TO US <span>→</span>
+            </Link>
           </div>
         </div>
       </section>

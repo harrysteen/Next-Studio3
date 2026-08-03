@@ -96,7 +96,7 @@ export default function Leiutis() {
   };
 
   const heroTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "38px" : width <= 768 ? "50px" : "72px",
     fontWeight: 700,
     lineHeight: 1.1,
@@ -165,7 +165,7 @@ export default function Leiutis() {
   };
 
   const statNumberStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: "54px",
     fontWeight: 700,
     color: "#9cff00",
@@ -191,7 +191,7 @@ export default function Leiutis() {
   const detailLeftStyle = {};
 
   const detailLeftTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "30px" : "40px",
     fontWeight: 600,
     textTransform: "uppercase",
@@ -291,7 +291,7 @@ export default function Leiutis() {
   const publicationsLeftStyle = {};
 
   const publicationsLeftTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "30px" : "40px",
     fontWeight: 600,
     textTransform: "uppercase",
@@ -352,7 +352,7 @@ export default function Leiutis() {
   };
 
   const advisoryTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "30px" : "40px",
     fontWeight: 600,
     textTransform: "uppercase",
@@ -389,7 +389,7 @@ export default function Leiutis() {
   const getBoardLogoPlaceholderStyle = (index) => {
     const isHovered = hoveredBoard === index;
     return {
-      fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+      fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
       fontSize: "22px",
       fontWeight: 700,
       color: isHovered ? "#9cff00" : "#FFFFFF",
@@ -470,7 +470,7 @@ export default function Leiutis() {
               fontWeight: 600,
               textTransform: "uppercase",
               marginBottom: "24px",
-              fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+              fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
             }}>THE PROJECT SUMMARY</h2>
             <p style={{
               fontSize: width <= 480 ? "16px" : "18px",
@@ -495,7 +495,7 @@ export default function Leiutis() {
                 fontWeight: 600,
                 textTransform: "uppercase",
                 marginBottom: "16px",
-                fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
               }}>What We Did</h2>
               <p style={{
                 fontSize: width <= 480 ? "16px" : "18px",
@@ -515,7 +515,7 @@ export default function Leiutis() {
                 fontWeight: 600,
                 textTransform: "uppercase",
                 marginBottom: "16px",
-                fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
               }}>Industry</h2>
               <p style={{
                 fontSize: width <= 480 ? "16px" : "18px",
@@ -677,9 +677,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg7} 
-              alt="Leiutis Brand Identity Design 7" 
+            <Image
+              src={leiutisImg7}
+              alt="Leiutis Brand Identity Design 7"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -693,9 +693,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg8} 
-              alt="Leiutis Brand Identity Design 8" 
+            <Image
+              src={leiutisImg8}
+              alt="Leiutis Brand Identity Design 8"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -709,9 +709,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg9} 
-              alt="Leiutis Brand Identity Design 9" 
+            <Image
+              src={leiutisImg9}
+              alt="Leiutis Brand Identity Design 9"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -740,9 +740,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg10} 
-              alt="Leiutis Brand Identity Design 10" 
+            <Image
+              src={leiutisImg10}
+              alt="Leiutis Brand Identity Design 10"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -756,9 +756,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg11} 
-              alt="Leiutis Brand Identity Design 11" 
+            <Image
+              src={leiutisImg11}
+              alt="Leiutis Brand Identity Design 11"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -772,9 +772,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg12} 
-              alt="Leiutis Brand Identity Design 12" 
+            <Image
+              src={leiutisImg12}
+              alt="Leiutis Brand Identity Design 12"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -803,9 +803,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg13} 
-              alt="Leiutis Brand Identity Design 13" 
+            <Image
+              src={leiutisImg13}
+              alt="Leiutis Brand Identity Design 13"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -819,9 +819,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg14} 
-              alt="Leiutis Brand Identity Design 14" 
+            <Image
+              src={leiutisImg14}
+              alt="Leiutis Brand Identity Design 14"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -835,9 +835,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg15} 
-              alt="Leiutis Brand Identity Design 15" 
+            <Image
+              src={leiutisImg15}
+              alt="Leiutis Brand Identity Design 15"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -866,9 +866,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg16} 
-              alt="Leiutis Brand Identity Design 16" 
+            <Image
+              src={leiutisImg16}
+              alt="Leiutis Brand Identity Design 16"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -882,9 +882,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg17} 
-              alt="Leiutis Brand Identity Design 17" 
+            <Image
+              src={leiutisImg17}
+              alt="Leiutis Brand Identity Design 17"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
@@ -898,9 +898,9 @@ export default function Leiutis() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
           }}>
-            <Image 
-              src={leiutisImg18} 
-              alt="Leiutis Brand Identity Design 18" 
+            <Image
+              src={leiutisImg18}
+              alt="Leiutis Brand Identity Design 18"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />

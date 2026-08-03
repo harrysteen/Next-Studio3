@@ -6,13 +6,24 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import styles from "./About.module.css";
 
+import himajaImg from "../../team images/himaja mam.webp";
+import bhavanaImg from "../../team images/Bhavana mam.webp";
+import kumarImg from "../../team images/kumar profile.jpeg";
+import bhanuImg from "../../team images/bhanu.png";
+import bunnyImg from "../../team images/bunny.png";
+import rakeshImg from "../../team images/rakesh.png";
+import rishitaImg from "../../team images/risitha.png";
+import sunnyImg from "../../team images/sunny.png";
+import vishwaImg from "../../team images/vishawa.png";
+import worldMapImg from "../../team images/World Map & stat.png";
+
 // Replaced static imports with placeholder links so it doesn't crash
 const img1 = "https://picsum.photos/400/600?random=1";
 const img2 = "https://picsum.photos/400/600?random=2";
 const img3 = "https://picsum.photos/400/600?random=3";
 const img4 = "https://picsum.photos/400/600?random=4";
 const img5 = "/team images/Team Image.png";
-const map = "https://picsum.photos/800/400?random=6";
+const map = worldMapImg.src || worldMapImg;
 const girl = "https://picsum.photos/400/600?random=7";
 
 const teamData = [
@@ -24,7 +35,17 @@ const teamData = [
         Hi, I am the <span style={{ color: "#9cff3b", fontWeight: "bold" }}>CEO</span>. I am obsessed with reading and dissecting perspectives.
       </>
     ),
-    image: "/team images/hemaja.jpeg"
+    image: himajaImg.src || himajaImg
+  },
+  {
+    name: "Bhavana",
+    role: "",
+    bio: (
+      <>
+        Hello, I am the <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Creative Head</span>. Art is my therapy. I wear the creative hats in the company.
+      </>
+    ),
+    image: bhavanaImg.src || bhavanaImg
   },
   {
     name: "Kumar",
@@ -34,37 +55,7 @@ const teamData = [
         Hi, I am the <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Developer</span>. Everything about technology excites me. I love learning and building exciting things.
       </>
     ),
-    image: "/team images/kumar profile.jpeg"
-  },
-  {
-    name: "Bhanu",
-    role: "",
-    bio: (
-      <>
-        Hey, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I love solving creative challenges and driving teams to achieve our best output.
-      </>
-    ),
-    image: "/team images/bhanu.png"
-  },
-  {
-    name: "Bunny",
-    role: "",
-    bio: (
-      <>
-        Hey, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>UI/UX Designer</span>. I enjoy creating unique, user-centered experiences that are visually engaging, easy to use, and designed to leave a lasting impression.
-      </>
-    ),
-    image: "/team images/bunny.png"
-  },
-  {
-    name: "Rakesh",
-    role: "",
-    bio: (
-      <>
-        Hi, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I thrive on building visually stunning brands and identities for various companies.
-      </>
-    ),
-    image: "/team images/rakesh.png"
+    image: kumarImg.src || kumarImg
   },
   {
     name: "Rishita",
@@ -74,7 +65,7 @@ const teamData = [
         Hi, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I enjoy strategy and designing for processes and doing little art pieces as a hobby.
       </>
     ),
-    image: "/team images/risitha.png"
+    image: rishitaImg.src || rishitaImg
   },
   {
     name: "Sunny",
@@ -84,17 +75,47 @@ const teamData = [
         Hello, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I love exploring and implementing new design trends and methods.
       </>
     ),
-    image: "/team images/sunny.png"
+    image: sunnyImg.src || sunnyImg
   },
   {
-    name: "Vishwambhar",
+    name: "Bhanu",
+    role: "",
+    bio: (
+      <>
+        Hey, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I love solving creative challenges and driving teams to achieve our best output.
+      </>
+    ),
+    image: bhanuImg.src || bhanuImg
+  },
+  {
+    name: "Rakesh",
+    role: "",
+    bio: (
+      <>
+        Hi, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>Senior Designer</span>. I thrive on building visually stunning brands and identities for various companies.
+      </>
+    ),
+    image: rakeshImg.src || rakeshImg
+  },
+  {
+    name: "Siddartha",
+    role: "",
+    bio: (
+      <>
+        Hey, I am a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>UI/UX Designer</span>. I enjoy creating unique, user-centered experiences that are visually engaging, easy to use, and designed to leave a lasting impression.
+      </>
+    ),
+    image: bunnyImg.src || bunnyImg
+  },
+  {
+    name: "Viswa",
     role: "",
     bio: (
       <>
         Hi, I'm a <span style={{ color: "#9cff3b", fontWeight: "bold" }}>UI/UX Designer</span>. I enjoy creating unique, user-centered experiences that are visually engaging, easy to use, and designed to leave a lasting impression.
       </>
     ),
-    image: "/team images/vishawa.png"
+    image: vishwaImg.src || vishwaImg
   }
 ];
 
@@ -154,7 +175,7 @@ const About2 = () => {
           <div className={styles["story-container"]}>
             <p className={styles["story-label"]}>✦ Our Story</p>
             <h2 className={styles["story-text"]}>
-              <span>IN A WORLD THAT IS BECOMING INCREASINGLY AI DISRUPTED, THE COMPANIES THAT THRIVE ARE THE ONES THAT PRIORITISE THEIR USER.</span>{" "}
+              <span>IN A WORLD THAT IS BECOMING INCREASINGLY AI DISRUPTED, THE COMPANIES THAT THRIVE ARE THE ONES THAT PRIORITISE THEIR <span style={{ textDecoration: "underline", textDecorationColor: "#9cff3b", textUnderlineOffset: "6px", textDecorationThickness: "3px" }}>USER.</span></span>{" "}
               AT STUDIO DEZU, WE BELIEVE IN A HUMAN-FIRST APPROACH. OUR PROCESSES ARE ROOTED IN EMPATHY AND GENUINE DISCOVERY. WE UNDERSTAND THE COMPLEXITY AND DYNAMISM OF DIFFERENT TEAMS AND BUILD STRATEGIC PARTNERSHIPS THAT WORK AND ADAPT WITH TIME.
             </h2>
             <div className={styles["story-image"]}>
@@ -263,7 +284,7 @@ const About2 = () => {
                   {/* FRONT */}
                   <div
                     className={styles["flip-front"]}
-                    style={{ backgroundImage: `url('${member.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                    style={{ backgroundImage: `url('${member.image}')`, backgroundSize: 'cover', backgroundPosition: 'center top' }}
                   >
                   </div>
                   {/* BACK */}
@@ -281,16 +302,16 @@ const About2 = () => {
         {/* /*****************section-6 ************************************** */}
         <section className={styles["trust-section"]}>
           <h2 className={styles["trust-title"]}>
-            WE BUILD TRUST <br />
-            AND <span>DRIVE RESULTS</span>
+            OUR VALUES ARE WHAT <br />
+            <span>MAKE US VALUABLE</span>
           </h2>
           <div className={styles["trust-grid"]}>
             <div className={styles.card}>
               <div className={styles.icon}>⬢</div>
-              <h3>PROOF OVER PROMISES</h3>
+              <h3>HUMAN BY DESIGN</h3>
               <p>
-                We measure our work by what changes after it ships clarity improves,
-                teams move faster, and growth becomes easier to sustain.
+                We design for how humans think, feel, and behave. So our products are intuitive,
+                communication is clear, and systems actually get used.
               </p>
             </div>
             <div className={styles.card}>
@@ -299,6 +320,14 @@ const About2 = () => {
               <p>
                 We take responsibility for impact, stay close to the work, and optimize until
                 it does what it’s meant to do in the real world.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.icon}>⬢</div>
+              <h3>PROOF OVER PROMISES</h3>
+              <p>
+                We measure our work by what changes after it ships clarity improves,
+                teams move faster, and growth becomes easier to sustain.
               </p>
             </div>
             <div className={styles.card}>
@@ -326,14 +355,6 @@ const About2 = () => {
                   <p>Impact Created</p>
                 </div>
               </div>
-            </div>
-            <div className={styles.card}>
-              <div className={styles.icon}>⬢</div>
-              <h3>HUMAN BY DESIGN</h3>
-              <p>
-                We design for how humans think, feel, and behave. So our products are intuitive,
-                communication is clear, and systems actually get used.
-              </p>
             </div>
           </div>
         </section>

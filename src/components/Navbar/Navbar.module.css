@@ -37,7 +37,7 @@
 .contactBtn {
   width: 185px;
   background-color: var(--accent-color);
-  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   color: #2A0B4B;
   padding: 10px 20px;
   border-radius: 4px;
@@ -136,7 +136,7 @@
   border-radius: 4px;
   font-weight: 700;
   font-size: 18px;
-  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   line-height: 100%;
   letter-spacing: 0;
   text-transform: uppercase;

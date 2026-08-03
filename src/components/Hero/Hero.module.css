@@ -27,14 +27,16 @@
   letter-spacing: -1px;
   margin-bottom: 20px;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .wordRotator {
   display: inline-block;
-  min-width: 260px;
+  width: 330px;
   text-align: left;
   vertical-align: bottom;
   position: relative;
+  white-space: nowrap;
 }
 
 .underlined {
@@ -46,13 +48,13 @@
 
 .subline {
   font-family: var(--font-albert), 'Albert Sans', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
   margin-top: 12px;
   margin-bottom: 24px;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .arrowIcon {
@@ -137,7 +139,7 @@
   }
 
   .wordRotator {
-    min-width: 170px;
+    width: 220px;
   }
 
   .subline {
@@ -153,5 +155,15 @@
     justify-content: center;
     padding-right: 0;
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .wordRotator {
+    width: 170px;
   }
 }

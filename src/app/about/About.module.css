@@ -29,7 +29,7 @@
 /* HEADING */
 
 .about-heading {
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-weight: 600;
   font-size: 48px;
   line-height: 130%;
@@ -109,7 +109,7 @@
 }
 
 .story-text {
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: 40px;
   line-height: 1.4;
   font-weight: 500;
@@ -122,13 +122,18 @@
 
 .story-image {
   width: 100%;
+  height: 540px;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .story-image img {
-
   width: 100%;
-  height: auto;
-  border-radius: 6px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  border-radius: 12px;
 }
 
 
@@ -212,7 +217,7 @@
 }
 
 .timeline-label {
-  font-family: "Bai Jamjuree", sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: 32px;
   font-weight: 700;
   color: #ffffff;
@@ -225,7 +230,7 @@
 }
 
 .timeline-content h3 {
-  font-family: "Bai Jamjuree";
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: 40px;
   color: #ABFF4F;
   margin-bottom: 10px;
@@ -273,7 +278,7 @@
 }
 
 .global-title {
-  font-family: "Bai Jamjuree";
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: 64px;
   margin-bottom: 30px;
   white-space: normal;
@@ -284,7 +289,7 @@
 }
 
 .global-subtitle {
-  font-family: "Bai Jamjuree", sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: 28px;
   line-height: 1.3;
   color: #9cff3b;
@@ -292,7 +297,7 @@
 }
 
 .global-heading {
-  font-family: "Bai Jamjuree";
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: 36px;
 
   margin-bottom: 20px;
@@ -316,6 +321,9 @@
 
 .global-map img {
   width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
 }
 
 
@@ -381,7 +389,7 @@
 }
 
 .team-title {
-  font-family: "Bai Jamjuree";
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   color: white;
   font-size: 64px;
   margin-bottom: 60px;
@@ -392,8 +400,9 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 260px);
-  gap: 40px;
+  grid-template-columns: repeat(3, 280px);
+  column-gap: 150px;
+  row-gap: 50px;
   justify-content: center;
 }
 
@@ -401,8 +410,8 @@
 /* FLIP CARD */
 
 .flip-card {
-  width: 260px;
-  height: 400px;
+  width: 280px;
+  height: 365px;
   perspective: 1000px;
 }
 
@@ -425,8 +434,9 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #d9d9d9;
+  background: #1f0036;
   border-radius: 8px;
+  overflow: hidden;
   backface-visibility: hidden;
 }
 
@@ -477,7 +487,7 @@
 }
 
 .trust-title {
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   text-align: center;
   font-size: 68px;
   margin-bottom: 70px;
@@ -514,7 +524,7 @@
 }
 
 .card h3 {
-  font-family: "Bai Jamjuree";
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   margin-bottom: 10px;
   font-size: 28px;
   font-weight: 600;
@@ -534,8 +544,9 @@
 /* IMAGE BOX */
 
 .image-box {
-  grid-row: span 2;
+  grid-column: span 2;
   position: relative;
+  margin-top: 10px;
 }
 
 .image-box img {
@@ -592,7 +603,7 @@
 }
 
 .behind-title {
-  font-family: "Bai Jamjuree";
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: 60px;
   margin-bottom: 80px;
 

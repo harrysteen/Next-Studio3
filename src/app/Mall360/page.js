@@ -77,7 +77,7 @@ export default function Mall360() {
   };
 
   const heroTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "38px" : width <= 768 ? "50px" : "72px",
     fontWeight: 700,
     lineHeight: 1.1,
@@ -146,7 +146,7 @@ export default function Mall360() {
   };
 
   const statNumberStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: "54px",
     fontWeight: 700,
     color: "#9cff00",
@@ -172,7 +172,7 @@ export default function Mall360() {
   const detailLeftStyle = {};
 
   const detailLeftTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "30px" : "40px",
     fontWeight: 600,
     textTransform: "uppercase",
@@ -272,7 +272,7 @@ export default function Mall360() {
   const publicationsLeftStyle = {};
 
   const publicationsLeftTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "30px" : "40px",
     fontWeight: 600,
     textTransform: "uppercase",
@@ -333,7 +333,7 @@ export default function Mall360() {
   };
 
   const advisoryTitleStyle = {
-    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
     fontSize: width <= 480 ? "30px" : "40px",
     fontWeight: 600,
     textTransform: "uppercase",
@@ -370,7 +370,7 @@ export default function Mall360() {
   const getBoardLogoPlaceholderStyle = (index) => {
     const isHovered = hoveredBoard === index;
     return {
-      fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+      fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
       fontSize: "22px",
       fontWeight: 700,
       color: isHovered ? "#9cff00" : "#FFFFFF",
@@ -451,7 +451,7 @@ export default function Mall360() {
               fontWeight: 600,
               textTransform: "uppercase",
               marginBottom: "24px",
-              fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+              fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
             }}>Project Overview</h2>
             <p style={{
               fontSize: width <= 480 ? "16px" : "18px",
@@ -476,7 +476,7 @@ export default function Mall360() {
                 fontWeight: 600,
                 textTransform: "uppercase",
                 marginBottom: "16px",
-                fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
               }}>What We Did</h2>
               <p style={{
                 fontSize: width <= 480 ? "16px" : "18px",
@@ -494,7 +494,7 @@ export default function Mall360() {
                 fontWeight: 600,
                 textTransform: "uppercase",
                 marginBottom: "16px",
-                fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
               }}>Industry</h2>
               <p style={{
                 fontSize: width <= 480 ? "16px" : "18px",
@@ -551,7 +551,7 @@ export default function Mall360() {
               fontWeight: 700,
               textTransform: "uppercase",
               marginBottom: "40px",
-              fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+              fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
               lineHeight: 1.2
             }}>
               HOW WE <span style={{ color: "#9cff00" }}>HANDLED</span> <br /> THE SITUATION
@@ -576,7 +576,7 @@ export default function Mall360() {
                     display: "flex",
                     alignItems: "center",
                     gap: "10px",
-                    fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+                    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
                   }}>
                     <span style={{ fontSize: "24px" }}>+</span> {item.title}
                   </h3>
@@ -597,10 +597,10 @@ export default function Mall360() {
           </div>
 
           <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
-            <img 
-              src="https://picsum.photos/800/600?random=10" 
-              alt="Design Process" 
-              style={{ width: "100%", height: "auto", display: "block" }} 
+            <img
+              src="https://picsum.photos/800/600?random=10"
+              alt="Design Process"
+              style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
         </section>
@@ -612,7 +612,7 @@ export default function Mall360() {
             fontWeight: 700,
             textTransform: "uppercase",
             marginBottom: "40px",
-            fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif",
+            fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
             lineHeight: 1.2
           }}>
             <span style={{ color: "#9cff00" }}>SUCCESS</span> IN <br /> NUMBERS & EXPERIENCE
@@ -630,8 +630,8 @@ export default function Mall360() {
               padding: "40px 30px",
               backgroundColor: "rgba(0, 0, 0, 0.2)",
             }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>95%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>HUMAN-CENTERED <br/> DESIGN</h3>
+              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>95%</div>
+              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>HUMAN-CENTERED <br /> DESIGN</h3>
               <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
                 We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
               </p>
@@ -644,8 +644,8 @@ export default function Mall360() {
               padding: "40px 30px",
               backgroundColor: "rgba(0, 0, 0, 0.2)",
             }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>87%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>PROVEN EXPERTISE <br/> RECORD</h3>
+              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>87%</div>
+              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>PROVEN EXPERTISE <br /> RECORD</h3>
               <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
                 We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
               </p>
@@ -662,9 +662,9 @@ export default function Mall360() {
               flexDirection: "column",
               justifyContent: "space-between"
             }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "40px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>100%</div>
+              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "40px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>100%</div>
               <div>
-                <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>MEASURABLE <br/> IMPACT</h3>
+                <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>MEASURABLE <br /> IMPACT</h3>
                 <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
                   We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
                 </p>
@@ -679,8 +679,8 @@ export default function Mall360() {
               padding: "40px 30px",
               backgroundColor: "rgba(0, 0, 0, 0.2)",
             }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>25X</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif" }}>STARTUPS&apos;S SCALABLE SOLUTION</h3>
+              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>25X</div>
+              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>STARTUPS&apos;S SCALABLE SOLUTION</h3>
               <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
                 We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
               </p>
@@ -691,7 +691,8 @@ export default function Mall360() {
 
       {/* INFINITE SCROLLING MARQUEE SECTION */}
       <section className="marqueeContainer">
-        <style dangerouslySetInnerHTML={{ __html: `
+        <style dangerouslySetInnerHTML={{
+          __html: `
           @keyframes scrollLeft {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -727,8 +728,8 @@ export default function Mall360() {
           }
           .marqueeItem {
             flex-shrink: 0;
-            width: 340px;
-            height: 220px;
+            width: 580px;
+            height: 360px;
             position: relative;
             border-radius: 16px;
             overflow: hidden;
@@ -743,6 +744,7 @@ export default function Mall360() {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top center;
             display: block;
           }
         ` }} />

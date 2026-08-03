@@ -50,7 +50,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: var(--font-bai-jamjuree), 'Bai Jamjuree', sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   line-height: 100%;
   letter-spacing: 0;
   text-transform: uppercase;

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Hero.module.css';
 
-const words = ["Brands.", "Products.", "Systems."];
+const words = ["BRANDS.", "PRODUCTS.", "SYSTEMS."];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
@@ -19,7 +19,7 @@ export default function Hero() {
     <section className={styles.hero} aria-labelledby="hero-heading">
       <div className={styles.content}>
         <h1 id="hero-heading" className={styles.title}>
-          We Build User-Centric{" "}
+          WE BUILD USER-CENTRIC{" "}
           <span className={styles.wordRotator}>
             <AnimatePresence mode="wait">
               <motion.span
@@ -37,7 +37,7 @@ export default function Hero() {
           </span>
         </h1>
         <p className={styles.subline}>
-          YOUR FULL-CYCLE DESIGN AND TECHNOLOGY PARTNER
+          Your full-cycle design and technology partner
         </p>
         <div className={styles.subtitleContainer}>
           <span className={styles.accentText}>@Since~2021</span>

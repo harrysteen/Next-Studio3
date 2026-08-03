@@ -31,7 +31,7 @@
 }
 
 .headline {
-  font-family: var(--font-main, "Bai Jamjuree", sans-serif);
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: clamp(36px, 4vw, 56px);
   text-transform: uppercase;
   font-weight: 700;
@@ -64,7 +64,7 @@
 }
 
 .email {
-  font-family: var(--font-main, "Bai Jamjuree", sans-serif);
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: 24px;
   color: var(--accent-color, #ABFF4F);
   text-decoration: none;
@@ -108,7 +108,7 @@
 }
 
 .tabBtn {
-  font-family: var(--font-main, "Bai Jamjuree", sans-serif);
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: 14px;
   font-weight: 600;
   padding: 10px 24px;
@@ -195,7 +195,7 @@
   background: var(--accent-color, #ABFF4F);
   border: none;
   border-radius: 6px;
-  font-family: var(--font-bai-jamjuree), "Bai Jamjuree", sans-serif;
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 100%;
