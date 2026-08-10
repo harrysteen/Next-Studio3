@@ -64,11 +64,15 @@ export default function Engagement() {
   return (
     <div ref={sectionRef} className={styles.scrollWrapper}>
       
-      {/* Absolute header that sits at the top of the stack */}
-      <div className={styles.header}>
+      {/* Sticky subtitle that stays pinned at top during card animations */}
+      <div className={styles.stickySubtitleContainer}>
         <div className={styles.subtitle}>
           <span>✦</span> MODES OF ENGAGEMENT
         </div>
+      </div>
+
+      {/* Header section */}
+      <div className={styles.header}>
         <h2 className={styles.title}>
           <SplitText
             text="WE UNDERSTAND THAT DYNAMIC PROBLEMS NEED ADAPTIVE WORK MODES."
@@ -88,7 +92,14 @@ export default function Engagement() {
       </div>
 
       {cardData.map((card, idx) => (
-        <section key={idx} className={styles.panel}>
+        <section 
+          key={idx} 
+          className={styles.panel}
+          style={{
+            top: `calc(65px + ${idx * 12}px)`,
+            zIndex: 10 + idx
+          }}
+        >
           <div className={styles.engagementCard}>
             {/* LEFT CONTENT */}
             <div className={styles.leftContent}>

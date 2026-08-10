@@ -7,34 +7,10 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import LatestWork from "../../components/LatestWork/LatestWork";
 
-export default function VenturaPranas() {
-  const scopeOfWork = [
-    { company: "Brand Strategy & Positioning", role: "Rebranding" },
-    { company: "UI/UX Design Systems", role: "Design" },
-    { company: "Responsive Web Platforms", role: "Development" },
-    { company: "Content Strategy & SEO", role: "Marketing" }
-  ];
-
-  const deliverables = [
-    "Design System Guidelines & Digital Asset Library",
-    "Sleek, High-Converting Web Platforms",
-    "Standardized Multi-Chapter Portal Layouts"
-  ];
-
-  const technologies = [
-    { company: "Figma", subtitle: "UI/UX Design" },
-    { company: "Next.js", subtitle: "Framework" },
-    { company: "GSAP", subtitle: "Animations" },
-    { company: "Tailwind CSS", subtitle: "Styling" },
-    { company: "Vercel", subtitle: "Hosting & CI/CD" }
-  ];
-
+// Evoque Impact Case Study Page
+export default function EvoqueImpact() {
   const { width } = useResponsive();
 
-  const [hoveredSocial, setHoveredSocial] = React.useState(null);
-  const [hoveredExperience, setHoveredExperience] = React.useState(null);
-  const [hoveredBook, setHoveredBook] = React.useState(null);
-  const [hoveredBoard, setHoveredBoard] = React.useState(null);
   const [hoveredNavLink, setHoveredNavLink] = React.useState(null);
   const [activeProcess, setActiveProcess] = React.useState(0);
 
@@ -66,7 +42,7 @@ export default function VenturaPranas() {
     width: "100%",
     height: "100vh",
     minHeight: "550px",
-    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/ventura work.webp')",
+    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/ourwork/evoqueimpact.webp')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
@@ -101,291 +77,6 @@ export default function VenturaPranas() {
     margin: "0 auto",
     paddingTop: "80px",
     paddingBottom: "80px",
-  };
-
-  const statsSectionStyle = {
-    backgroundColor: "#1b0634",
-    border: "1px solid rgba(255, 255, 255, 0.1)",
-    borderRadius: "16px",
-    padding: width <= 1024 ? "30px" : "40px",
-    marginBottom: "80px",
-    display: "grid",
-    gridTemplateColumns: width <= 480 ? "1fr" : width <= 1024 ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
-    gap: width <= 480 ? "20px" : "30px",
-    textAlign: "center",
-  };
-
-  const getStatCardStyle = (index) => {
-    const isLast = index === 3;
-    let borderRight = "none";
-    let borderBottom = "none";
-    let paddingBottom = "0px";
-
-    if (width <= 480) {
-      if (!isLast) {
-        borderBottom = "1px solid rgba(255, 255, 255, 0.1)";
-        paddingBottom = "20px";
-      }
-    } else if (width <= 1024) {
-      if (index === 0 || index === 2) {
-        borderRight = "1px solid rgba(255, 255, 255, 0.1)";
-      }
-    } else {
-      if (!isLast) {
-        borderRight = "1px solid rgba(255, 255, 255, 0.1)";
-      }
-    }
-
-    return {
-      display: "flex",
-      flexDirection: "column",
-      gap: "8px",
-      borderRight,
-      borderBottom,
-      paddingBottom,
-    };
-  };
-
-  const statNumberStyle = {
-    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-    fontSize: "54px",
-    fontWeight: 700,
-    color: "#9cff00",
-    lineHeight: 1,
-  };
-
-  const statLabelStyle = {
-    fontSize: "14px",
-    color: "#cfcfcf",
-    textTransform: "uppercase",
-    letterSpacing: "1px",
-  };
-
-  const detailsSectionStyle = {
-    display: "grid",
-    gridTemplateColumns: width <= 1024 ? "1fr" : "1fr 1fr",
-    gap: width <= 1024 ? "40px" : "80px",
-    marginBottom: "80px",
-    borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-    paddingTop: "60px",
-  };
-
-  const detailLeftStyle = {};
-
-  const detailLeftTitleStyle = {
-    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-    fontSize: width <= 480 ? "30px" : "40px",
-    fontWeight: 600,
-    textTransform: "uppercase",
-    marginBottom: "30px",
-  };
-
-  const detailLeftTextStyle = {
-    fontSize: "17px",
-    lineHeight: "1.7",
-    color: "#BBBBBB",
-  };
-
-  const socialRowStyle = {
-    display: "flex",
-    gap: "20px",
-    marginTop: "30px",
-  };
-
-  const getSocialIconStyle = (key) => {
-    const isHovered = hoveredSocial === key;
-    return {
-      width: "44px",
-      height: "44px",
-      borderRadius: "50%",
-      border: isHovered ? "1px solid #9cff00" : "1px solid rgba(255, 255, 255, 0.15)",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      color: isHovered ? "#130323" : "#FFFFFF",
-      backgroundColor: isHovered ? "#9cff00" : "transparent",
-      transform: isHovered ? "translateY(-4px)" : "translateY(0)",
-      boxShadow: isHovered ? "0 4px 15px rgba(156, 255, 0, 0.3)" : "none",
-      transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-    };
-  };
-
-  const getSocialSvgStyle = () => ({
-    width: "20px",
-    height: "20px",
-    fill: "currentColor",
-  });
-
-  const detailRightStyle = {
-    display: "flex",
-    flexDirection: "column",
-  };
-
-  const sectionTagStyle = {
-    color: "#9cff00",
-    fontSize: "14px",
-    fontWeight: 600,
-    letterSpacing: "2px",
-    textTransform: "uppercase",
-    marginBottom: "24px",
-  };
-
-  const experienceListStyle = {
-    display: "flex",
-    flexDirection: "column",
-  };
-
-  const getExperienceItemStyle = (index) => {
-    const isHovered = hoveredExperience === index;
-    return {
-      paddingTop: index === 0 ? "0px" : "20px",
-      paddingBottom: "20px",
-      paddingLeft: isHovered ? "10px" : "0px",
-      borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
-      display: "flex",
-      flexDirection: "column",
-      gap: "6px",
-      transition: "padding-left 0.3s ease",
-    };
-  };
-
-  const experienceCompanyStyle = {
-    fontSize: "19px",
-    fontWeight: 600,
-    color: "#FFFFFF",
-  };
-
-  const experienceRoleStyle = {
-    fontSize: "15px",
-    color: "#9cff00",
-    fontWeight: 500,
-  };
-
-  const publicationsSectionStyle = {
-    display: "grid",
-    gridTemplateColumns: width <= 1024 ? "1fr" : "1fr 1fr",
-    gap: width <= 1024 ? "40px" : "80px",
-    marginBottom: "80px",
-    borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-    paddingTop: "60px",
-  };
-
-  const publicationsLeftStyle = {};
-
-  const publicationsLeftTitleStyle = {
-    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-    fontSize: width <= 480 ? "30px" : "40px",
-    fontWeight: 600,
-    textTransform: "uppercase",
-    marginBottom: "30px",
-  };
-
-  const publicationsRightStyle = {
-    display: "flex",
-    flexDirection: "column",
-  };
-
-  const bookListStyle = {
-    display: "flex",
-    flexDirection: "column",
-  };
-
-  const getBookItemStyle = (index) => {
-    const isHovered = hoveredBook === index;
-    return {
-      paddingTop: index === 0 ? "0px" : "24px",
-      paddingBottom: "24px",
-      paddingLeft: isHovered ? "10px" : "0px",
-      borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      transition: "padding-left 0.3s ease",
-      cursor: "pointer",
-    };
-  };
-
-  const getBookTitleStyle = (index) => {
-    const isHovered = hoveredBook === index;
-    return {
-      fontSize: "18px",
-      fontWeight: 600,
-      color: isHovered ? "#9cff00" : "#FFFFFF",
-      lineHeight: 1.4,
-      maxWidth: "90%",
-      transition: "color 0.3s ease",
-    };
-  };
-
-  const getBookArrowStyle = (index) => {
-    const isHovered = hoveredBook === index;
-    return {
-      fontSize: "20px",
-      color: "#9cff00",
-      transform: isHovered ? "translateX(6px)" : "translateX(0)",
-      transition: "transform 0.3s ease",
-    };
-  };
-
-  const advisorySectionStyle = {
-    marginBottom: "60px",
-    borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-    paddingTop: "60px",
-  };
-
-  const advisoryTitleStyle = {
-    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-    fontSize: width <= 480 ? "30px" : "40px",
-    fontWeight: 600,
-    textTransform: "uppercase",
-    marginBottom: "40px",
-    textAlign: "center",
-  };
-
-  const boardGridStyle = {
-    display: "grid",
-    gridTemplateColumns: width <= 480 ? "1fr" : width <= 768 ? "repeat(2, 1fr)" : width <= 1024 ? "repeat(3, 1fr)" : "repeat(5, 1fr)",
-    gap: "20px",
-  };
-
-  const getBoardCardStyle = (index) => {
-    const isHovered = hoveredBoard === index;
-    return {
-      backgroundColor: isHovered ? "#240944" : "#1b0634",
-      border: isHovered ? "1px solid #9cff00" : "1px solid rgba(255, 255, 255, 0.1)",
-      borderRadius: "16px",
-      padding: "30px 20px",
-      textAlign: "center",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      minHeight: "140px",
-      transform: isHovered ? "translateY(-6px)" : "translateY(0)",
-      boxShadow: isHovered ? "0 10px 20px rgba(156, 255, 0, 0.1)" : "none",
-      transition: "all 0.3s ease",
-      cursor: "pointer",
-    };
-  };
-
-  const getBoardLogoPlaceholderStyle = (index) => {
-    const isHovered = hoveredBoard === index;
-    return {
-      fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-      fontSize: "22px",
-      fontWeight: 700,
-      color: isHovered ? "#9cff00" : "#FFFFFF",
-      letterSpacing: "-0.5px",
-      marginBottom: "6px",
-      transition: "color 0.3s ease",
-    };
-  };
-
-  const boardCompanyNameStyle = {
-    fontSize: "13px",
-    color: "#cfcfcf",
-    textTransform: "uppercase",
-    letterSpacing: "1px",
   };
 
   const bottomNavStyle = {
@@ -424,19 +115,17 @@ export default function VenturaPranas() {
     <div style={containerStyle}>
       <Navbar style={navbarStyle} />
 
-      {/* GIANT TYPOGRAPHY HERO SECTION WITH FULL-BLEED IMAGE BACKGROUND */}
+      {/* GIANT TYPOGRAPHY HERO SECTION */}
       <section style={heroSectionStyle}>
-        <div style={{}}>
+        <div>
           <h1 style={heroTitleStyle}>
-            VENTURA<br />PRANAS
+            EVOQUE <br /> IMPACT
           </h1>
-          <span style={heroTaglineStyle}>@CHENNAI, INDIA~2024</span>
+          <span style={heroTaglineStyle}>@USA~2026</span>
         </div>
       </section>
 
       <main style={contentWrapperStyle}>
-
-
         {/* PROJECT OVERVIEW SECTION */}
         <section style={{
           display: "grid",
@@ -461,15 +150,11 @@ export default function VenturaPranas() {
               fontFamily: "'Albert Sans', sans-serif",
               fontWeight: 400,
             }}>
-              Ventura Pranas is a known cross-border accounting and compliance firm that primalrily works with clients in USA, India and Singapore. They wanted a new visual identity and communication that symbolised their decade-long experience and technical expertise.
+              Evoque Impact is a product, strategy, and Innovation studio based in the Bay Area. We worked on creating a Silicon Valley standard branding and cohesive web experience to communicate the credibility of the brand.
             </p>
           </div>
 
-          <div style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "50px",
-          }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "50px" }}>
             <div>
               <h2 style={{
                 color: "#9cff00",
@@ -485,7 +170,7 @@ export default function VenturaPranas() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Branding and Visual Identity, Content Strategy, UX Research, UI Design, Development
+                Brand Identity Design, Content Strategy, UI Design and Development
               </p>
             </div>
             <div>
@@ -503,13 +188,13 @@ export default function VenturaPranas() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Finance and Technology
+                Technology
               </p>
             </div>
           </div>
         </section>
 
-        {/* VIDEO SECTION */}
+        {/* VIDEO / HERO MEDIA SHOWCASE SECTION */}
         <section style={{
           width: "100%",
           height: width <= 768 ? "400px" : "80vh",
@@ -538,7 +223,7 @@ export default function VenturaPranas() {
           </video>
         </section>
 
-        {/* WHAT WE WORKED ON SECTION */}
+        {/* HOW WE HANDLED THE SITUATION */}
         <section style={{
           marginBottom: "120px",
           display: "grid",
@@ -561,20 +246,20 @@ export default function VenturaPranas() {
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {[
                 {
-                  title: "DISCOVERY AND BRAND STRATEGY",
-                  desc: "An in-person discovery spanning over two weeks helped us document the company’s history, the founder’s vision, all their services, processes and the users they target. Based on the information, we created a strong messaging and visual positioning framework."
+                  title: "DISCOVERY AND REBRANDING",
+                  desc: "Evoque Impact wanted their branding to convey the impact they create for businesses and institutions. We combined vibrant tones with clean elements that express acceleration and AI."
                 },
                 {
-                  title: "CONTENT STRATEGY AND UX RESEARCH",
-                  desc: "The key challenge was to flatten their technical jargon while still keeping the communication apt and easy for the users to navigate. We designed wireframes that helped their users get all the information they needed without hassle."
+                  title: "CONTENT STRATEGY AND WRITING",
+                  desc: "It was critical that we get the messaging right. Our deep discovery helped document and write content with a crisp and professional tone while making sure the message was direct and impactful."
                 },
                 {
-                  title: "REBRANDING AND UI DESIGN",
-                  desc: "We designed a visual identity that was a combination of their existing elements and a more modern and futuristic look. The entire website experience was designed to feel immaculate, professional and reliable."
+                  title: "UI DESIGN AND NAVIGATION",
+                  desc: "The website transports the user immediately into technical innovation and strategic clarity through its minimal layouts, vibrant graphics and clear content hierarchy."
                 },
                 {
-                  title: "DEVELOPMENT AND TESTING",
-                  desc: "We built a dynamic website with a sound technical foundation which made sure all the data was safe, editable and easy to access for the relevant company parties."
+                  title: "DEVELOPMENT",
+                  desc: "It is built on dynamic code that is responsive and multi-browser compatible. The modular technical system ensures performance, flexibility and long-term scalability."
                 }
               ].map((item, idx) => (
                 <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
@@ -608,15 +293,15 @@ export default function VenturaPranas() {
 
           <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
             <img
-              src="/ourwork/venturawork.webp"
-              alt="Ventura Pranas Design Process"
+              src="/ourwork/evoqueimpact.webp"
+              alt="Evoque Impact Design Process"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
         </section>
 
         {/* THE OUTCOME SECTION */}
-        <section style={{ marginBottom: "0px" }}>
+        <section style={{ marginBottom: "100px" }}>
           <h2 style={{
             fontSize: width <= 480 ? "32px" : "40px",
             fontWeight: 700,
@@ -641,7 +326,7 @@ export default function VenturaPranas() {
               fontFamily: "'Albert Sans', sans-serif",
               margin: 0
             }}>
-              We built a fully functional and content-heavy website and appealing brand systems that helped Ventura communicate and connect better with their audience. The content strategy and copywriting helped their users navigate through the website without any overwhelm.
+              Evoque Impact launched with a futuristic brand identity that aligned better with their vision and strategic direction. The design system we built supports adaptive iteration and content management, helping the brand stay consistent on their branding and messaging.
             </p>
           </div>
         </section>
@@ -677,12 +362,20 @@ export default function VenturaPranas() {
             display: flex;
             width: max-content;
             gap: 30px;
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
           }
           .marqueeLeft {
-            animation: scrollLeft 40s linear infinite;
+            animation: scrollLeft 45s linear infinite;
           }
           .marqueeRight {
-            animation: scrollRight 40s linear infinite;
+            animation: scrollRight 45s linear infinite;
+          }
+          .marqueeWrapper:hover .marqueeLeft,
+          .marqueeWrapper:hover .marqueeRight {
+            animation-play-state: paused;
           }
           .marqueeItem {
             flex-shrink: 0;
@@ -691,7 +384,7 @@ export default function VenturaPranas() {
             position: relative;
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease;
           }
@@ -739,22 +432,20 @@ export default function VenturaPranas() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/tie loop scroll img1.webp",
+                "/work individual page assets/tie loop scroll img2.webp",
+                "/work individual page assets/tie loop scroll img3.webp",
+                "/work individual page assets/tie loop scroll img4.webp",
+                "/work individual page assets/tie loop scroll img5.webp"
               ].concat([
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/tie loop scroll img1.webp",
+                "/work individual page assets/tie loop scroll img2.webp",
+                "/work individual page assets/tie loop scroll img3.webp",
+                "/work individual page assets/tie loop scroll img4.webp",
+                "/work individual page assets/tie loop scroll img5.webp"
               ]).map((src, index) => (
                 <div key={`row1-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="Evoque Impact Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -764,47 +455,20 @@ export default function VenturaPranas() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeLeft">
               {[
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/tie loop scroll img6.webp",
+                "/work individual page assets/tie loop scroll img7.webp",
+                "/work individual page assets/tie loop scroll img8.webp",
+                "/work individual page assets/tie loop scroll img9.webp",
+                "/work individual page assets/tie loop scroll img10.webp"
               ].concat([
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/tie loop scroll img6.webp",
+                "/work individual page assets/tie loop scroll img7.webp",
+                "/work individual page assets/tie loop scroll img8.webp",
+                "/work individual page assets/tie loop scroll img9.webp",
+                "/work individual page assets/tie loop scroll img10.webp"
               ]).map((src, index) => (
                 <div key={`row2-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Row 3 (moving right) */}
-          <div className="marqueeRow">
-            <div className="marqueeTrack marqueeRight">
-              {[
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
-              ].concat([
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
-              ]).map((src, index) => (
-                <div key={`row3-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="Evoque Impact Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -855,8 +519,8 @@ export default function VenturaPranas() {
             justifyContent: "center",
           }}>
             <img
-              src="/work individual page assets/PRABHA SRINIVASAN.svg"
-              alt="Prabha Srinivasan"
+              src="/ourwork/evoqueimpact.webp"
+              alt="Sumeet Ahuja"
               style={{
                 width: "100%",
                 height: "100%",
@@ -887,7 +551,7 @@ export default function VenturaPranas() {
               fontWeight: 500,
               margin: 0,
             }}>
-              &ldquo;Finance and compliance services can be confusing at times, especially crossborder compliance. Studio Dezu was able to categorise all our offerings in an easy and categorical way through appealing branding and website.&rdquo;
+              &ldquo;I worked closely with the Dezu team and watched them bring my vision to life. They got all the content and messaging exactly as I wanted and spent a great deal of attention to detail.&rdquo;
             </p>
 
             {/* Author */}
@@ -901,7 +565,7 @@ export default function VenturaPranas() {
                 textTransform: "uppercase",
                 letterSpacing: "0.5px"
               }}>
-                — PRABHA SRINIVASAN
+                — SUMEET AHUJA
               </h4>
               <p style={{
                 fontFamily: "'Albert Sans', sans-serif",
@@ -910,7 +574,7 @@ export default function VenturaPranas() {
                 margin: "4px 0 0 0",
                 fontWeight: 500,
               }}>
-                CEO Ventura Pranas, Chennai
+                CEO, Evoque Impact
               </p>
             </div>
 
@@ -940,11 +604,11 @@ export default function VenturaPranas() {
         </div>
       </section>
 
-      <LatestWork currentProjectId="ventura" />
+      <LatestWork currentProjectId="evoque" />
 
       <Footer />
 
-      {/* Bottom Navigation matching main site */}
+      {/* FLOATING BOTTOM NAV */}
       <nav style={bottomNavStyle} aria-label="Primary Navigation">
         <Link
           href="/work"

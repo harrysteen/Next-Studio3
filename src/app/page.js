@@ -20,22 +20,28 @@ import mall360 from "../herossection-animation-assets/mall360.webp";
 import naeeamzafar from "../herossection-animation-assets/naeeamzafar.webp";
 import tieSiliconValley from "../herossection-animation-assets/tie silicon valley.webp";
 import venturaWork from "../herossection-animation-assets/ventura work.webp";
+import evoqueImpact from "../herossection-animation-assets/Evoque impact.webp";
+import lifeCykul from "../herossection-animation-assets/life cykul.webp";
+
+const trailImages = [
+  evoqueImpact.src || evoqueImpact,
+  lifeCykul.src || lifeCykul,
+  ecomallwork.src || ecomallwork,
+  highcloudWork.src || highcloudWork,
+  kshatriyasWork.src || kshatriyasWork,
+  leiutis.src || leiutis,
+  madboxwork.src || madboxwork,
+  mall360.src || mall360,
+  naeeamzafar.src || naeeamzafar,
+  tieSiliconValley.src || tieSiliconValley,
+  venturaWork.src || venturaWork,
+];
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <ImageTrail
-        items={[
-          ecomallwork.src,
-          highcloudWork.src,
-          kshatriyasWork.src,
-          leiutis.src,
-          madboxwork.src,
-          mall360.src,
-          naeeamzafar.src,
-          tieSiliconValley.src,
-          venturaWork.src,
-        ]}
+        items={trailImages}
         variant="3"
       >  
         <Navbar />

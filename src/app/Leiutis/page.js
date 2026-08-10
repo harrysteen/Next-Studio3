@@ -6,6 +6,7 @@ import Image from "next/image";
 import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import LatestWork from "../../components/LatestWork/LatestWork";
 import leiutisHero from "../../work individual page assets/Leiutis individual page hero section img.png";
 import leiutisImg1 from "../../work individual page assets/leiutis image1.png";
 import leiutisImg2 from "../../work individual page assets/leiutis image2.png";
@@ -907,6 +908,8 @@ export default function Leiutis() {
           </div>
         </div>
       </section>
+
+      <LatestWork currentProjectId="leiutis" />
 
       <Footer />
 

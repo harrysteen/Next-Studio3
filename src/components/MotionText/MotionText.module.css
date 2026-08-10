@@ -14,8 +14,8 @@
 /* ================= CONTENT SECTION ================= */
 
 .contentSection {
-  min-height: 100vh;
-  padding: 15vh 5vw;
+  min-height: 80vh;
+  padding: 30px 5vw 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +85,8 @@
   }
 
   .contentSection {
-    padding: 100px 20px;
+    min-height: auto;
+    padding: 30px 20px 60px;
   }
 
   .textHeading {

@@ -5,6 +5,7 @@ import Link from "next/link";
 import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import LatestWork from "../../components/LatestWork/LatestWork";
 
 export default function HighCloud() {
   const scopeOfWork = [
@@ -747,6 +748,34 @@ export default function HighCloud() {
             object-position: top center;
             display: block;
           }
+          @media (max-width: 768px) {
+            .marqueeItem {
+              width: 280px;
+              height: 200px;
+              border-radius: 12px;
+            }
+            .marqueeWrapper {
+              gap: 16px;
+              margin-bottom: 60px;
+            }
+            .marqueeTrack {
+              gap: 16px;
+            }
+          }
+          @media (max-width: 480px) {
+            .marqueeItem {
+              width: 230px;
+              height: 165px;
+              border-radius: 10px;
+            }
+            .marqueeWrapper {
+              gap: 12px;
+              margin-bottom: 40px;
+            }
+            .marqueeTrack {
+              gap: 12px;
+            }
+          }
         ` }} />
         <div className="marqueeWrapper">
           {/* Row 1 (moving right) */}
@@ -825,6 +854,8 @@ export default function HighCloud() {
           </div>
         </div>
       </section>
+
+      <LatestWork currentProjectId="highcloud" />
 
       <Footer />
 

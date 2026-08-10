@@ -5,15 +5,15 @@
 
   height: 300vh;
   position: relative;
- 
- 
+
+
 }
 
 .transformStickyContainer {
   position: sticky;
   top: 0;
   height: 100vh;
- 
+
   display: flex;
   align-items: center;
   justify-content: flex-start;

@@ -215,6 +215,37 @@ const GetyourownTeam = () => {
             WHO’S THIS FOR
           </h2>
         </div>
+
+        {/* MOBILE CATEGORY PILLS + FEATURE CARD */}
+        <div className={styles["whos-mobile-wrapper"]}>
+          <div className={styles["whos-pills"]}>
+            {items.map((item, index) => (
+              <button
+                key={index}
+                className={`${styles["whos-pill"]} ${active === index ? styles["whos-pill-active"] : ""}`}
+                onClick={() => setActive(index)}
+              >
+                {item.title}
+              </button>
+            ))}
+          </div>
+
+          <div className={styles["whos-mobile-card"]}>
+            <div className={styles["whos-mobile-img-wrap"]}>
+              <img
+                key={active}
+                src={items[active].img}
+                alt={items[active].title}
+                className={styles["whos-mobile-img"]}
+              />
+            </div>
+            <div className={styles["whos-mobile-card-title"]}>
+              {items[active].title}
+            </div>
+          </div>
+        </div>
+
+        {/* DESKTOP LAYOUT */}
         <div className={styles["whos-container"]}>
           {/* TEXT LIST */}
           <div className={styles["whos-list"]}>

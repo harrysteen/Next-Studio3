@@ -29,14 +29,15 @@
   line-height: 100%;
   letter-spacing: 4%;
   text-transform: uppercase;
-  color: #ABFF4F;
+  color: #ffffff;
   text-decoration: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
   white-space: nowrap;
 }
 
 .viewAll:hover {
-  opacity: 0.8;
+  color: var(--accent-color);
+  opacity: 0.9;
   transform: translateX(4px);
 }
 
@@ -222,6 +223,41 @@
   margin: 0;
 }
 
+/* Footer Action Button after grid */
+.footerAction {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.viewAllBtn {
+  font-family: var(--font-albert), 'Albert Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.viewAllBtn:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .grid {
@@ -236,5 +272,13 @@
 
   .card {
     height: 400px;
+  }
+
+  .viewAll {
+    display: none !important;
+  }
+
+  .footerAction {
+    display: flex !important;
   }
 }

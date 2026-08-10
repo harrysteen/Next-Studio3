@@ -127,14 +127,52 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .container {
+    padding: 50px 5vw 40px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .trackInner {
+    gap: 16px;
+    padding-right: 16px;
+  }
+
   .card {
-    width: 85vw;
-    /* Almost full width but scaled for mobile */
-    min-height: auto;
-    padding: 30px;
+    width: 82vw;
+    max-width: 330px;
+    min-height: 250px;
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .quoteIcon {
+    font-size: 42px;
+    margin-bottom: 12px;
   }
 
   .quoteText {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .cardFooter {
+    gap: 10px;
+  }
+
+  .authorName {
+    font-size: 15px;
+  }
+
+  .authorRole {
+    font-size: 12.5px;
+  }
+
+  .companyLogo {
+    height: 36px;
+    max-width: 110px;
   }
 }

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -16,10 +16,12 @@ const projects = [
     // Col 2
     { id: 4, title: 'TIE Silicon Valley', year: '2024', tags: 'Rebranding, UI/UX Design', img: '/ourwork/siliconvalley.webp', col: 2, href: '/TieSiliconValley' },
     { id: 5, title: 'Naeem Zafar', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/naeeamzafar.webp', col: 2, href: '/NaeemZafar' },
+    { id: 11, title: 'Evoque Impact', year: '2025', tags: 'Finance, UI/UX Design', img: '/ourwork/evoqueimpact.webp', col: 2, href: '/EvoqueImpact' },
 
     // Col 3
     { id: 6, title: 'Mall 360', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/mall360.webp', col: 3, href: '/Mall360' },
     { id: 7, title: 'Mad Box', year: '2022', tags: 'Branding, Packaging Design', img: '/ourwork/madboxwork.webp', col: 3, href: '/Madbox' },
+    { id: 12, title: 'Life Cykul', year: '2025', tags: 'E-commerce, UI/UX Design', img: '/ourwork/lifecykul.webp', col: 3, href: '/LifeCykul' },
 
     // Col 4
     { id: 8, title: 'Ecomall', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/ecomallwork.webp', col: 4, href: '/Ecomall' },
@@ -56,15 +58,20 @@ const ProjectCard = ({ project }) => {
 
 export default function Ourwork() {
     const containerRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
+    const [showAllMobile, setShowAllMobile] = useState(false);
 
     useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
         let ctx = gsap.context(() => {
             const matchMedia = gsap.matchMedia();
 
-            // Only run complex parallax on desktop/tablet, skip for small mobiles if needed, 
-            // but let's run it simply if width >= 1024px to match our un-stacked grid.
             matchMedia.add("(min-width: 1024px)", () => {
-                // Col 1: Moves up slightly faster
                 gsap.to(`.${styles.col1}`, {
                     y: -120,
                     ease: 'none',
@@ -76,7 +83,6 @@ export default function Ourwork() {
                     }
                 });
 
-                // Col 2: Moves up slower
                 gsap.to(`.${styles.col2}`, {
                     y: -40,
                     ease: 'none',
@@ -88,7 +94,6 @@ export default function Ourwork() {
                     }
                 });
 
-                // Col 3: Moves up quickly
                 gsap.to(`.${styles.col3}`, {
                     y: -180,
                     ease: 'none',
@@ -100,7 +105,6 @@ export default function Ourwork() {
                     }
                 });
 
-                // Col 4: Moves up the fastest
                 gsap.to(`.${styles.col4}`, {
                     y: -250,
                     ease: 'none',
@@ -112,7 +116,6 @@ export default function Ourwork() {
                     }
                 });
 
-                // Center Text Parallax & Fade In
                 gsap.fromTo(`.${styles.centerText}`,
                     { scale: 0.8, opacity: 0, y: 50 },
                     {
@@ -131,8 +134,14 @@ export default function Ourwork() {
             });
         }, containerRef);
 
-        return () => ctx.revert();
+        return () => {
+            window.removeEventListener('resize', checkMobile);
+            ctx.revert();
+        };
     }, []);
+
+    // On mobile, if not showAllMobile, show first 6 projects
+    const visibleProjects = isMobile && !showAllMobile ? projects.slice(0, 6) : projects;
 
     return (
         <section className={styles.container} id="work" ref={containerRef}>
@@ -145,34 +154,50 @@ export default function Ourwork() {
             </div>
 
             <div className={styles.grid}>
-                {/* Column 1 */}
-                <div className={`${styles.column} ${styles.col1}`}>
-                    {projects.filter(p => p.col === 1).map(p => (
+                {/* On mobile: render flat 2-column grid of visible projects */}
+                {isMobile ? (
+                    visibleProjects.map(p => (
                         <ProjectCard key={p.id} project={p} />
-                    ))}
-                </div>
-
-                {/* Column 2 */}
-                <div className={`${styles.column} ${styles.col2}`}>
-                    {projects.filter(p => p.col === 2).map(p => (
-                        <ProjectCard key={p.id} project={p} />
-                    ))}
-                </div>
-
-                {/* Column 3 */}
-                <div className={`${styles.column} ${styles.col3}`}>
-                    {projects.filter(p => p.col === 3).map(p => (
-                        <ProjectCard key={p.id} project={p} />
-                    ))}
-                </div>
-
-                {/* Column 4 */}
-                <div className={`${styles.column} ${styles.col4}`}>
-                    {projects.filter(p => p.col === 4).map(p => (
-                        <ProjectCard key={p.id} project={p} />
-                    ))}
-                </div>
+                    ))
+                ) : (
+                    <>
+                        <div className={`${styles.column} ${styles.col1}`}>
+                            {projects.filter(p => p.col === 1).map(p => (
+                                <ProjectCard key={p.id} project={p} />
+                            ))}
+                        </div>
+                        <div className={`${styles.column} ${styles.col2}`}>
+                            {projects.filter(p => p.col === 2).map(p => (
+                                <ProjectCard key={p.id} project={p} />
+                            ))}
+                        </div>
+                        <div className={`${styles.column} ${styles.col3}`}>
+                            {projects.filter(p => p.col === 3).map(p => (
+                                <ProjectCard key={p.id} project={p} />
+                            ))}
+                        </div>
+                        <div className={`${styles.column} ${styles.col4}`}>
+                            {projects.filter(p => p.col === 4).map(p => (
+                                <ProjectCard key={p.id} project={p} />
+                            ))}
+                        </div>
+                    </>
+                )}
             </div>
+
+            {/* Mobile Action Button */}
+            {isMobile && (
+                <div className={styles.mobileAction}>
+                    <button
+                        className={styles.viewMoreBtn}
+                        onClick={() => setShowAllMobile(!showAllMobile)}
+                        aria-label={showAllMobile ? "Show less work" : "View all work"}
+                    >
+                        {showAllMobile ? "SHOW LESS" : `VIEW ALL WORK (${projects.length})`}
+                        <span className={`${styles.arrow} ${showAllMobile ? styles.up : ''}`}>↓</span>
+                    </button>
+                </div>
+            )}
         </section>
     );
 }

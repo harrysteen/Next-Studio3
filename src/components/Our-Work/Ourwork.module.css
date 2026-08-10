@@ -15,7 +15,6 @@
   text-align: center;
   z-index: 10;
   pointer-events: none;
-  /* Let clicks pass through to cards */
   width: 100%;
 }
 
@@ -23,7 +22,7 @@
   font-family: var(--font-albert), 'Albert Sans', sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 54px;
+  font-size: 56px;
   line-height: 1.15;
   letter-spacing: -0.5px;
   text-align: center;
@@ -78,12 +77,10 @@
 .col2 {
   margin-top: 0px;
   gap: 250px;
-  /* Big gap in middle column to leave room for center text */
 }
 
 .col3 {
   margin-top: 250px;
-  /* Push down to avoid center text */
 }
 
 .col4 {
@@ -93,7 +90,6 @@
 /* Card Styles */
 .card {
   background-color: #1a0b2e;
-  /* dark purple background */
   border-radius: 4px;
   overflow: hidden;
   display: flex;
@@ -173,6 +169,10 @@
   margin: 0;
 }
 
+.mobileAction {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .grid {
@@ -197,7 +197,7 @@
     top: auto;
     left: auto;
     transform: none;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .container {
@@ -207,7 +207,138 @@
 }
 
 @media (max-width: 768px) {
-  .column {
-    min-width: 100%;
+  .container {
+    padding: 40px 16px 30px;
+    min-height: auto;
+  }
+
+  .centerText {
+    margin-bottom: 24px;
+  }
+
+  .centerText h2 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0;
+    text-shadow: none;
+  }
+
+  .centerText h2 span {
+    text-shadow: none;
+  }
+
+  .centerSubtext {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  /* 2-Column Mobile Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+  }
+
+  .card {
+    border-radius: 8px;
+  }
+
+  .cardFooter {
+    padding: 10px 10px 12px;
+    gap: 2px;
+  }
+
+  .cardTitle {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .cardYear {
+    font-size: 11px;
+  }
+
+  .cardTags {
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobileAction {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .viewMoreBtn {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    font-family: var(--font-albert), 'Albert Sans', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+  }
+
+  .viewMoreBtn:hover,
+  .viewMoreBtn:active {
+    background-color: var(--accent-color);
+    color: #2A0B4B;
+  }
+
+  .arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .arrow.up {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 12px 24px;
+  }
+
+  .centerText h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  .centerSubtext {
+    font-size: 14px;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  .cardTitle {
+    font-size: 12px;
+  }
+
+  .cardYear {
+    font-size: 10px;
+  }
+
+  .cardTags {
+    font-size: 9.5px;
+  }
+
+  .viewMoreBtn {
+    font-size: 12px;
+    padding: 10px 20px;
   }
 }

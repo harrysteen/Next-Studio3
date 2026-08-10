@@ -1,7 +1,7 @@
 .container {
   padding: 100px 5vw;
   background-color: var(--bg-color);
-  background-image: 
+  background-image:
     radial-gradient(circle at 10% 10%, rgba(98, 0, 234, 0.3), transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(98, 0, 234, 0.2), transparent 40%);
   min-height: 100vh;
@@ -250,6 +250,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
+
   .imageWrap {
     max-height: 340px;
   }

@@ -52,6 +52,12 @@ export default function Articals() {
           </Link>
         ))}
       </div>
+
+      <div className={styles.footerAction}>
+        <Link href="/blogs" className={styles.viewAllBtn}>
+          VIEW ALL →
+        </Link>
+      </div>
     </section>
   );
 }

@@ -7,16 +7,19 @@
   padding: 0 5vw;
   text-align: center;
   position: relative;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 100px);
 }
 
 .content {
-  margin-top: -10vh;
-  /* slightly pull up */
+  margin-top: -4vh;
   max-width: 1200px;
   width: 100%;
   position: relative;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
@@ -28,22 +31,27 @@
   margin-bottom: 20px;
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
 }
 
 .wordRotator {
   display: inline-block;
-  width: 330px;
-  text-align: left;
+  min-width: 310px;
+  text-align: center;
   vertical-align: bottom;
   position: relative;
   white-space: nowrap;
 }
 
 .underlined {
+  display: inline-block;
+  text-align: center;
   text-decoration: underline;
   text-decoration-color: #ABFF4F;
   text-underline-offset: 6px;
   text-decoration-thickness: 3px;
+  white-space: nowrap;
 }
 
 .subline {
@@ -52,23 +60,16 @@
   font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
   margin-top: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
   text-transform: none;
-}
-
-.arrowIcon {
-  display: inline-block;
-  font-size: 30px;
-  vertical-align: middle;
-  color: rgba(255, 255, 255, 0.5);
-  margin-left: 10px;
-  font-weight: 300;
+  text-align: center;
 }
 
 .subtitleContainer {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
   padding-right: 15%;
 }
 
@@ -77,15 +78,14 @@
   font-family: 'Satoshi', sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 24px;
-  leading-trim: none;
+  font-size: 22px;
   line-height: 100%;
   letter-spacing: 0%;
 }
 
 .bottomSection {
   position: absolute;
-  bottom: 120px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -133,18 +133,60 @@
 
 /* Media Queries */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .hero {
+    min-height: calc(100vh - 90px);
+  }
+
   .title {
-    font-size: 36px;
+    font-size: 44px;
   }
 
   .wordRotator {
-    width: 220px;
+    min-width: 250px;
+  }
+
+  .subtitleContainer {
+    padding-right: 8%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: calc(100dvh - 80px);
+    padding: 0 20px;
+  }
+
+  .content {
+    margin-top: -2vh;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .wordRotator {
+    display: block;
+    width: 100%;
+    min-width: unset;
+    text-align: center;
+    margin-top: 4px;
+    white-space: normal;
+  }
+
+  .underlined {
+    display: inline-block;
+    text-align: center;
   }
 
   .subline {
-    font-size: 16px;
-    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    padding: 0 10px;
   }
 
   .downArrows {
@@ -154,16 +196,51 @@
   .subtitleContainer {
     justify-content: center;
     padding-right: 0;
-    margin-top: 15px;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .accentText {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    min-height: calc(100dvh - 70px);
+    padding: 0 16px;
+  }
+
   .title {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .wordRotator {
-    width: 170px;
+    margin-top: 2px;
+  }
+
+  .subline {
+    font-size: 13.5px;
+    margin-bottom: 10px;
+  }
+
+  .accentText {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .subline {
+    font-size: 12px;
+  }
+
+  .accentText {
+    font-size: 12px;
   }
 }

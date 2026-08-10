@@ -5,6 +5,7 @@ import Link from "next/link";
 import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import LatestWork from "../../components/LatestWork/LatestWork";
 
 export default function TieSiliconValley() {
   const scopeOfWork = [
@@ -65,7 +66,7 @@ export default function TieSiliconValley() {
     width: "100%",
     height: "100vh",
     minHeight: "550px",
-    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/tie_silicon_valley_hero.png')",
+    backgroundImage: "url('/work individual page assets/tie hero.webp')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
@@ -429,7 +430,7 @@ export default function TieSiliconValley() {
           <h1 style={heroTitleStyle}>
             TIE SILICON <br /> VALLEY
           </h1>
-          <span style={heroTaglineStyle}>@USA~2025</span>
+          <span style={heroTaglineStyle}>@BAY AREA, USA~2024</span>
         </div>
       </section>
 
@@ -460,7 +461,7 @@ export default function TieSiliconValley() {
               fontFamily: "'Albert Sans', sans-serif",
               fontWeight: 400,
             }}>
-              TiE Silicon Valley Is One Of The World&apos;s Largest Startup Ecosystems, Built To Support Entrepreneurs At Every Stage Of Their Journey. From Idea Validation To Global Expansion, It Provides Access To Mentorship, Funding, And Powerful Networks Of Investors And Industry Experts. TiE Silicon Valley Helps Founders Turn Bold Ideas Into Successful Companies.
+              TiE Silicon Valley is the founding chapter of a global entrepreneurs&apos; community based the Bay Area, USA. It acts as a strong support ecosystem for founders stages by providing network, mentorship and the right opportunities. Their flagship event TiEcon is one of the biggest entrepreneurial conferences of the world.
             </p>
           </div>
 
@@ -484,7 +485,7 @@ export default function TieSiliconValley() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Rebranding, UI/UX Design,<br />Content Strategy
+                Rebranding, UI Design, Content Strategy, Marketing Design
               </p>
             </div>
             <div>
@@ -502,7 +503,7 @@ export default function TieSiliconValley() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Community
+                Business Community
               </p>
             </div>
           </div>
@@ -537,7 +538,7 @@ export default function TieSiliconValley() {
           </video>
         </section>
 
-        {/* HOW WE HANDLED THE SITUATION */}
+        {/* WHAT WE WORKED ON SECTION */}
         <section style={{
           marginBottom: "120px",
           display: "grid",
@@ -554,18 +555,27 @@ export default function TieSiliconValley() {
               fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
               lineHeight: 1.2
             }}>
-              HOW WE <span style={{ color: "#9cff00" }}>HANDLED</span> <br /> THE SITUATION
+              WHAT WE <span style={{ color: "#9cff00" }}>WORKED ON</span>
             </h2>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {[
                 {
-                  title: "RESEARCH & DISCOVERY",
-                  desc: "We Conducted In-Depth Research By Analyzing Competitors, Identifying Key User Pain Points, And Mapping Out Detailed Customer Journeys To Uncover Opportunities For A More Intuitive And Impactful Experience."
+                  title: "RESEARCH AND STRATEGY",
+                  desc: "We spent ample time with key leaders of the community to understand the legacy and vision of TiE. Then we documented all our research, existing information and discovery in clear usable content systems."
                 },
-                { title: "WIREFRAMING & UX DESIGN", desc: "" },
-                { title: "UI DESIGN & BRANDING", desc: "" },
-                { title: "DEVELOPMENT & TESTING", desc: "" }
+                {
+                  title: "UX AND INFORMATION ARCHITECTURE",
+                  desc: "Our content team worked on creating a strong messaging framework. We then rewrote and edited all the content into clean and navigable wireframes."
+                },
+                {
+                  title: "REBRANDING AND UI DESIGN",
+                  desc: "With young entrepreneurs as our primary audience, we designed a brand new identity that resonates with cutting-edge technical innovation and community. The visual components were transferred to the layouts."
+                },
+                {
+                  title: "MARKETING DESIGN",
+                  desc: "To continue the user experience and communicate TiE’s messaging, we built a varied set of editable marketing assets."
+                }
               ].map((item, idx) => (
                 <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
                   <h3 style={{
@@ -605,86 +615,34 @@ export default function TieSiliconValley() {
           </div>
         </section>
 
-        {/* SUCCESS IN NUMBERS SECTION */}
+        {/* THE OUTCOME SECTION */}
         <section style={{ marginBottom: "0px" }}>
           <h2 style={{
             fontSize: width <= 480 ? "32px" : "40px",
             fontWeight: 700,
             textTransform: "uppercase",
-            marginBottom: "40px",
+            marginBottom: "30px",
             fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
             lineHeight: 1.2
           }}>
-            <span style={{ color: "#9cff00" }}>SUCCESS</span> IN <br /> NUMBERS & EXPERIENCE
+            THE <span style={{ color: "#9cff00" }}>OUTCOME</span>
           </h2>
-
           <div style={{
-            display: "grid",
-            gridTemplateColumns: width <= 768 ? "1fr" : "repeat(3, 1fr)",
-            gap: "20px",
+            border: "1px solid rgba(156, 255, 0, 0.3)",
+            borderRadius: "16px",
+            padding: width <= 768 ? "36px 24px" : "50px 40px",
+            backgroundColor: "rgba(27, 6, 52, 0.7)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
           }}>
-            {/* Card 1 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
+            <p style={{
+              fontSize: width <= 480 ? "16px" : "19px",
+              lineHeight: "1.8",
+              color: "#e0e0e0",
+              fontFamily: "'Albert Sans', sans-serif",
+              margin: 0
             }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>95%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>HUMAN-CENTERED <br /> DESIGN</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>87%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>PROVEN EXPERTISE <br /> RECORD</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 3 (Spans 2 rows) */}
-            <div style={{
-              gridRow: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between"
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "40px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>100%</div>
-              <div>
-                <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>MEASURABLE <br /> IMPACT</h3>
-                <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                  We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 (Spans 2 cols) */}
-            <div style={{
-              gridColumn: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>25X</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>STARTUPS&apos;S SCALABLE SOLUTION</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
+              TiE SV now has a coherent and futuristic brand that appeals to the younger generation of audience while keeping its connection with existing community and veterans intact. The content and marketing systems we built help them publish creatives without hindering the brand experience.
+            </p>
           </div>
         </section>
       </main>
@@ -754,6 +712,34 @@ export default function TieSiliconValley() {
             object-fit: cover;
             object-position: top center;
             display: block;
+          }
+          @media (max-width: 768px) {
+            .marqueeItem {
+              width: 280px;
+              height: 200px;
+              border-radius: 12px;
+            }
+            .marqueeWrapper {
+              gap: 16px;
+              margin-bottom: 60px;
+            }
+            .marqueeTrack {
+              gap: 16px;
+            }
+          }
+          @media (max-width: 480px) {
+            .marqueeItem {
+              width: 230px;
+              height: 165px;
+              border-radius: 10px;
+            }
+            .marqueeWrapper {
+              gap: 12px;
+              margin-bottom: 40px;
+            }
+            .marqueeTrack {
+              gap: 12px;
+            }
           }
         ` }} />
         <div className="marqueeWrapper">
@@ -827,6 +813,136 @@ export default function TieSiliconValley() {
           </div>
         </div>
       </section>
+
+      {/* OUR CLIENTS SAY'S ABOUT US TESTIMONIAL SECTION */}
+      <section style={{
+        width: "90%",
+        maxWidth: "1100px",
+        margin: width <= 768 ? "40px auto 80px auto" : "60px auto 120px auto",
+      }}>
+        <h2 style={{
+          textAlign: "center",
+          fontSize: width <= 480 ? "26px" : width <= 768 ? "34px" : "42px",
+          fontWeight: 700,
+          textTransform: "uppercase",
+          marginBottom: width <= 768 ? "28px" : "40px",
+          fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+          letterSpacing: "-0.5px",
+          color: "#FFFFFF",
+          lineHeight: 1.2
+        }}>
+          OUR CLIENTS SAY&apos;S <span style={{ color: "#9cff00" }}>ABOUT US</span>
+        </h2>
+
+        <div style={{
+          backgroundColor: "#FFFFFF",
+          borderRadius: width <= 480 ? "16px" : "24px",
+          padding: width <= 480 ? "24px 20px" : width <= 768 ? "32px 28px" : "40px 48px",
+          display: "grid",
+          gridTemplateColumns: width <= 900 ? "1fr" : "320px 1fr",
+          gap: width <= 768 ? "24px" : "40px",
+          alignItems: "center",
+          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
+          color: "#111111",
+        }}>
+          {/* Left: Client Photo */}
+          <div style={{
+            width: "100%",
+            height: width <= 480 ? "260px" : "320px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            backgroundColor: "#9BB6C3",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "center",
+          }}>
+            <img
+              src="/work individual page assets/Anita Manwani.svg"
+              alt="Anita Manwani"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "top center",
+              }}
+            />
+          </div>
+
+          {/* Right: Content */}
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "20px",
+          }}>
+            {/* Stars */}
+            <div style={{ display: "flex", gap: "6px", color: "#FFB800", fontSize: "22px" }}>
+              ★ ★ ★ ★ ★
+            </div>
+
+            {/* Quote */}
+            <p style={{
+              fontFamily: "'Albert Sans', sans-serif",
+              fontSize: width <= 480 ? "15px" : width <= 768 ? "17px" : "18px",
+              lineHeight: "1.6",
+              color: "#222222",
+              fontWeight: 500,
+              margin: 0,
+            }}>
+              &ldquo;The discovery was intensive but when we saw the process, we could see our vision and communication translated into the visuals. Studio Dezu created a new branding exactly like we wanted - futuristic but familiar.&rdquo;
+            </p>
+
+            {/* Author */}
+            <div>
+              <h4 style={{
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+                fontSize: "18px",
+                fontWeight: 700,
+                color: "#111111",
+                margin: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.5px"
+              }}>
+                — ANITA MANWANI
+              </h4>
+              <p style={{
+                fontFamily: "'Albert Sans', sans-serif",
+                fontSize: "13px",
+                color: "#666666",
+                margin: "4px 0 0 0",
+                fontWeight: 500,
+              }}>
+                President, TiE Silicon Valley & Vice Chair, TiE Global
+              </p>
+            </div>
+
+            {/* Tags */}
+            <div style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "10px",
+              marginTop: "4px"
+            }}>
+              {["Rebranding", "UIUX", "Marketing Design"].map((tag, idx) => (
+                <span key={idx} style={{
+                  backgroundColor: "#9CFF00",
+                  color: "#000000",
+                  padding: "6px 14px",
+                  borderRadius: "6px",
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+                }}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <LatestWork currentProjectId="tie" />
 
       <Footer />
 

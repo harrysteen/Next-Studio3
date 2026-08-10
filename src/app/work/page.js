@@ -74,6 +74,20 @@ const projects = [
     year: "2022",
     path: "/Madbox",
   },
+  {
+    img: "/Evoque impact.webp",
+    title: "Evoque Impact",
+    category: "Finance",
+    year: "2025",
+    path: "/EvoqueImpact",
+  },
+  {
+    img: "/life cykul.webp",
+    title: "Life Cykul",
+    category: "E-commerce",
+    year: "2025",
+    path: "/LifeCykul",
+  },
 ];
 
 const categories = [

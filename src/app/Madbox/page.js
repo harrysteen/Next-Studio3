@@ -5,6 +5,7 @@ import Link from "next/link";
 import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import LatestWork from "../../components/LatestWork/LatestWork";
 import Image from "next/image";
 import madboxImg1 from "../../work individual page assets/madbox img1.jpg";
 import madboxImg2 from "../../work individual page assets/madbox img2.jpg";
@@ -737,6 +738,8 @@ export default function Madbox() {
           </div>
         </div>
       </section>
+
+      <LatestWork currentProjectId="madbox" />
 
       <Footer />
 
