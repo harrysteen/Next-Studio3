@@ -66,7 +66,7 @@ export default function HighCloud() {
     width: "100%",
     height: "100vh",
     minHeight: "550px",
-    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/highcloud work.webp')",
+    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/work individual page assets/hero image Highcloud.svg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
@@ -782,22 +782,18 @@ export default function HighCloud() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/hight cloud scrolling img1.svg",
+                "/work individual page assets/hight cloud scrolling img2.svg",
+                "/work individual page assets/hight cloud scrolling img3.svg",
+                "/work individual page assets/hight cloud scrolling img4.svg"
               ].concat([
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/hight cloud scrolling img1.svg",
+                "/work individual page assets/hight cloud scrolling img2.svg",
+                "/work individual page assets/hight cloud scrolling img3.svg",
+                "/work individual page assets/hight cloud scrolling img4.svg"
               ]).map((src, index) => (
                 <div key={`row1-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="HighCloud Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -807,22 +803,18 @@ export default function HighCloud() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeLeft">
               {[
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/hight cloud scrolling img5.svg",
+                "/work individual page assets/hight cloud scrolling img6.svg",
+                "/work individual page assets/hight cloud scrolling img7.svg",
+                "/work individual page assets/hight cloud scrolling img8.svg"
               ].concat([
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/hight cloud scrolling img5.svg",
+                "/work individual page assets/hight cloud scrolling img6.svg",
+                "/work individual page assets/hight cloud scrolling img7.svg",
+                "/work individual page assets/hight cloud scrolling img8.svg"
               ]).map((src, index) => (
                 <div key={`row2-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="HighCloud Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -832,22 +824,18 @@ export default function HighCloud() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
+                "/work individual page assets/hight cloud scrolling img9.svg",
+                "/work individual page assets/hight cloud scrolling img10.svg",
+                "/work individual page assets/hight cloud scrolling img11.svg",
+                "/work individual page assets/hight cloud scrolling img12.svg"
               ].concat([
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
+                "/work individual page assets/hight cloud scrolling img9.svg",
+                "/work individual page assets/hight cloud scrolling img10.svg",
+                "/work individual page assets/hight cloud scrolling img11.svg",
+                "/work individual page assets/hight cloud scrolling img12.svg"
               ]).map((src, index) => (
                 <div key={`row3-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="HighCloud Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
