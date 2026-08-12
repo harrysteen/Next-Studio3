@@ -831,7 +831,7 @@ export default function TieSiliconValley() {
           color: "#FFFFFF",
           lineHeight: 1.2
         }}>
-          OUR CLIENTS SAY&apos;S <span style={{ color: "#9cff00" }}>ABOUT US</span>
+          WHAT OUR <span style={{ color: "#9cff00" }}>CLIENTS SAY</span>
         </h2>
 
         <div style={{
@@ -875,11 +875,6 @@ export default function TieSiliconValley() {
             justifyContent: "center",
             gap: "20px",
           }}>
-            {/* Stars */}
-            <div style={{ display: "flex", gap: "6px", color: "#FFB800", fontSize: "22px" }}>
-              ★ ★ ★ ★ ★
-            </div>
-
             {/* Quote */}
             <p style={{
               fontFamily: "'Albert Sans', sans-serif",

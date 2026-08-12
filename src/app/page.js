@@ -25,16 +25,16 @@ import lifeCykul from "../herossection-animation-assets/life cykul.webp";
 
 const trailImages = [
   evoqueImpact.src || evoqueImpact,
-  lifeCykul.src || lifeCykul,
-  ecomallwork.src || ecomallwork,
-  highcloudWork.src || highcloudWork,
-  kshatriyasWork.src || kshatriyasWork,
-  leiutis.src || leiutis,
-  madboxwork.src || madboxwork,
-  mall360.src || mall360,
   naeeamzafar.src || naeeamzafar,
   tieSiliconValley.src || tieSiliconValley,
+  lifeCykul.src || lifeCykul,
   venturaWork.src || venturaWork,
+  highcloudWork.src || highcloudWork,
+  leiutis.src || leiutis,
+  kshatriyasWork.src || kshatriyasWork,
+  madboxwork.src || madboxwork,
+  ecomallwork.src || ecomallwork,
+  mall360.src || mall360,
 ];
 
 export default function Home() {

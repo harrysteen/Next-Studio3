@@ -1,29 +1,64 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import useResponsive from "../../hooks/useResponsive";
 import LatestWork from "../../components/LatestWork/LatestWork";
 
-// Life Cykul Case Study Page
-export default function LifeCykul() {
+export default function PontisPage() {
   const { width } = useResponsive();
+  const [activeProcess, setActiveProcess] = useState(0);
+  const [hoveredNavLink, setHoveredNavLink] = useState(null);
 
-  const [hoveredNavLink, setHoveredNavLink] = React.useState(null);
-  const [activeProcess, setActiveProcess] = React.useState(0);
-
-  // Responsive Styles
   const containerStyle = {
+    backgroundColor: "#1b0634",
+    color: "#ffffff",
     minHeight: "100vh",
-    background:
-      "radial-gradient(circle at 35% 30%, rgba(61, 16, 108, 0.5), transparent 20%), radial-gradient(circle at 70% 40%, rgba(61, 16, 108, 0.5), transparent 20%), #130323",
-    color: "#FFFFFF",
-    paddingTop: width <= 768 ? "80px" : "0px",
-    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-    overflowX: "hidden",
+    fontFamily: "'Albert Sans', sans-serif",
     position: "relative",
+    overflow: "hidden",
+  };
+
+  const heroSectionStyle = {
+    height: width <= 768 ? "60vh" : "85vh",
+    minHeight: width <= 768 ? "400px" : "600px",
+    width: "100%",
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    padding: width <= 480 ? "0 20px 40px 20px" : width <= 768 ? "0 40px 60px 40px" : "0 80px 80px 80px",
+    backgroundImage: `linear-gradient(to bottom, rgba(27, 6, 52, 0.2), rgba(27, 6, 52, 0.95)), url('/ourwork/pontis.webp')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    boxSizing: "border-box"
+  };
+
+  const heroTitleStyle = {
+    fontSize: width <= 480 ? "40px" : width <= 768 ? "64px" : width <= 1024 ? "90px" : "120px",
+    fontWeight: 800,
+    lineHeight: "0.95",
+    textTransform: "uppercase",
+    margin: "0 0 20px 0",
+    letterSpacing: "-2px",
+    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+  };
+
+  const heroTaglineStyle = {
+    fontSize: width <= 480 ? "16px" : "20px",
+    color: "#9cff00",
+    fontWeight: 600,
+    letterSpacing: "1px",
+    textTransform: "uppercase",
+  };
+
+  const contentWrapperStyle = {
+    width: "90%",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    padding: width <= 480 ? "40px 0" : "80px 0",
   };
 
   const navbarStyle = {
@@ -35,48 +70,6 @@ export default function LifeCykul() {
     background: "transparent",
     backgroundColor: "transparent",
     borderBottom: "none",
-  };
-
-  const heroSectionStyle = {
-    position: "relative",
-    width: "100%",
-    height: "100vh",
-    minHeight: "550px",
-    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/ourwork/lifecykul.webp')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    display: "flex",
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    padding: "180px 5% 0 5%",
-    overflow: "hidden",
-    borderBottom: "1px solid rgba(255, 255, 255, 0.05)",
-  };
-
-  const heroTitleStyle = {
-    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-    fontSize: width <= 480 ? "38px" : width <= 768 ? "50px" : "72px",
-    fontWeight: 700,
-    lineHeight: 1.1,
-    textTransform: "uppercase",
-    marginBottom: "12px",
-    letterSpacing: "-1px",
-  };
-
-  const heroTaglineStyle = {
-    fontSize: "20px",
-    color: "#9cff00",
-    fontWeight: 600,
-    textTransform: "uppercase",
-    letterSpacing: "1px",
-  };
-
-  const contentWrapperStyle = {
-    width: "90%",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    paddingTop: "80px",
-    paddingBottom: "80px",
   };
 
   const bottomNavStyle = {
@@ -115,17 +108,18 @@ export default function LifeCykul() {
     <div style={containerStyle}>
       <Navbar style={navbarStyle} />
 
-      {/* GIANT TYPOGRAPHY HERO SECTION */}
+      {/* HERO SECTION */}
       <section style={heroSectionStyle}>
         <div>
           <h1 style={heroTitleStyle}>
-            LIFE <br /> CYKUL
+            PONTIS
           </h1>
-          <span style={heroTaglineStyle}>@SRICITY, INDIA~2026</span>
+          <span style={heroTaglineStyle}>@Bay Area, USA~2025</span>
         </div>
       </section>
 
       <main style={contentWrapperStyle}>
+
         {/* PROJECT OVERVIEW SECTION */}
         <section style={{
           display: "grid",
@@ -150,11 +144,31 @@ export default function LifeCykul() {
               fontFamily: "'Albert Sans', sans-serif",
               fontWeight: 400,
             }}>
-              Lifecykul is a reimagined employee engagement platform that helps companies create several engagement activities for dynamic teams. We worked with them on designing the entire product and navigation to make it a accessible and functional product.
+              Pontis is a bay-area based education and counselling platform that aims at providing personalised training and one-on-one programs for civil engineering job-seekers and aspiring students. The brand should establish trust and expertise immediately while communicating the important details to the target audience.
             </p>
+            <div style={{ marginTop: "20px" }}>
+              <a 
+                href="https://pontishub.info/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  color: "#9cff00",
+                  fontSize: "16px",
+                  fontWeight: 700,
+                  textDecoration: "underline",
+                  textUnderlineOffset: "4px"
+                }}
+              >
+                Visit Website: pontishub.info ↗
+              </a>
+            </div>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "50px" }}>
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "50px",
+          }}>
             <div>
               <h2 style={{
                 color: "#9cff00",
@@ -170,7 +184,7 @@ export default function LifeCykul() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Rebranding, User Research, User Experience Design, Interface and Layout Design
+                Branding, Visual Identity systems, Content Strategy, UI Design, Marketing Design
               </p>
             </div>
             <div>
@@ -188,42 +202,35 @@ export default function LifeCykul() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Technology
+                Education and Technology
               </p>
             </div>
           </div>
         </section>
 
-        {/* VIDEO / HERO MEDIA SHOWCASE SECTION */}
+        {/* IMAGE SHOWCASE */}
         <section style={{
           width: "100%",
-          height: width <= 768 ? "400px" : "80vh",
+          height: width <= 768 ? "400px" : "70vh",
           minHeight: "400px",
           borderRadius: "16px",
           marginBottom: "80px",
           position: "relative",
           overflow: "hidden"
         }}>
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <img
+            src="/ourwork/pontis.webp"
+            alt="Pontis Hub"
             style={{
               width: "100%",
               height: "100%",
               objectFit: "cover",
+              objectPosition: "center top"
             }}
-          >
-            <source
-              src="https://www.dropbox.com/scl/fi/ffqkap8xoe469vfd6u4ua/18069232-uhd_3840_2160_24fps.mp4?rlkey=xylgikojt656pmmy0ua8or8lb&st=f3q4uup0&raw=1"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+          />
         </section>
 
-        {/* HOW WE HANDLED THE SITUATION */}
+        {/* WHAT WE WORKED ON */}
         <section style={{
           marginBottom: "120px",
           display: "grid",
@@ -246,20 +253,20 @@ export default function LifeCykul() {
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {[
                 {
-                  title: "USER RESEARCH",
-                  desc: "Through extensive research and surveys, we understood the pain points and requirements of the different users- the employees and the relevant management teams that create engagement programs."
+                  title: "BRANDING AND VISUAL IDENTITY",
+                  desc: "The client’s brief was clear- they wanted an immersive experience that felt professional and inviting at the same time. We used brighter tones and moving elements to bring in the energy and enthusiasm for the students. Subtle gradients and clean moments brought in the association with expertise and credibility."
                 },
                 {
-                  title: "USER EXPERIENCE DESIGN",
-                  desc: "The key difficulty was to gauge the complexity of use cases while creating extensive control for the user. The manger should be able to design and setup different games, of different levels for various employee groups. We built a control system that is easy and user friendly, start to end."
+                  title: "CONTENT STRATEGY AND COPYWRITING",
+                  desc: "The tone is simple and encouraging. The messaging and content is driven by motivating notes and productivity boosting across all the resources. We kept the content minimal and descriptive sparingly to ensure the relevant message is delivered and overwhelm is avoided."
                 },
                 {
-                  title: "BRANDING AND DESIGN SYSTEMS",
-                  desc: "The branding has two facets- a clean and uncluttered visual identity for the management end but a vibrant and energetic identity to boost interest in the players. We created a mutual and complementing brand design system that is modern, scalable, and intuitive."
+                  title: "UI AND LAYOUT DESIGN",
+                  desc: "The client wanted a single informative landing page that packed all the information and interaction required. The key was to keep the landing page clean, engaging and short to avoid additional scroll. We adapted the branding elements creatively across the page to stay consistent with the experience and interaction."
                 },
                 {
-                  title: "USER INTERFACE AND LAYOUT DESIGN",
-                  desc: "We kept in mind the admin’s pain points, the dynamic requirements they might have, the nature of various games, potential tournament structures and most importantly- room to grow. This was possible through clear hierarchy, spatial design and visual flows."
+                  title: "MARKETING DESIGN",
+                  desc: "The business spoke to a niche audience - aspiring students and jobseekers in the non-engineering domains in the USA. The market gap made the business a good contender. We strategised and designed communication material that helped the client enable their sales system."
                 }
               ].map((item, idx) => (
                 <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
@@ -293,8 +300,8 @@ export default function LifeCykul() {
 
           <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
             <img
-              src="/ourwork/lifecykul.webp"
-              alt="Life Cykul Platform Design Process"
+              src="/ourwork/pontis.webp"
+              alt="Pontis Showcase"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
@@ -326,7 +333,7 @@ export default function LifeCykul() {
               fontFamily: "'Albert Sans', sans-serif",
               margin: 0
             }}>
-              We designed a product that adapts and allows room of choice to the users. The admin can create, navigate and control a wide range of tasks and games with ease, making the product a one-of-its kind in this market segment with very little learning curve and excellent execution.
+              Pontis stands out from their competitors in the market through a striking yet clean branding identity. The landing page is easy to navigate and it establishes the core brand experiences like credibility and reliability. The students reported that the landing page was easy to go over and gives them something to think about.
             </p>
           </div>
         </section>
@@ -375,8 +382,8 @@ export default function LifeCykul() {
             justifyContent: "center",
           }}>
             <img
-              src="/ourwork/lifecykul.webp"
-              alt="Namit Patravali"
+              src="/ourwork/pontis.webp"
+              alt="Kiran Sathuluru"
               style={{
                 width: "100%",
                 height: "100%",
@@ -402,7 +409,7 @@ export default function LifeCykul() {
               fontWeight: 500,
               margin: 0,
             }}>
-              &ldquo;Our technical teams worked back and forth with the Dezu team over a month. We were on a time crunch to launch the product but they were able to understand our requirements, users and complexity quickly and deliver the designs in time.&rdquo;
+              &ldquo;We started from scratch. Studio Dezu listened to my story and goals and I could see them bring my vision to life through iterations and modifications. The landing page became a critical asset that helped move my business.&rdquo;
             </p>
 
             {/* Author */}
@@ -416,7 +423,7 @@ export default function LifeCykul() {
                 textTransform: "uppercase",
                 letterSpacing: "0.5px"
               }}>
-                — NAMIT PATRAVALI
+                — KIRAN SATHULURU
               </h4>
               <p style={{
                 fontFamily: "'Albert Sans', sans-serif",
@@ -425,7 +432,7 @@ export default function LifeCykul() {
                 margin: "4px 0 0 0",
                 fontWeight: 500,
               }}>
-                Product Head, Lifecykul
+                CEO, Pontis Hub
               </p>
             </div>
 
@@ -436,7 +443,7 @@ export default function LifeCykul() {
               gap: "10px",
               marginTop: "4px"
             }}>
-              {["PRODUCT DESIGN", "UI/UX", "PRODUCT STRATEGY"].map((tag, idx) => (
+              {["BRANDING", "UI/UX", "MARKETING DESIGN"].map((tag, idx) => (
                 <span key={idx} style={{
                   backgroundColor: "#9cff00",
                   color: "#111111",
@@ -455,155 +462,11 @@ export default function LifeCykul() {
         </div>
       </section>
 
-      {/* INFINITE SCROLLING MARQUEE SECTION */}
-      <section className="marqueeContainer">
-        <style dangerouslySetInnerHTML={{
-          __html: `
-          @keyframes scrollLeft {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          @keyframes scrollRight {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
-          }
-          .marqueeWrapper {
-            overflow: hidden;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            margin-top: 0px;
-            margin-bottom: 100px;
-          }
-          .marqueeRow {
-            display: flex;
-            width: 100%;
-            overflow: hidden;
-          }
-          .marqueeTrack {
-            display: flex;
-            width: max-content;
-            gap: 30px;
-            will-change: transform;
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-          }
-          .marqueeLeft {
-            animation: scrollLeft 45s linear infinite;
-          }
-          .marqueeRight {
-            animation: scrollRight 45s linear infinite;
-          }
-          .marqueeWrapper:hover .marqueeLeft,
-          .marqueeWrapper:hover .marqueeRight {
-            animation-play-state: paused;
-          }
-          .marqueeItem {
-            flex-shrink: 0;
-            width: 580px;
-            height: 360px;
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease;
-          }
-          .marqueeItem:hover {
-            transform: scale(1.03);
-          }
-          .marqueeImg {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            display: block;
-          }
-          @media (max-width: 768px) {
-            .marqueeItem {
-              width: 280px;
-              height: 200px;
-              border-radius: 12px;
-            }
-            .marqueeWrapper {
-              gap: 16px;
-              margin-bottom: 60px;
-            }
-            .marqueeTrack {
-              gap: 16px;
-            }
-          }
-          @media (max-width: 480px) {
-            .marqueeItem {
-              width: 230px;
-              height: 165px;
-              border-radius: 10px;
-            }
-            .marqueeWrapper {
-              gap: 12px;
-              margin-bottom: 40px;
-            }
-            .marqueeTrack {
-              gap: 12px;
-            }
-          }
-        ` }} />
-        <div className="marqueeWrapper">
-          {/* Row 1 (moving right) */}
-          <div className="marqueeRow">
-            <div className="marqueeTrack marqueeRight">
-              {[
-                "/work individual page assets/tie loop scroll img1.webp",
-                "/work individual page assets/tie loop scroll img2.webp",
-                "/work individual page assets/tie loop scroll img3.webp",
-                "/work individual page assets/tie loop scroll img4.webp",
-                "/work individual page assets/tie loop scroll img5.webp"
-              ].concat([
-                "/work individual page assets/tie loop scroll img1.webp",
-                "/work individual page assets/tie loop scroll img2.webp",
-                "/work individual page assets/tie loop scroll img3.webp",
-                "/work individual page assets/tie loop scroll img4.webp",
-                "/work individual page assets/tie loop scroll img5.webp"
-              ]).map((src, index) => (
-                <div key={`row1-${index}`} className="marqueeItem">
-                  <img src={src} alt="Life Cykul Showcase" className="marqueeImg" />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Row 2 (moving left) */}
-          <div className="marqueeRow">
-            <div className="marqueeTrack marqueeLeft">
-              {[
-                "/work individual page assets/tie loop scroll img6.webp",
-                "/work individual page assets/tie loop scroll img7.webp",
-                "/work individual page assets/tie loop scroll img8.webp",
-                "/work individual page assets/tie loop scroll img9.webp",
-                "/work individual page assets/tie loop scroll img10.webp"
-              ].concat([
-                "/work individual page assets/tie loop scroll img6.webp",
-                "/work individual page assets/tie loop scroll img7.webp",
-                "/work individual page assets/tie loop scroll img8.webp",
-                "/work individual page assets/tie loop scroll img9.webp",
-                "/work individual page assets/tie loop scroll img10.webp"
-              ]).map((src, index) => (
-                <div key={`row2-${index}`} className="marqueeItem">
-                  <img src={src} alt="Life Cykul Showcase" className="marqueeImg" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <LatestWork currentProjectId="lifecykul" />
+      <LatestWork currentProjectId="pontis" />
 
       <Footer />
 
-      {/* FLOATING BOTTOM NAV */}
+      {/* Bottom Navigation matching main site */}
       <nav style={bottomNavStyle} aria-label="Primary Navigation">
         <Link
           href="/work"

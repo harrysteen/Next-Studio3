@@ -430,7 +430,7 @@ export default function HighCloud() {
           <h1 style={heroTitleStyle}>
             HIGHCLOUD<br />SOLUTIONS
           </h1>
-          <span style={heroTaglineStyle}>@USA~2025</span>
+          <span style={heroTaglineStyle}>@Minnesota, USA~2025</span>
         </div>
       </section>
 
@@ -461,7 +461,7 @@ export default function HighCloud() {
               fontFamily: "'Albert Sans', sans-serif",
               fontWeight: 400,
             }}>
-              HighCloud Solutions Project Overview.
+              HighCloud Solutions is a Minnesota-based forward AI-driven cloud technology company providing services to their local government institutions among other major clientele. They wanted a new brand identity that communicated their technical expertise, experience and AI-credibility.
             </p>
           </div>
 
@@ -485,7 +485,7 @@ export default function HighCloud() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Branding, UI/UX Design, Development
+                Rebranding, Visual Identity system, Content Strategy, UI Design
               </p>
             </div>
             <div>
@@ -555,18 +555,23 @@ export default function HighCloud() {
               fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
               lineHeight: 1.2
             }}>
-              HOW WE <span style={{ color: "#9cff00" }}>HANDLED</span> <br /> THE SITUATION
+              WHAT WE <span style={{ color: "#9cff00" }}>WORKED ON</span>
             </h2>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {[
                 {
-                  title: "RESEARCH & DISCOVERY",
-                  desc: "We Conducted In-Depth Research By Analyzing Competitors, Identifying Key User Pain Points, And Mapping Out Detailed Customer Journeys To Uncover Opportunities For A More Intuitive And Impactful Experience."
+                  title: "REBRANDING AND VISUAL STORYTELLING",
+                  desc: "The brand identity brings the company’s ‘Forward technical expertise and nimble offerings’ concept to life through strong color palettes and clear cut design elements. Reimagined logo colors, motion design and visual elements align with the brands message and vision."
                 },
-                { title: "WIREFRAMING & UX DESIGN", desc: "" },
-                { title: "UI DESIGN & BRANDING", desc: "" },
-                { title: "DEVELOPMENT & TESTING", desc: "" }
+                {
+                  title: "CONTENT STRATEGY AND WRITING",
+                  desc: "With heavy technical jargon and diverse service offerings, it was critical to architect the information in a simple, impactful and navigable content system without creating overwhelm to the user."
+                },
+                {
+                  title: "UI AND LAYOUT DESIGN",
+                  desc: "The website serves as HighCloud’s primary communication and information platform, so it was vital to get the messaging and branding right. The UI translates the brand’s technical expertise and impending vision into the layouts through clean transitions and visual systems."
+                }
               ].map((item, idx) => (
                 <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
                   <h3 style={{
@@ -599,96 +604,167 @@ export default function HighCloud() {
 
           <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
             <img
-              src="https://picsum.photos/800/600?random=10"
-              alt="Design Process"
+              src="/ourwork/highcloudwork.webp"
+              alt="HighCloud Design Process"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
         </section>
 
-        {/* SUCCESS IN NUMBERS SECTION */}
-        <section style={{ marginBottom: "0px" }}>
+        {/* THE OUTCOME SECTION */}
+        <section style={{ marginBottom: "100px" }}>
           <h2 style={{
             fontSize: width <= 480 ? "32px" : "40px",
             fontWeight: 700,
             textTransform: "uppercase",
-            marginBottom: "40px",
+            marginBottom: "30px",
             fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
             lineHeight: 1.2
           }}>
-            <span style={{ color: "#9cff00" }}>SUCCESS</span> IN <br /> NUMBERS & EXPERIENCE
+            THE <span style={{ color: "#9cff00" }}>OUTCOME</span>
           </h2>
-
           <div style={{
-            display: "grid",
-            gridTemplateColumns: width <= 768 ? "1fr" : "repeat(3, 1fr)",
-            gap: "20px",
+            border: "1px solid rgba(156, 255, 0, 0.3)",
+            borderRadius: "16px",
+            padding: width <= 768 ? "36px 24px" : "50px 40px",
+            backgroundColor: "rgba(27, 6, 52, 0.7)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
           }}>
-            {/* Card 1 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
+            <p style={{
+              fontSize: width <= 480 ? "16px" : "19px",
+              lineHeight: "1.8",
+              color: "#e0e0e0",
+              fontFamily: "'Albert Sans', sans-serif",
+              margin: 0
             }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>95%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>HUMAN-CENTERED <br /> DESIGN</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>87%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>PROVEN EXPERTISE <br /> RECORD</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 3 (Spans 2 rows) */}
-            <div style={{
-              gridRow: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between"
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "40px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>100%</div>
-              <div>
-                <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>MEASURABLE <br /> IMPACT</h3>
-                <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                  We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 (Spans 2 cols) */}
-            <div style={{
-              gridColumn: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>25X</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>STARTUPS&apos;S SCALABLE SOLUTION</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
+              Highcloud Solutions launched with a new performative branding that makes them stand out from their competitors. Their messaging comes out stronger and their vision and service providings are clearly communicated. Their overall brand system packs a punch and immediately engages the audience while making sure it remains subtle and professional throughout.
+            </p>
           </div>
         </section>
       </main>
+
+      {/* WHAT OUR CLIENTS SAY TESTIMONIAL SECTION */}
+      <section style={{
+        width: "90%",
+        maxWidth: "1100px",
+        margin: width <= 768 ? "40px auto 80px auto" : "60px auto 120px auto",
+      }}>
+        <h2 style={{
+          textAlign: "center",
+          fontSize: width <= 480 ? "26px" : width <= 768 ? "34px" : "42px",
+          fontWeight: 700,
+          textTransform: "uppercase",
+          marginBottom: width <= 768 ? "28px" : "40px",
+          fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+          letterSpacing: "-0.5px",
+          color: "#FFFFFF",
+          lineHeight: 1.2
+        }}>
+          WHAT OUR <span style={{ color: "#9cff00" }}>CLIENTS SAY</span>
+        </h2>
+
+        <div style={{
+          backgroundColor: "#FFFFFF",
+          borderRadius: width <= 480 ? "16px" : "24px",
+          padding: width <= 480 ? "24px 20px" : width <= 768 ? "32px 28px" : "40px 48px",
+          display: "grid",
+          gridTemplateColumns: width <= 900 ? "1fr" : "320px 1fr",
+          gap: width <= 768 ? "24px" : "40px",
+          alignItems: "center",
+          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
+          color: "#111111",
+        }}>
+          {/* Left: Client Photo */}
+          <div style={{
+            width: "100%",
+            height: width <= 480 ? "260px" : "320px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            backgroundColor: "#9BB6C3",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "center",
+          }}>
+            <img
+              src="/work individual page assets/Raghu Chejarla.webp"
+              alt="Raghu Chejarla"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "top center",
+              }}
+            />
+          </div>
+
+          {/* Right: Content */}
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "20px",
+          }}>
+            {/* Quote */}
+            <p style={{
+              fontFamily: "'Albert Sans', sans-serif",
+              fontSize: width <= 480 ? "15px" : width <= 768 ? "17px" : "18px",
+              lineHeight: "1.6",
+              color: "#222222",
+              fontWeight: 500,
+              margin: 0,
+            }}>
+              &ldquo;Studio Dezu created a stunning brand for us without making it feel unfamiliar to the elements that we associated with for the last few years. The new branding gave us a much more sophisticated and professional outlook - exactly what we wanted.&rdquo;
+            </p>
+
+            {/* Author */}
+            <div>
+              <h4 style={{
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+                fontSize: "18px",
+                fontWeight: 700,
+                color: "#111111",
+                margin: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.5px"
+              }}>
+                — RAGHU CHEJARLA
+              </h4>
+              <p style={{
+                fontFamily: "'Albert Sans', sans-serif",
+                fontSize: "13px",
+                color: "#666666",
+                margin: "4px 0 0 0",
+                fontWeight: 500,
+              }}>
+                President, HighCloud Solutions
+              </p>
+            </div>
+
+            {/* Tags */}
+            <div style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "10px",
+              marginTop: "4px"
+            }}>
+              {["REBRANDING", "UI/UX", "CONTENT STRATEGY"].map((tag, idx) => (
+                <span key={idx} style={{
+                  backgroundColor: "#9cff00",
+                  color: "#111111",
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  padding: "6px 14px",
+                  borderRadius: "6px",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.5px"
+                }}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* INFINITE SCROLLING MARQUEE SECTION */}
       <section className="marqueeContainer">
