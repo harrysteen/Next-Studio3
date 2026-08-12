@@ -66,7 +66,7 @@ export default function HighCloud() {
     width: "100%",
     height: "100vh",
     minHeight: "550px",
-    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/work individual page assets/hero image Highcloud.svg')",
+    backgroundImage: "linear-gradient(#000000B2, #000000B2), url('/work individual page assets/hero image Highcloud.webp')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
@@ -782,18 +782,18 @@ export default function HighCloud() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/work individual page assets/hight cloud scrolling img1.svg",
-                "/work individual page assets/hight cloud scrolling img2.svg",
-                "/work individual page assets/hight cloud scrolling img3.svg",
-                "/work individual page assets/hight cloud scrolling img4.svg"
+                "/work individual page assets/hight cloud scrolling img1.webp",
+                "/work individual page assets/hight cloud scrolling img2.webp",
+                "/work individual page assets/hight cloud scrolling img3.webp",
+                "/work individual page assets/hight cloud scrolling img4.webp"
               ].concat([
-                "/work individual page assets/hight cloud scrolling img1.svg",
-                "/work individual page assets/hight cloud scrolling img2.svg",
-                "/work individual page assets/hight cloud scrolling img3.svg",
-                "/work individual page assets/hight cloud scrolling img4.svg"
+                "/work individual page assets/hight cloud scrolling img1.webp",
+                "/work individual page assets/hight cloud scrolling img2.webp",
+                "/work individual page assets/hight cloud scrolling img3.webp",
+                "/work individual page assets/hight cloud scrolling img4.webp"
               ]).map((src, index) => (
                 <div key={`row1-${index}`} className="marqueeItem">
-                  <img src={src} alt="HighCloud Showcase" className="marqueeImg" />
+                  <img src={src} alt="HighCloud Showcase" className="marqueeImg" loading="lazy" />
                 </div>
               ))}
             </div>
@@ -803,18 +803,18 @@ export default function HighCloud() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeLeft">
               {[
-                "/work individual page assets/hight cloud scrolling img5.svg",
-                "/work individual page assets/hight cloud scrolling img6.svg",
-                "/work individual page assets/hight cloud scrolling img7.svg",
-                "/work individual page assets/hight cloud scrolling img8.svg"
+                "/work individual page assets/hight cloud scrolling img5.webp",
+                "/work individual page assets/hight cloud scrolling img6.webp",
+                "/work individual page assets/hight cloud scrolling img7.webp",
+                "/work individual page assets/hight cloud scrolling img8.webp"
               ].concat([
-                "/work individual page assets/hight cloud scrolling img5.svg",
-                "/work individual page assets/hight cloud scrolling img6.svg",
-                "/work individual page assets/hight cloud scrolling img7.svg",
-                "/work individual page assets/hight cloud scrolling img8.svg"
+                "/work individual page assets/hight cloud scrolling img5.webp",
+                "/work individual page assets/hight cloud scrolling img6.webp",
+                "/work individual page assets/hight cloud scrolling img7.webp",
+                "/work individual page assets/hight cloud scrolling img8.webp"
               ]).map((src, index) => (
                 <div key={`row2-${index}`} className="marqueeItem">
-                  <img src={src} alt="HighCloud Showcase" className="marqueeImg" />
+                  <img src={src} alt="HighCloud Showcase" className="marqueeImg" loading="lazy" />
                 </div>
               ))}
             </div>
@@ -824,18 +824,18 @@ export default function HighCloud() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/work individual page assets/hight cloud scrolling img9.svg",
-                "/work individual page assets/hight cloud scrolling img10.svg",
-                "/work individual page assets/hight cloud scrolling img11.svg",
-                "/work individual page assets/hight cloud scrolling img12.svg"
+                "/work individual page assets/hight cloud scrolling img9.webp",
+                "/work individual page assets/hight cloud scrolling img10.webp",
+                "/work individual page assets/hight cloud scrolling img11.webp",
+                "/work individual page assets/hight cloud scrolling img12.webp"
               ].concat([
-                "/work individual page assets/hight cloud scrolling img9.svg",
-                "/work individual page assets/hight cloud scrolling img10.svg",
-                "/work individual page assets/hight cloud scrolling img11.svg",
-                "/work individual page assets/hight cloud scrolling img12.svg"
+                "/work individual page assets/hight cloud scrolling img9.webp",
+                "/work individual page assets/hight cloud scrolling img10.webp",
+                "/work individual page assets/hight cloud scrolling img11.webp",
+                "/work individual page assets/hight cloud scrolling img12.webp"
               ]).map((src, index) => (
                 <div key={`row3-${index}`} className="marqueeItem">
-                  <img src={src} alt="HighCloud Showcase" className="marqueeImg" />
+                  <img src={src} alt="HighCloud Showcase" className="marqueeImg" loading="lazy" />
                 </div>
               ))}
             </div>
