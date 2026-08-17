@@ -68,9 +68,8 @@ function BlogsContent() {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`${styles.categoryBtn} ${
-                selectedCategory === cat ? styles.active : ""
-              }`}
+              className={`${styles.categoryBtn} ${selectedCategory === cat ? styles.active : ""
+                }`}
               onClick={() => setSelectedCategory(cat)}
             >
               {cat}
@@ -173,22 +172,6 @@ function BlogsContent() {
       )}
 
       <Footer />
-
-      {/* BOTTOM NAV */}
-      <nav className={styles.bottomNav} aria-label="Primary Navigation">
-        <Link href="/work" className={styles.navLink}>
-          Work
-        </Link>
-        <Link href="/team" className={styles.navLink}>
-          Get Your Own Team
-        </Link>
-        <Link href="/about" className={styles.navLink}>
-          About
-        </Link>
-        <Link href="/blogs" className={styles.navLink}>
-          Blogs
-        </Link>
-      </nav>
     </div>
   );
 }

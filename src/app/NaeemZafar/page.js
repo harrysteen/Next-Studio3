@@ -6,6 +6,7 @@ import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import LatestWork from "../../components/LatestWork/LatestWork";
+import WorkAccordion from "../../components/WorkAccordion/WorkAccordion";
 
 export default function NaeemZafar() {
   const scopeOfWork = [
@@ -36,7 +37,14 @@ export default function NaeemZafar() {
   const [hoveredBook, setHoveredBook] = React.useState(null);
   const [hoveredBoard, setHoveredBoard] = React.useState(null);
   const [hoveredNavLink, setHoveredNavLink] = React.useState(null);
-  const [activeProcess, setActiveProcess] = React.useState(0);
+  const [activeProcessImg, setActiveProcessImg] = React.useState(0);
+
+  const processImages = [
+    "/work individual page assets/Naeem Zafar persnol branding.webp",
+    "/work individual page assets/NAEEM ZAFAR.png",
+    "/work individual page assets/Naeem Zafar ui and web designing.webp",
+    "/work individual page assets/Naeem Zafar development and maintnance.webp",
+  ];
 
   // Responsive Styles
   const containerStyle = {
@@ -558,8 +566,8 @@ export default function NaeemZafar() {
               WHAT WE <span style={{ color: "#9cff00" }}>WORKED ON</span>
             </h2>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
+            <WorkAccordion
+              items={[
                 {
                   title: "PERSONAL BRANDING",
                   desc: "We built a vibrant visual identity for Prof NZ with the objective of creating an experience as similar as possible to his real-life personality and teaching."
@@ -576,41 +584,30 @@ export default function NaeemZafar() {
                   title: "DEVELOPMENT AND MAINTENANCE",
                   desc: "We built this site on Wordpress-Elementor to act as a clear Content Management system from Professor Naeem and complement the ecommerce elements and integrations on the site. It was also built for SEO and compatible with potential LMS and future integrations. Through an ongoing engagement, we also check the functionality and security of the site."
                 }
-              ].map((item, idx) => (
-                <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
-                  <h3 style={{
-                    color: activeProcess === idx ? "#9cff00" : "#ffffff",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-                  }}>
-                    <span style={{ fontSize: "24px" }}>+</span> {item.title}
-                  </h3>
-                  {activeProcess === idx && item.desc && (
-                    <p style={{
-                      marginTop: "16px",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      color: "#b0b0b0",
-                      fontFamily: "'Albert Sans', sans-serif",
-                    }}>
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+              ]}
+              defaultActiveIndex={0}
+              onChange={(idx) => setActiveProcessImg(idx !== null ? idx : 0)}
+            />
           </div>
 
-          <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
+          <div style={{
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)",
+            backgroundColor: "#1b0634",
+          }}>
             <img
-              src="/naeem_zafar_portrait.png"
-              alt="Naeem Zafar"
-              style={{ width: "100%", height: "auto", display: "block" }}
+              src={processImages[activeProcessImg ?? 0]}
+              alt="Naeem Zafar Work Process"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                objectFit: "cover",
+                transition: "opacity 0.3s ease, transform 0.3s ease"
+              }}
             />
           </div>
         </section>

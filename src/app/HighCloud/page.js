@@ -6,6 +6,7 @@ import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import LatestWork from "../../components/LatestWork/LatestWork";
+import WorkAccordion from "../../components/WorkAccordion/WorkAccordion";
 
 export default function HighCloud() {
   const scopeOfWork = [
@@ -36,7 +37,13 @@ export default function HighCloud() {
   const [hoveredBook, setHoveredBook] = React.useState(null);
   const [hoveredBoard, setHoveredBoard] = React.useState(null);
   const [hoveredNavLink, setHoveredNavLink] = React.useState(null);
-  const [activeProcess, setActiveProcess] = React.useState(0);
+  const [activeProcessImg, setActiveProcessImg] = React.useState(0);
+
+  const processImages = [
+    "/work individual page assets/HighCloud Rebranding.webp",
+    "/work individual page assets/hight cloud scrolling img1.svg",
+    "/work individual page assets/Highcloud UIUX Design.webp",
+  ];
 
   // Responsive Styles
   const containerStyle = {
@@ -558,8 +565,8 @@ export default function HighCloud() {
               WHAT WE <span style={{ color: "#9cff00" }}>WORKED ON</span>
             </h2>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
+            <WorkAccordion
+              items={[
                 {
                   title: "REBRANDING AND VISUAL STORYTELLING",
                   desc: "The brand identity brings the company’s ‘Forward technical expertise and nimble offerings’ concept to life through strong color palettes and clear cut design elements. Reimagined logo colors, motion design and visual elements align with the brands message and vision."
@@ -572,41 +579,30 @@ export default function HighCloud() {
                   title: "UI AND LAYOUT DESIGN",
                   desc: "The website serves as HighCloud’s primary communication and information platform, so it was vital to get the messaging and branding right. The UI translates the brand’s technical expertise and impending vision into the layouts through clean transitions and visual systems."
                 }
-              ].map((item, idx) => (
-                <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
-                  <h3 style={{
-                    color: activeProcess === idx ? "#9cff00" : "#ffffff",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-                  }}>
-                    <span style={{ fontSize: "24px" }}>+</span> {item.title}
-                  </h3>
-                  {activeProcess === idx && item.desc && (
-                    <p style={{
-                      marginTop: "16px",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      color: "#b0b0b0",
-                      fontFamily: "'Albert Sans', sans-serif",
-                    }}>
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+              ]}
+              defaultActiveIndex={0}
+              onChange={(idx) => setActiveProcessImg(idx !== null ? idx : 0)}
+            />
           </div>
 
-          <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
+          <div style={{
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)",
+            backgroundColor: "#1b0634",
+          }}>
             <img
-              src="/ourwork/highcloudwork.webp"
+              src={processImages[activeProcessImg ?? 0]}
               alt="HighCloud Design Process"
-              style={{ width: "100%", height: "auto", display: "block" }}
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                objectFit: "cover",
+                transition: "opacity 0.3s ease, transform 0.3s ease"
+              }}
             />
           </div>
         </section>

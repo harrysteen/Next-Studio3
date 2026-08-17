@@ -13,6 +13,7 @@ import leiutisImg2 from "../../work individual page assets/leiutis image2.png";
 import leiutisImg3 from "../../work individual page assets/leiutis image3.png";
 import leiutisImg4 from "../../work individual page assets/leiutis image4.png";
 import leiutisImg5 from "../../work individual page assets/leiutis image5.png";
+import leiutisImg6 from "../../work individual page assets/leiutis image6.png";
 import leiutisImg7 from "../../work individual page assets/leiutis image7.png";
 import leiutisImg8 from "../../work individual page assets/leiutis image8.png";
 import leiutisImg9 from "../../work individual page assets/leiutis image9.png";
@@ -610,7 +611,7 @@ export default function Leiutis() {
         </div>
       </section>
 
-      {/* FINAL MOCKUP ROW SECTION (IMAGES 4 & 5) */}
+      {/* FINAL MOCKUP ROW SECTION (IMAGES 4, 5 & 6 - BRAND SYSTEM & TYPOGRAPHY) */}
       <section style={{
         width: "100%",
         marginBottom: "80px",
@@ -618,40 +619,50 @@ export default function Leiutis() {
       }}>
         <div style={{
           display: "grid",
-          gridTemplateColumns: width <= 768 ? "1fr" : "1fr 1fr",
+          gridTemplateColumns: width <= 480 ? "1fr" : width <= 768 ? "1fr 1fr" : "1fr 1fr 1fr",
           gap: "40px",
           width: "100%"
         }}>
           <div style={{
             position: "relative",
             width: "100%",
-            aspectRatio: "16/10",
-            borderRadius: "16px",
-            overflow: "hidden",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
-            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+            aspectRatio: "1.58/1",
+            borderRadius: "12px",
+            overflow: "hidden"
           }}>
             <Image
               src={leiutisImg4}
-              alt="Leiutis Brand Identity Design 4"
+              alt="Leiutis Primary Font Norwester"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
           </div>
           <div style={{
             position: "relative",
             width: "100%",
-            aspectRatio: "16/10",
-            borderRadius: "16px",
-            overflow: "hidden",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
-            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+            aspectRatio: "1.58/1",
+            borderRadius: "12px",
+            overflow: "hidden"
           }}>
             <Image
               src={leiutisImg5}
-              alt="Leiutis Brand Identity Design 5"
+              alt="Leiutis Secondary Font Montserrat"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "1.58/1",
+            borderRadius: "12px",
+            overflow: "hidden"
+          }}>
+            <Image
+              src={leiutisImg6}
+              alt="Leiutis Brand Color Palette"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
           </div>
         </div>

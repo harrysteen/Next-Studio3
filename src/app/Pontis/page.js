@@ -6,6 +6,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import useResponsive from "../../hooks/useResponsive";
 import LatestWork from "../../components/LatestWork/LatestWork";
+import WorkAccordion from "../../components/WorkAccordion/WorkAccordion";
 
 export default function PontisPage() {
   const { width } = useResponsive();
@@ -250,8 +251,8 @@ export default function PontisPage() {
               WHAT WE <span style={{ color: "#9cff00" }}>WORKED ON</span>
             </h2>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
+            <WorkAccordion
+              items={[
                 {
                   title: "BRANDING AND VISUAL IDENTITY",
                   desc: "The client’s brief was clear- they wanted an immersive experience that felt professional and inviting at the same time. We used brighter tones and moving elements to bring in the energy and enthusiasm for the students. Subtle gradients and clean moments brought in the association with expertise and credibility."
@@ -268,34 +269,9 @@ export default function PontisPage() {
                   title: "MARKETING DESIGN",
                   desc: "The business spoke to a niche audience - aspiring students and jobseekers in the non-engineering domains in the USA. The market gap made the business a good contender. We strategised and designed communication material that helped the client enable their sales system."
                 }
-              ].map((item, idx) => (
-                <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
-                  <h3 style={{
-                    color: activeProcess === idx ? "#9cff00" : "#ffffff",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-                  }}>
-                    <span style={{ fontSize: "24px" }}>+</span> {item.title}
-                  </h3>
-                  {activeProcess === idx && item.desc && (
-                    <p style={{
-                      marginTop: "16px",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      color: "#b0b0b0",
-                      fontFamily: "'Albert Sans', sans-serif",
-                    }}>
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+              ]}
+              defaultActiveIndex={0}
+            />
           </div>
 
           <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>

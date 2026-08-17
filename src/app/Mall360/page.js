@@ -6,6 +6,7 @@ import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import LatestWork from "../../components/LatestWork/LatestWork";
+import WorkAccordion from "../../components/WorkAccordion/WorkAccordion";
 
 export default function Mall360() {
   const scopeOfWork = [
@@ -36,7 +37,14 @@ export default function Mall360() {
   const [hoveredBook, setHoveredBook] = React.useState(null);
   const [hoveredBoard, setHoveredBoard] = React.useState(null);
   const [hoveredNavLink, setHoveredNavLink] = React.useState(null);
-  const [activeProcess, setActiveProcess] = React.useState(0);
+  const [activeProcessImg, setActiveProcessImg] = React.useState(0);
+
+  const processImages = [
+    "/work individual page assets/Mall360 Branding.webp",
+    "/work individual page assets/Mall360 UIUX Design.webp",
+    "/work individual page assets/Mall360 Branding.webp",
+    "/work individual page assets/Mall360 UIUX Design.webp",
+  ];
 
   // Responsive Styles
   const containerStyle = {
@@ -558,50 +566,39 @@ export default function Mall360() {
               HOW WE <span style={{ color: "#9cff00" }}>HANDLED</span> <br /> THE SITUATION
             </h2>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
+            <WorkAccordion
+              items={[
                 {
                   title: "RESEARCH & DISCOVERY",
                   desc: "We Conducted In-Depth Research By Analyzing Competitors, Identifying Key User Pain Points, And Mapping Out Detailed Customer Journeys To Uncover Opportunities For A More Intuitive And Impactful Experience."
                 },
-                { title: "WIREFRAMING & UX DESIGN", desc: "" },
-                { title: "UI DESIGN & BRANDING", desc: "" },
-                { title: "DEVELOPMENT & TESTING", desc: "" }
-              ].map((item, idx) => (
-                <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
-                  <h3 style={{
-                    color: activeProcess === idx ? "#9cff00" : "#ffffff",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-                  }}>
-                    <span style={{ fontSize: "24px" }}>+</span> {item.title}
-                  </h3>
-                  {activeProcess === idx && item.desc && (
-                    <p style={{
-                      marginTop: "16px",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      color: "#b0b0b0",
-                      fontFamily: "'Albert Sans', sans-serif",
-                    }}>
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+                { title: "WIREFRAMING & UX DESIGN", desc: "Our team created interactive wireframes and UX prototypes to streamline navigation and optimize the e-commerce shopping flow." },
+                { title: "UI DESIGN & BRANDING", desc: "We crafted a vibrant, modern UI design system that communicates Mall360's brand identity with modern visual assets." },
+                { title: "DEVELOPMENT & TESTING", desc: "We developed a highly responsive, scalable platform built for speed, performance, multi-device access, and security." }
+              ]}
+              defaultActiveIndex={0}
+              onChange={(idx) => setActiveProcessImg(idx !== null ? idx : 0)}
+            />
           </div>
 
-          <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
+          <div style={{
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)",
+            backgroundColor: "#1b0634",
+          }}>
             <img
-              src="https://picsum.photos/800/600?random=10"
-              alt="Design Process"
-              style={{ width: "100%", height: "auto", display: "block" }}
+              src={processImages[activeProcessImg ?? 0]}
+              alt="Mall360 Design Process"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                objectFit: "cover",
+                transition: "opacity 0.3s ease, transform 0.3s ease"
+              }}
             />
           </div>
         </section>
@@ -782,22 +779,20 @@ export default function Mall360() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/mall360 scrolling img1.webp",
+                "/work individual page assets/mall360 scrolling img2.webp",
+                "/work individual page assets/mall360 scrolling img3.webp",
+                "/work individual page assets/mall360 scrolling img4.webp",
+                "/work individual page assets/mall360 scrolling img5.webp"
               ].concat([
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/mall360 scrolling img1.webp",
+                "/work individual page assets/mall360 scrolling img2.webp",
+                "/work individual page assets/mall360 scrolling img3.webp",
+                "/work individual page assets/mall360 scrolling img4.webp",
+                "/work individual page assets/mall360 scrolling img5.webp"
               ]).map((src, index) => (
                 <div key={`row1-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="Mall360 Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -807,22 +802,20 @@ export default function Mall360() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeLeft">
               {[
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/mall360 scrolling img6.webp",
+                "/work individual page assets/mall360 scrolling img7.webp",
+                "/work individual page assets/mall360 scrolling img8.webp",
+                "/work individual page assets/mall360 scrolling img9.webp",
+                "/work individual page assets/mall360 scrolling img10.webp"
               ].concat([
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/mall360 scrolling img6.webp",
+                "/work individual page assets/mall360 scrolling img7.webp",
+                "/work individual page assets/mall360 scrolling img8.webp",
+                "/work individual page assets/mall360 scrolling img9.webp",
+                "/work individual page assets/mall360 scrolling img10.webp"
               ]).map((src, index) => (
                 <div key={`row2-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="Mall360 Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -832,22 +825,20 @@ export default function Mall360() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
+                "/work individual page assets/mall360 scrolling img1.webp",
+                "/work individual page assets/mall360 scrolling img3.webp",
+                "/work individual page assets/mall360 scrolling img5.webp",
+                "/work individual page assets/mall360 scrolling img7.webp",
+                "/work individual page assets/mall360 scrolling img9.webp"
               ].concat([
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
+                "/work individual page assets/mall360 scrolling img1.webp",
+                "/work individual page assets/mall360 scrolling img3.webp",
+                "/work individual page assets/mall360 scrolling img5.webp",
+                "/work individual page assets/mall360 scrolling img7.webp",
+                "/work individual page assets/mall360 scrolling img9.webp"
               ]).map((src, index) => (
                 <div key={`row3-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="Mall360 Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>

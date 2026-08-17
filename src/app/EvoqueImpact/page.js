@@ -7,12 +7,21 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import LatestWork from "../../components/LatestWork/LatestWork";
 
+import WorkAccordion from "../../components/WorkAccordion/WorkAccordion";
+
 // Evoque Impact Case Study Page
 export default function EvoqueImpact() {
   const { width } = useResponsive();
 
   const [hoveredNavLink, setHoveredNavLink] = React.useState(null);
-  const [activeProcess, setActiveProcess] = React.useState(0);
+  const [activeProcessImg, setActiveProcessImg] = React.useState(3);
+
+  const processImages = [
+    "/work individual page assets/evoq discovery and rebanding.webp",
+    "/work individual page assets/evoq content statage.webp",
+    "/work individual page assets/evoq  ui designing and rebranding.webp",
+    "/work individual page assets/evoq development.webp",
+  ];
 
   // Responsive Styles
   const containerStyle = {
@@ -243,8 +252,8 @@ export default function EvoqueImpact() {
               WHAT WE <span style={{ color: "#9cff00" }}>WORKED ON</span>
             </h2>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
+            <WorkAccordion
+              items={[
                 {
                   title: "DISCOVERY AND REBRANDING",
                   desc: "Evoque Impact wanted their branding to convey the impact they create for businesses and institutions. We combined vibrant tones with clean elements that express acceleration and AI."
@@ -261,41 +270,30 @@ export default function EvoqueImpact() {
                   title: "DEVELOPMENT",
                   desc: "It is built on dynamic code that is responsive and multi-browser compatible. The modular technical system ensures performance, flexibility and long-term scalability."
                 }
-              ].map((item, idx) => (
-                <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
-                  <h3 style={{
-                    color: activeProcess === idx ? "#9cff00" : "#ffffff",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-                  }}>
-                    <span style={{ fontSize: "24px" }}>+</span> {item.title}
-                  </h3>
-                  {activeProcess === idx && item.desc && (
-                    <p style={{
-                      marginTop: "16px",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      color: "#b0b0b0",
-                      fontFamily: "'Albert Sans', sans-serif",
-                    }}>
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+              ]}
+              defaultActiveIndex={3}
+              onChange={(idx) => setActiveProcessImg(idx !== null ? idx : 3)}
+            />
           </div>
 
-          <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
+          <div style={{
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)",
+            backgroundColor: "#1b0634",
+          }}>
             <img
-              src="/ourwork/evoqueimpact.webp"
+              src={processImages[activeProcessImg ?? 3]}
               alt="Evoque Impact Design Process"
-              style={{ width: "100%", height: "auto", display: "block" }}
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                objectFit: "cover",
+                transition: "opacity 0.3s ease, transform 0.3s ease"
+              }}
             />
           </div>
         </section>
@@ -432,17 +430,19 @@ export default function EvoqueImpact() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/work individual page assets/tie loop scroll img1.webp",
-                "/work individual page assets/tie loop scroll img2.webp",
-                "/work individual page assets/tie loop scroll img3.webp",
-                "/work individual page assets/tie loop scroll img4.webp",
-                "/work individual page assets/tie loop scroll img5.webp"
+                "/work individual page assets/evoq scrolling img1.webp",
+                "/work individual page assets/evoq scrolling img2.webp",
+                "/work individual page assets/evoq scrolling img3.webp",
+                "/work individual page assets/evoq scrolling img4.webp",
+                "/work individual page assets/evoq scrolling img5.webp",
+                "/work individual page assets/evoq scrolling img6.webp"
               ].concat([
-                "/work individual page assets/tie loop scroll img1.webp",
-                "/work individual page assets/tie loop scroll img2.webp",
-                "/work individual page assets/tie loop scroll img3.webp",
-                "/work individual page assets/tie loop scroll img4.webp",
-                "/work individual page assets/tie loop scroll img5.webp"
+                "/work individual page assets/evoq scrolling img1.webp",
+                "/work individual page assets/evoq scrolling img2.webp",
+                "/work individual page assets/evoq scrolling img3.webp",
+                "/work individual page assets/evoq scrolling img4.webp",
+                "/work individual page assets/evoq scrolling img5.webp",
+                "/work individual page assets/evoq scrolling img6.webp"
               ]).map((src, index) => (
                 <div key={`row1-${index}`} className="marqueeItem">
                   <img src={src} alt="Evoque Impact Showcase" className="marqueeImg" />
@@ -455,17 +455,19 @@ export default function EvoqueImpact() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeLeft">
               {[
-                "/work individual page assets/tie loop scroll img6.webp",
-                "/work individual page assets/tie loop scroll img7.webp",
-                "/work individual page assets/tie loop scroll img8.webp",
-                "/work individual page assets/tie loop scroll img9.webp",
-                "/work individual page assets/tie loop scroll img10.webp"
+                "/work individual page assets/evoq scrolling img7.webp",
+                "/work individual page assets/evoq scrolling img8.webp",
+                "/work individual page assets/evoq scrolling img9.webp",
+                "/work individual page assets/evoq scrolling img10.webp",
+                "/work individual page assets/evoq scrolling img11.webp",
+                "/work individual page assets/evoq scrolling img12.webp"
               ].concat([
-                "/work individual page assets/tie loop scroll img6.webp",
-                "/work individual page assets/tie loop scroll img7.webp",
-                "/work individual page assets/tie loop scroll img8.webp",
-                "/work individual page assets/tie loop scroll img9.webp",
-                "/work individual page assets/tie loop scroll img10.webp"
+                "/work individual page assets/evoq scrolling img7.webp",
+                "/work individual page assets/evoq scrolling img8.webp",
+                "/work individual page assets/evoq scrolling img9.webp",
+                "/work individual page assets/evoq scrolling img10.webp",
+                "/work individual page assets/evoq scrolling img11.webp",
+                "/work individual page assets/evoq scrolling img12.webp"
               ]).map((src, index) => (
                 <div key={`row2-${index}`} className="marqueeItem">
                   <img src={src} alt="Evoque Impact Showcase" className="marqueeImg" />

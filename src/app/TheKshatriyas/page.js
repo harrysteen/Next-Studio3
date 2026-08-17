@@ -6,6 +6,7 @@ import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import LatestWork from "../../components/LatestWork/LatestWork";
+import WorkAccordion from "../../components/WorkAccordion/WorkAccordion";
 
 export default function TheKshatriyas() {
   const scopeOfWork = [
@@ -558,8 +559,8 @@ export default function TheKshatriyas() {
               HOW WE <span style={{ color: "#9cff00" }}>HANDLED</span> <br /> THE SITUATION
             </h2>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
+            <WorkAccordion
+              items={[
                 {
                   title: "RESEARCH & DISCOVERY",
                   desc: "We Conducted In-Depth Research By Analyzing Competitors, Identifying Key User Pain Points, And Mapping Out Detailed Customer Journeys To Uncover Opportunities For A More Intuitive And Impactful Experience."
@@ -567,34 +568,9 @@ export default function TheKshatriyas() {
                 { title: "WIREFRAMING & UX DESIGN", desc: "" },
                 { title: "UI DESIGN & BRANDING", desc: "" },
                 { title: "DEVELOPMENT & TESTING", desc: "" }
-              ].map((item, idx) => (
-                <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
-                  <h3 style={{
-                    color: activeProcess === idx ? "#9cff00" : "#ffffff",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-                  }}>
-                    <span style={{ fontSize: "24px" }}>+</span> {item.title}
-                  </h3>
-                  {activeProcess === idx && item.desc && (
-                    <p style={{
-                      marginTop: "16px",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      color: "#b0b0b0",
-                      fontFamily: "'Albert Sans', sans-serif",
-                    }}>
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+              ]}
+              defaultActiveIndex={0}
+            />
           </div>
 
           <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>

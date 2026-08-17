@@ -6,13 +6,21 @@ import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import LatestWork from "../../components/LatestWork/LatestWork";
+import WorkAccordion from "../../components/WorkAccordion/WorkAccordion";
 
 // Life Cykul Case Study Page
 export default function LifeCykul() {
   const { width } = useResponsive();
 
   const [hoveredNavLink, setHoveredNavLink] = React.useState(null);
-  const [activeProcess, setActiveProcess] = React.useState(0);
+  const [activeProcessImg, setActiveProcessImg] = React.useState(0);
+
+  const processImages = [
+    "/work individual page assets/lifecycle User research.svg",
+    "/work individual page assets/life cycle user experience design.svg",
+    "/work individual page assets/lifecycle banding.svg",
+    "/work individual page assets/lifecycle scroll img1.webp",
+  ];
 
   // Responsive Styles
   const containerStyle = {
@@ -243,10 +251,10 @@ export default function LifeCykul() {
               WHAT WE <span style={{ color: "#9cff00" }}>WORKED ON</span>
             </h2>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
+            <WorkAccordion
+              items={[
                 {
-                  title: "USER RESEARCH",
+                  title: "DISCOVERY & USER RESEARCH",
                   desc: "Through extensive research and surveys, we understood the pain points and requirements of the different users- the employees and the relevant management teams that create engagement programs."
                 },
                 {
@@ -261,41 +269,30 @@ export default function LifeCykul() {
                   title: "USER INTERFACE AND LAYOUT DESIGN",
                   desc: "We kept in mind the admin’s pain points, the dynamic requirements they might have, the nature of various games, potential tournament structures and most importantly- room to grow. This was possible through clear hierarchy, spatial design and visual flows."
                 }
-              ].map((item, idx) => (
-                <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
-                  <h3 style={{
-                    color: activeProcess === idx ? "#9cff00" : "#ffffff",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-                  }}>
-                    <span style={{ fontSize: "24px" }}>+</span> {item.title}
-                  </h3>
-                  {activeProcess === idx && item.desc && (
-                    <p style={{
-                      marginTop: "16px",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      color: "#b0b0b0",
-                      fontFamily: "'Albert Sans', sans-serif",
-                    }}>
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+              ]}
+              defaultActiveIndex={0}
+              onChange={(idx) => setActiveProcessImg(idx !== null ? idx : 0)}
+            />
           </div>
 
-          <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
+          <div style={{
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)",
+            backgroundColor: "#1b0634",
+          }}>
             <img
-              src="/ourwork/lifecykul.webp"
+              src={processImages[activeProcessImg ?? 0]}
               alt="Life Cykul Platform Design Process"
-              style={{ width: "100%", height: "auto", display: "block" }}
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                objectFit: "cover",
+                transition: "opacity 0.3s ease, transform 0.3s ease"
+              }}
             />
           </div>
         </section>
@@ -555,17 +552,17 @@ export default function LifeCykul() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/work individual page assets/tie loop scroll img1.webp",
-                "/work individual page assets/tie loop scroll img2.webp",
-                "/work individual page assets/tie loop scroll img3.webp",
-                "/work individual page assets/tie loop scroll img4.webp",
-                "/work individual page assets/tie loop scroll img5.webp"
+                "/work individual page assets/lifecycle scroll img1.webp",
+                "/work individual page assets/lifecycle scroll img2.webp",
+                "/work individual page assets/lifecycle scroll img3.webp",
+                "/work individual page assets/lifecycle scroll img4.webp",
+                "/work individual page assets/lifecycle scroll img5.webp"
               ].concat([
-                "/work individual page assets/tie loop scroll img1.webp",
-                "/work individual page assets/tie loop scroll img2.webp",
-                "/work individual page assets/tie loop scroll img3.webp",
-                "/work individual page assets/tie loop scroll img4.webp",
-                "/work individual page assets/tie loop scroll img5.webp"
+                "/work individual page assets/lifecycle scroll img1.webp",
+                "/work individual page assets/lifecycle scroll img2.webp",
+                "/work individual page assets/lifecycle scroll img3.webp",
+                "/work individual page assets/lifecycle scroll img4.webp",
+                "/work individual page assets/lifecycle scroll img5.webp"
               ]).map((src, index) => (
                 <div key={`row1-${index}`} className="marqueeItem">
                   <img src={src} alt="Life Cykul Showcase" className="marqueeImg" />
@@ -578,17 +575,19 @@ export default function LifeCykul() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeLeft">
               {[
-                "/work individual page assets/tie loop scroll img6.webp",
-                "/work individual page assets/tie loop scroll img7.webp",
-                "/work individual page assets/tie loop scroll img8.webp",
-                "/work individual page assets/tie loop scroll img9.webp",
-                "/work individual page assets/tie loop scroll img10.webp"
+                "/work individual page assets/lifecycle scroll img6.webp",
+                "/work individual page assets/lifecycle scroll img7.webp",
+                "/work individual page assets/lifecycle scroll img8.webp",
+                "/work individual page assets/lifecycle scroll img10.webp",
+                "/work individual page assets/lifecycle scroll img11.webp",
+                "/work individual page assets/lifecycle scroll img12.webp"
               ].concat([
-                "/work individual page assets/tie loop scroll img6.webp",
-                "/work individual page assets/tie loop scroll img7.webp",
-                "/work individual page assets/tie loop scroll img8.webp",
-                "/work individual page assets/tie loop scroll img9.webp",
-                "/work individual page assets/tie loop scroll img10.webp"
+                "/work individual page assets/lifecycle scroll img6.webp",
+                "/work individual page assets/lifecycle scroll img7.webp",
+                "/work individual page assets/lifecycle scroll img8.webp",
+                "/work individual page assets/lifecycle scroll img10.webp",
+                "/work individual page assets/lifecycle scroll img11.webp",
+                "/work individual page assets/lifecycle scroll img12.webp"
               ]).map((src, index) => (
                 <div key={`row2-${index}`} className="marqueeItem">
                   <img src={src} alt="Life Cykul Showcase" className="marqueeImg" />

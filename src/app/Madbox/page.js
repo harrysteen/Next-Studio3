@@ -521,6 +521,35 @@ export default function Madbox() {
           </div>
         </section>
 
+        {/* VIDEO / HERO MEDIA SHOWCASE SECTION */}
+        <section style={{
+          width: "100%",
+          height: width <= 768 ? "400px" : "80vh",
+          minHeight: "400px",
+          borderRadius: "16px",
+          marginBottom: "80px",
+          position: "relative",
+          overflow: "hidden"
+        }}>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          >
+            <source
+              src="https://www.dropbox.com/scl/fi/zy0fszufx88b7w5thwamn/WhatsApp-Video-2026-07-27-at-10.39.36.mp4?rlkey=2sg0gbhu1ah058o056ht0zlww&st=55o4wxxe&raw=1"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </section>
+
         {/* WORK PAGE IMAGES COLUMN SECTION */}
         <div style={{
           display: "flex",

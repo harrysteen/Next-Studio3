@@ -6,6 +6,7 @@ import useResponsive from "../../hooks/useResponsive";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import LatestWork from "../../components/LatestWork/LatestWork";
+import WorkAccordion from "../../components/WorkAccordion/WorkAccordion";
 
 export default function VenturaPranas() {
   const scopeOfWork = [
@@ -36,7 +37,14 @@ export default function VenturaPranas() {
   const [hoveredBook, setHoveredBook] = React.useState(null);
   const [hoveredBoard, setHoveredBoard] = React.useState(null);
   const [hoveredNavLink, setHoveredNavLink] = React.useState(null);
-  const [activeProcess, setActiveProcess] = React.useState(0);
+  const [activeProcessImg, setActiveProcessImg] = React.useState(0);
+
+  const processImages = [
+    "/work individual page assets/Ventura Pranas Rebranding.webp",
+    "/work individual page assets/Ventura Pranas UIUX Design.webp",
+    "/work individual page assets/Ventura Pranas Rebranding.webp",
+    "/work individual page assets/Ventura Pranas Development.webp",
+  ];
 
   // Responsive Styles
   const containerStyle = {
@@ -558,8 +566,8 @@ export default function VenturaPranas() {
               WHAT WE <span style={{ color: "#9cff00" }}>WORKED ON</span>
             </h2>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {[
+            <WorkAccordion
+              items={[
                 {
                   title: "DISCOVERY AND BRAND STRATEGY",
                   desc: "An in-person discovery spanning over two weeks helped us document the company’s history, the founder’s vision, all their services, processes and the users they target. Based on the information, we created a strong messaging and visual positioning framework."
@@ -576,41 +584,30 @@ export default function VenturaPranas() {
                   title: "DEVELOPMENT AND TESTING",
                   desc: "We built a dynamic website with a sound technical foundation which made sure all the data was safe, editable and easy to access for the relevant company parties."
                 }
-              ].map((item, idx) => (
-                <div key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "20px", cursor: "pointer" }} onClick={() => setActiveProcess(idx)}>
-                  <h3 style={{
-                    color: activeProcess === idx ? "#9cff00" : "#ffffff",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-                  }}>
-                    <span style={{ fontSize: "24px" }}>+</span> {item.title}
-                  </h3>
-                  {activeProcess === idx && item.desc && (
-                    <p style={{
-                      marginTop: "16px",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      color: "#b0b0b0",
-                      fontFamily: "'Albert Sans', sans-serif",
-                    }}>
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+              ]}
+              defaultActiveIndex={0}
+              onChange={(idx) => setActiveProcessImg(idx !== null ? idx : 0)}
+            />
           </div>
 
-          <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
+          <div style={{
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)",
+            backgroundColor: "#1b0634",
+          }}>
             <img
-              src="/ourwork/venturawork.webp"
+              src={processImages[activeProcessImg ?? 0]}
               alt="Ventura Pranas Design Process"
-              style={{ width: "100%", height: "auto", display: "block" }}
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                objectFit: "cover",
+                transition: "opacity 0.3s ease, transform 0.3s ease"
+              }}
             />
           </div>
         </section>
@@ -739,22 +736,20 @@ export default function VenturaPranas() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/venture scrolling img1.webp",
+                "/work individual page assets/venture scrolling img2.webp",
+                "/work individual page assets/venture scrolling img3.webp",
+                "/work individual page assets/venture scrolling img4.webp",
+                "/work individual page assets/venture scrolling img5.webp"
               ].concat([
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/venture scrolling img1.webp",
+                "/work individual page assets/venture scrolling img2.webp",
+                "/work individual page assets/venture scrolling img3.webp",
+                "/work individual page assets/venture scrolling img4.webp",
+                "/work individual page assets/venture scrolling img5.webp"
               ]).map((src, index) => (
                 <div key={`row1-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="Ventura Pranas Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -764,22 +759,20 @@ export default function VenturaPranas() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeLeft">
               {[
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/venture scrolling img6.webp",
+                "/work individual page assets/venture scrolling img7.webp",
+                "/work individual page assets/venture scrolling img8.webp",
+                "/work individual page assets/venture scrolling img9.webp",
+                "/work individual page assets/venture scrolling img10.webp"
               ].concat([
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/venture scrolling img6.webp",
+                "/work individual page assets/venture scrolling img7.webp",
+                "/work individual page assets/venture scrolling img8.webp",
+                "/work individual page assets/venture scrolling img9.webp",
+                "/work individual page assets/venture scrolling img10.webp"
               ]).map((src, index) => (
                 <div key={`row2-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="Ventura Pranas Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -789,22 +782,20 @@ export default function VenturaPranas() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
+                "/work individual page assets/venture scrolling img1.webp",
+                "/work individual page assets/venture scrolling img3.webp",
+                "/work individual page assets/venture scrolling img5.webp",
+                "/work individual page assets/venture scrolling img7.webp",
+                "/work individual page assets/venture scrolling img9.webp"
               ].concat([
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
+                "/work individual page assets/venture scrolling img1.webp",
+                "/work individual page assets/venture scrolling img3.webp",
+                "/work individual page assets/venture scrolling img5.webp",
+                "/work individual page assets/venture scrolling img7.webp",
+                "/work individual page assets/venture scrolling img9.webp"
               ]).map((src, index) => (
                 <div key={`row3-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="Ventura Pranas Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
