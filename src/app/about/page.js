@@ -16,15 +16,22 @@ import rishitaImg from "../../team images/risitha.png";
 import sunnyImg from "../../team images/sunny.png";
 import vishwaImg from "../../team images/vishawa.png";
 import worldMapImg from "../../team images/World Map & stat.png";
+import aboutImg3 from "../../team images/About Team img3.jpeg";
+import aboutImg4 from "../../team images/About Team img4.jpeg";
+import aboutImg5 from "../../team images/About Team img5.jpeg";
+import aboutImg6 from "../../team images/About Team img6.jpeg";
+import aboutImg7 from "../../team images/About Team img7.jpeg";
+import aboutImg8 from "../../team images/About Team img8.png";
+import teamImg from "../../team images/Team Image.png";
 
-// Replaced static imports with placeholder links so it doesn't crash
-const img1 = "https://picsum.photos/400/600?random=1";
-const img2 = "https://picsum.photos/400/600?random=2";
-const img3 = "https://picsum.photos/400/600?random=3";
-const img4 = "https://picsum.photos/400/600?random=4";
-const img5 = "/team images/Team Image.png";
+const img1 = aboutImg3.src || aboutImg3;
+const img2 = aboutImg4.src || aboutImg4;
+const img3 = aboutImg5.src || aboutImg5;
+const img4 = aboutImg6.src || aboutImg6;
+const img5 = teamImg.src || teamImg;
 const map = worldMapImg.src || worldMapImg;
-const girl = "https://picsum.photos/400/600?random=7";
+const girl = aboutImg7.src || aboutImg7;
+const img8 = aboutImg8.src || aboutImg8;
 
 const teamData = [
   {
@@ -159,13 +166,13 @@ const About2 = () => {
               <img src={img2} className={styles["img-small"]} alt="" />
               <img src={img3} className={styles["img-tall"]} alt="" />
               <img src={img4} className={styles["img-tall"]} alt="" />
-              <img src={img4} className={styles["img-small"]} alt="" />
+              <img src={img8} className={styles["img-small"]} alt="" />
               {/* duplicate for infinite loop */}
               <img src={img1} className={styles["img-tall"]} alt="" />
               <img src={img2} className={styles["img-small"]} alt="" />
               <img src={img3} className={styles["img-tall"]} alt="" />
               <img src={img4} className={styles["img-tall"]} alt="" />
-              <img src={img4} className={styles["img-small"]} alt="" />
+              <img src={img8} className={styles["img-small"]} alt="" />
             </div>
           </div>
         </section>
