@@ -440,9 +440,9 @@ export default function Madbox() {
       <section style={heroSectionStyle}>
         <div style={{}}>
           <h1 style={heroTitleStyle}>
-            MAD BOX
+            MADBOX
           </h1>
-          <span style={heroTaglineStyle}>@USA~2025</span>
+          <span style={heroTaglineStyle}>@Bangalore~2022</span>
         </div>
       </section>
 
@@ -465,7 +465,7 @@ export default function Madbox() {
               textTransform: "uppercase",
               marginBottom: "24px",
               fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-            }}>THE PROJECT SUMMARY</h2>
+            }}>THE PROJECT OVERVIEW</h2>
             <p style={{
               fontSize: width <= 480 ? "16px" : "18px",
               lineHeight: "1.8",
@@ -473,7 +473,7 @@ export default function Madbox() {
               fontFamily: "'Albert Sans', sans-serif",
               fontWeight: 400,
             }}>
-              MadBox Is A Dynamic Fast-Food Company Known For Its Commitment To Quality Ingredients, Bold Flavors, And Innovative Menu Offerings. With A Focus On Culinary Experimentation, MadBox Keeps Customers Engaged With Limited-Time Specials And Seasonal Creations.
+              Madbox is a fun and modern snacking company with a chain of outlets in Bangalore and Hyderabad. The business owner wanted to convey the message that ‘New age snacking is both healthy and fun’. We designed a fun and bold brand system complete with custom illustrations and design elements to elevate Madbox. We also designed packaging that is true to the brand essence- fun and modern. Sustainability, efficiency and creativity were our key objectives for packaging.
             </p>
           </div>
 
@@ -688,15 +688,6 @@ export default function Madbox() {
             />
           </div>
         </div>
-
-        {/* VIDEO SECTION */}
-
-
-        {/* HOW WE HANDLED THE SITUATION */}
-
-
-        {/* SUCCESS IN NUMBERS SECTION */}
-
       </main>
 
       {/* FINAL MOCKUP IMAGE SECTION (FULL WIDTH) */}
@@ -764,6 +755,129 @@ export default function Madbox() {
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT OUR CLIENTS SAY TESTIMONIAL SECTION */}
+      <section style={{
+        width: "100%",
+        maxWidth: "1100px",
+        margin: width <= 768 ? "40px auto 80px auto" : "60px auto 100px auto",
+      }}>
+        <h2 style={{
+          textAlign: "center",
+          fontSize: width <= 480 ? "26px" : width <= 768 ? "34px" : "42px",
+          fontWeight: 700,
+          textTransform: "uppercase",
+          marginBottom: width <= 768 ? "28px" : "40px",
+          fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+          letterSpacing: "-0.5px",
+          color: "#FFFFFF",
+          lineHeight: 1.2
+        }}>
+          WHAT OUR <span style={{ color: "#9cff00" }}>CLIENTS SAY</span>
+        </h2>
+
+        <div style={{
+          backgroundColor: "#FFFFFF",
+          borderRadius: width <= 480 ? "16px" : "24px",
+          padding: width <= 480 ? "24px 20px" : width <= 768 ? "32px 28px" : "40px 48px",
+          display: "grid",
+          gridTemplateColumns: width <= 900 ? "1fr" : "320px 1fr",
+          gap: width <= 768 ? "24px" : "40px",
+          alignItems: "center",
+          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
+          color: "#111111",
+        }}>
+          {/* Left: Client Photo / Brand Image */}
+          <div style={{
+            width: "100%",
+            height: width <= 480 ? "260px" : "320px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            backgroundColor: "#1b0634",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}>
+            <img
+              src="/ourwork/madboxwork.webp"
+              alt="Rahul Mishra"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
+
+          {/* Right: Content */}
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "20px",
+          }}>
+            {/* Quote */}
+            <p style={{
+              fontFamily: "'Albert Sans', sans-serif",
+              fontSize: width <= 480 ? "15px" : width <= 768 ? "17px" : "18px",
+              lineHeight: "1.6",
+              color: "#222222",
+              fontWeight: 500,
+              margin: 0,
+            }}>
+              &ldquo;We had some visuals and direction for the brand and Studio Dezu delivered beyond our expectations. Couldn&apos;t be happier.&rdquo;
+            </p>
+
+            {/* Author */}
+            <div>
+              <h4 style={{
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+                fontSize: "18px",
+                fontWeight: 700,
+                color: "#111111",
+                margin: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.5px"
+              }}>
+                — RAHUL MISHRA
+              </h4>
+              <p style={{
+                fontFamily: "'Albert Sans', sans-serif",
+                fontSize: "13px",
+                color: "#666666",
+                margin: "4px 0 0 0",
+                fontWeight: 500,
+              }}>
+                CEO, Madbox
+              </p>
+            </div>
+
+            {/* Tags */}
+            <div style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "10px",
+              marginTop: "4px"
+            }}>
+              {["BRANDING", "PACKAGING DESIGN"].map((tag, idx) => (
+                <span key={idx} style={{
+                  backgroundColor: "#9cff00",
+                  color: "#111111",
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  padding: "6px 14px",
+                  borderRadius: "6px",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.5px"
+                }}>
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

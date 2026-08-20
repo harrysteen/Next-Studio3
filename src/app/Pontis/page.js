@@ -11,7 +11,15 @@ import WorkAccordion from "../../components/WorkAccordion/WorkAccordion";
 export default function PontisPage() {
   const { width } = useResponsive();
   const [activeProcess, setActiveProcess] = useState(0);
+  const [activeProcessImg, setActiveProcessImg] = useState(0);
   const [hoveredNavLink, setHoveredNavLink] = useState(null);
+
+  const processImages = [
+    "/work individual page assets/pontis branding and visiul identity.webp",
+    "/work individual page assets/pontis scrolling img1.webp",
+    "/work individual page assets/pontis ui and layout design.webp",
+    "/work individual page assets/pontis Marketing design.webp",
+  ];
 
   const containerStyle = {
     backgroundColor: "#1b0634",
@@ -31,7 +39,7 @@ export default function PontisPage() {
     flexDirection: "column",
     justifyContent: "flex-end",
     padding: width <= 480 ? "0 20px 40px 20px" : width <= 768 ? "0 40px 60px 40px" : "0 80px 80px 80px",
-    backgroundImage: `linear-gradient(to bottom, rgba(27, 6, 52, 0.2), rgba(27, 6, 52, 0.95)), url('/ourwork/pontis.webp')`,
+    backgroundImage: `linear-gradient(to bottom, rgba(27, 6, 52, 0.2), rgba(27, 6, 52, 0.95)), url('/work individual page assets/pointis hero.webp')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     boxSizing: "border-box"
@@ -220,7 +228,7 @@ export default function PontisPage() {
           overflow: "hidden"
         }}>
           <img
-            src="/ourwork/pontis.webp"
+            src="/work individual page assets/pointis hero.webp"
             alt="Pontis Hub"
             style={{
               width: "100%",
@@ -271,14 +279,28 @@ export default function PontisPage() {
                 }
               ]}
               defaultActiveIndex={0}
+              onChange={(idx) => setActiveProcessImg(idx !== null ? idx : 0)}
             />
           </div>
 
-          <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
+          <div style={{
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)",
+            backgroundColor: "#1b0634",
+          }}>
             <img
-              src="/ourwork/pontis.webp"
+              src={processImages[activeProcessImg ?? 0]}
               alt="Pontis Showcase"
-              style={{ width: "100%", height: "auto", display: "block" }}
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                objectFit: "cover",
+                transition: "opacity 0.3s ease, transform 0.3s ease"
+              }}
             />
           </div>
         </section>
@@ -314,6 +336,140 @@ export default function PontisPage() {
           </div>
         </section>
       </main>
+
+      {/* INFINITE SCROLLING MARQUEE SECTION */}
+      <section className="marqueeContainer">
+        <style dangerouslySetInnerHTML={{
+          __html: `
+          @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @keyframes scrollRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+          .marqueeWrapper {
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 0px;
+            margin-bottom: 100px;
+          }
+          .marqueeRow {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+          }
+          .marqueeTrack {
+            display: flex;
+            width: max-content;
+            gap: 30px;
+            will-change: transform;
+          }
+          .marqueeLeft {
+            animation: scrollLeft 45s linear infinite;
+          }
+          .marqueeRight {
+            animation: scrollRight 45s linear infinite;
+          }
+          .marqueeWrapper:hover .marqueeLeft,
+          .marqueeWrapper:hover .marqueeRight {
+            animation-play-state: paused;
+          }
+          .marqueeItem {
+            flex-shrink: 0;
+            width: 580px;
+            height: 360px;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+          }
+          .marqueeItem:hover {
+            transform: scale(1.03);
+          }
+          .marqueeImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+          }
+          @media (max-width: 768px) {
+            .marqueeItem {
+              width: 280px;
+              height: 200px;
+              border-radius: 12px;
+            }
+            .marqueeWrapper {
+              gap: 16px;
+              margin-bottom: 60px;
+            }
+            .marqueeTrack {
+              gap: 16px;
+            }
+          }
+          @media (max-width: 480px) {
+            .marqueeItem {
+              width: 230px;
+              height: 165px;
+              border-radius: 10px;
+            }
+            .marqueeWrapper {
+              gap: 12px;
+              margin-bottom: 40px;
+            }
+          }
+          `
+        }} />
+
+        <div className="marqueeWrapper">
+          {/* Top Row: Left Scroll */}
+          <div className="marqueeRow">
+            <div className="marqueeTrack marqueeLeft">
+              {[
+                "/work individual page assets/pontis scrolling img1.webp",
+                "/work individual page assets/pontis scrolling img2.webp",
+                "/work individual page assets/pontis scrolling img3.webp",
+                "/work individual page assets/pontis scrolling img4.webp",
+                "/work individual page assets/pontis scrolling img1.webp",
+                "/work individual page assets/pontis scrolling img2.webp",
+                "/work individual page assets/pontis scrolling img3.webp",
+                "/work individual page assets/pontis scrolling img4.webp"
+              ].map((imgSrc, idx) => (
+                <div key={idx} className="marqueeItem">
+                  <img src={imgSrc} alt={`Pontis Scroll ${idx + 1}`} className="marqueeImg" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom Row: Right Scroll */}
+          <div className="marqueeRow">
+            <div className="marqueeTrack marqueeRight">
+              {[
+                "/work individual page assets/pontis scrolling img5.webp",
+                "/work individual page assets/pontis scrolling img6.webp",
+                "/work individual page assets/pontis scrolling img7.webp",
+                "/work individual page assets/pontis scrolling img8.webp",
+                "/work individual page assets/pontis scrolling img5.webp",
+                "/work individual page assets/pontis scrolling img6.webp",
+                "/work individual page assets/pontis scrolling img7.webp",
+                "/work individual page assets/pontis scrolling img8.webp"
+              ].map((imgSrc, idx) => (
+                <div key={idx} className="marqueeItem">
+                  <img src={imgSrc} alt={`Pontis Scroll ${idx + 5}`} className="marqueeImg" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* WHAT OUR CLIENTS SAY TESTIMONIAL SECTION */}
       <section style={{
@@ -358,7 +514,7 @@ export default function PontisPage() {
             justifyContent: "center",
           }}>
             <img
-              src="/ourwork/pontis.webp"
+              src="/work individual page assets/Kiran Sathuluru.webp"
               alt="Kiran Sathuluru"
               style={{
                 width: "100%",

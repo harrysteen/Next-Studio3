@@ -13,7 +13,7 @@ const services = [
       "Marketing and Execution Strategy",
       "Product Strategy",
     ],
-    image: "/home assets/statage.webp",
+    image: "/home assets/Strategy.webp?v=2",
   },
   {
     title: "BRANDING",
@@ -23,7 +23,7 @@ const services = [
       "Illustration & Mascot Design",
       "Motion Design",
     ],
-    image: "/home assets/Branding.webp",
+    image: "/home assets/BRANDING (2).webp?v=2",
   },
   {
     title: "WEB",
@@ -34,7 +34,7 @@ const services = [
       "Design Systems & Documentation",
       "Web Copywriting & UX Writing",
     ],
-    image: "/home assets/web.webp",
+    image: "/home assets/web_section.webp?v=2",
   },
   {
     title: "PRODUCT",
@@ -45,7 +45,7 @@ const services = [
       "Animated Product Visualisations",
       "Prototyping, Testing & User Validation",
     ],
-    image: "/home assets/production.webp",
+    image: "/home assets/Product.webp?v=2",
   },
   {
     title: "DEVELOPMENT",
@@ -57,7 +57,7 @@ const services = [
       "Generative AI & Machine Learning",
       "Quality Assurance & Maintenance",
     ],
-    image: "/home assets/development.jpg",
+    image: "/home assets/DEVELOPMENT (1).webp?v=2",
   },
 ];
 

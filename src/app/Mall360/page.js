@@ -603,86 +603,34 @@ export default function Mall360() {
           </div>
         </section>
 
-        {/* SUCCESS IN NUMBERS SECTION */}
-        <section style={{ marginBottom: "0px" }}>
+        {/* THE OUTCOME SECTION */}
+        <section style={{ marginBottom: "100px" }}>
           <h2 style={{
             fontSize: width <= 480 ? "32px" : "40px",
             fontWeight: 700,
             textTransform: "uppercase",
-            marginBottom: "40px",
+            marginBottom: "30px",
             fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
             lineHeight: 1.2
           }}>
-            <span style={{ color: "#9cff00" }}>SUCCESS</span> IN <br /> NUMBERS & EXPERIENCE
+            THE <span style={{ color: "#9cff00" }}>OUTCOME</span>
           </h2>
-
           <div style={{
-            display: "grid",
-            gridTemplateColumns: width <= 768 ? "1fr" : "repeat(3, 1fr)",
-            gap: "20px",
+            border: "1px solid rgba(156, 255, 0, 0.3)",
+            borderRadius: "16px",
+            padding: width <= 768 ? "36px 24px" : "50px 40px",
+            backgroundColor: "rgba(27, 6, 52, 0.7)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
           }}>
-            {/* Card 1 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
+            <p style={{
+              fontSize: width <= 480 ? "16px" : "19px",
+              lineHeight: "1.8",
+              color: "#e0e0e0",
+              fontFamily: "'Albert Sans', sans-serif",
+              margin: 0
             }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>95%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>HUMAN-CENTERED <br /> DESIGN</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>87%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>PROVEN EXPERTISE <br /> RECORD</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 3 (Spans 2 rows) */}
-            <div style={{
-              gridRow: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between"
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "40px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>100%</div>
-              <div>
-                <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>MEASURABLE <br /> IMPACT</h3>
-                <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                  We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 (Spans 2 cols) */}
-            <div style={{
-              gridColumn: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>25X</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>STARTUPS&apos;S SCALABLE SOLUTION</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
+              Mall360 launched with an engaging e-commerce experience, streamlined UX navigation, and a modern branding identity that drives user engagement and conversion across all devices.
+            </p>
           </div>
         </section>
       </main>

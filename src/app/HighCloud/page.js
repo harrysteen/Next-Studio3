@@ -639,129 +639,6 @@ export default function HighCloud() {
         </section>
       </main>
 
-      {/* WHAT OUR CLIENTS SAY TESTIMONIAL SECTION */}
-      <section style={{
-        width: "90%",
-        maxWidth: "1100px",
-        margin: width <= 768 ? "40px auto 80px auto" : "60px auto 120px auto",
-      }}>
-        <h2 style={{
-          textAlign: "center",
-          fontSize: width <= 480 ? "26px" : width <= 768 ? "34px" : "42px",
-          fontWeight: 700,
-          textTransform: "uppercase",
-          marginBottom: width <= 768 ? "28px" : "40px",
-          fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-          letterSpacing: "-0.5px",
-          color: "#FFFFFF",
-          lineHeight: 1.2
-        }}>
-          WHAT OUR <span style={{ color: "#9cff00" }}>CLIENTS SAY</span>
-        </h2>
-
-        <div style={{
-          backgroundColor: "#FFFFFF",
-          borderRadius: width <= 480 ? "16px" : "24px",
-          padding: width <= 480 ? "24px 20px" : width <= 768 ? "32px 28px" : "40px 48px",
-          display: "grid",
-          gridTemplateColumns: width <= 900 ? "1fr" : "320px 1fr",
-          gap: width <= 768 ? "24px" : "40px",
-          alignItems: "center",
-          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
-          color: "#111111",
-        }}>
-          {/* Left: Client Photo */}
-          <div style={{
-            width: "100%",
-            height: width <= 480 ? "260px" : "320px",
-            borderRadius: "16px",
-            overflow: "hidden",
-            backgroundColor: "#9BB6C3",
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "center",
-          }}>
-            <img
-              src="/work individual page assets/Raghu Chejarla.webp"
-              alt="Raghu Chejarla"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "top center",
-              }}
-            />
-          </div>
-
-          {/* Right: Content */}
-          <div style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            gap: "20px",
-          }}>
-            {/* Quote */}
-            <p style={{
-              fontFamily: "'Albert Sans', sans-serif",
-              fontSize: width <= 480 ? "15px" : width <= 768 ? "17px" : "18px",
-              lineHeight: "1.6",
-              color: "#222222",
-              fontWeight: 500,
-              margin: 0,
-            }}>
-              &ldquo;Studio Dezu created a stunning brand for us without making it feel unfamiliar to the elements that we associated with for the last few years. The new branding gave us a much more sophisticated and professional outlook - exactly what we wanted.&rdquo;
-            </p>
-
-            {/* Author */}
-            <div>
-              <h4 style={{
-                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-                fontSize: "18px",
-                fontWeight: 700,
-                color: "#111111",
-                margin: 0,
-                textTransform: "uppercase",
-                letterSpacing: "0.5px"
-              }}>
-                — RAGHU CHEJARLA
-              </h4>
-              <p style={{
-                fontFamily: "'Albert Sans', sans-serif",
-                fontSize: "13px",
-                color: "#666666",
-                margin: "4px 0 0 0",
-                fontWeight: 500,
-              }}>
-                President, HighCloud Solutions
-              </p>
-            </div>
-
-            {/* Tags */}
-            <div style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "10px",
-              marginTop: "4px"
-            }}>
-              {["REBRANDING", "UI/UX", "CONTENT STRATEGY"].map((tag, idx) => (
-                <span key={idx} style={{
-                  backgroundColor: "#9cff00",
-                  color: "#111111",
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  padding: "6px 14px",
-                  borderRadius: "6px",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.5px"
-                }}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* INFINITE SCROLLING MARQUEE SECTION */}
       <section className="marqueeContainer">
         <style dangerouslySetInnerHTML={{
@@ -854,15 +731,15 @@ export default function HighCloud() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/work individual page assets/hight cloud scrolling img1.webp",
-                "/work individual page assets/hight cloud scrolling img2.webp",
-                "/work individual page assets/hight cloud scrolling img3.webp",
-                "/work individual page assets/hight cloud scrolling img4.webp"
+                "/work individual page assets/hight cloud scrolling img1.svg",
+                "/work individual page assets/hight cloud scrolling img2.svg",
+                "/work individual page assets/hight cloud scrolling img3.svg",
+                "/work individual page assets/hight cloud scrolling img4.svg"
               ].concat([
-                "/work individual page assets/hight cloud scrolling img1.webp",
-                "/work individual page assets/hight cloud scrolling img2.webp",
-                "/work individual page assets/hight cloud scrolling img3.webp",
-                "/work individual page assets/hight cloud scrolling img4.webp"
+                "/work individual page assets/hight cloud scrolling img1.svg",
+                "/work individual page assets/hight cloud scrolling img2.svg",
+                "/work individual page assets/hight cloud scrolling img3.svg",
+                "/work individual page assets/hight cloud scrolling img4.svg"
               ]).map((src, index) => (
                 <div key={`row1-${index}`} className="marqueeItem">
                   <img src={src} alt="HighCloud Showcase" className="marqueeImg" loading="lazy" />
@@ -875,15 +752,15 @@ export default function HighCloud() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeLeft">
               {[
-                "/work individual page assets/hight cloud scrolling img5.webp",
-                "/work individual page assets/hight cloud scrolling img6.webp",
-                "/work individual page assets/hight cloud scrolling img7.webp",
-                "/work individual page assets/hight cloud scrolling img8.webp"
+                "/work individual page assets/hight cloud scrolling img5.svg",
+                "/work individual page assets/hight cloud scrolling img6.svg",
+                "/work individual page assets/hight cloud scrolling img7.svg",
+                "/work individual page assets/hight cloud scrolling img8.svg"
               ].concat([
-                "/work individual page assets/hight cloud scrolling img5.webp",
-                "/work individual page assets/hight cloud scrolling img6.webp",
-                "/work individual page assets/hight cloud scrolling img7.webp",
-                "/work individual page assets/hight cloud scrolling img8.webp"
+                "/work individual page assets/hight cloud scrolling img5.svg",
+                "/work individual page assets/hight cloud scrolling img6.svg",
+                "/work individual page assets/hight cloud scrolling img7.svg",
+                "/work individual page assets/hight cloud scrolling img8.svg"
               ]).map((src, index) => (
                 <div key={`row2-${index}`} className="marqueeItem">
                   <img src={src} alt="HighCloud Showcase" className="marqueeImg" loading="lazy" />
@@ -896,19 +773,142 @@ export default function HighCloud() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/work individual page assets/hight cloud scrolling img9.webp",
-                "/work individual page assets/hight cloud scrolling img10.webp",
-                "/work individual page assets/hight cloud scrolling img11.webp",
-                "/work individual page assets/hight cloud scrolling img12.webp"
+                "/work individual page assets/hight cloud scrolling img9.svg",
+                "/work individual page assets/hight cloud scrolling img10.svg",
+                "/work individual page assets/hight cloud scrolling img11.svg",
+                "/work individual page assets/hight cloud scrolling img12.svg"
               ].concat([
-                "/work individual page assets/hight cloud scrolling img9.webp",
+                "/work individual page assets/hight cloud scrolling img9.svg",
                 "/work individual page assets/hight cloud scrolling img10.webp",
-                "/work individual page assets/hight cloud scrolling img11.webp",
-                "/work individual page assets/hight cloud scrolling img12.webp"
+                "/work individual page assets/hight cloud scrolling img11.svg",
+                "/work individual page assets/hight cloud scrolling img12.svg"
               ]).map((src, index) => (
                 <div key={`row3-${index}`} className="marqueeItem">
                   <img src={src} alt="HighCloud Showcase" className="marqueeImg" loading="lazy" />
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT OUR CLIENTS SAY TESTIMONIAL SECTION */}
+      <section style={{
+        width: "90%",
+        maxWidth: "1100px",
+        margin: width <= 768 ? "40px auto 80px auto" : "60px auto 120px auto",
+      }}>
+        <h2 style={{
+          textAlign: "center",
+          fontSize: width <= 480 ? "26px" : width <= 768 ? "34px" : "42px",
+          fontWeight: 700,
+          textTransform: "uppercase",
+          marginBottom: width <= 768 ? "28px" : "40px",
+          fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+          letterSpacing: "-0.5px",
+          color: "#FFFFFF",
+          lineHeight: 1.2
+        }}>
+          WHAT OUR <span style={{ color: "#9cff00" }}>CLIENTS SAY</span>
+        </h2>
+
+        <div style={{
+          backgroundColor: "#FFFFFF",
+          borderRadius: width <= 480 ? "16px" : "24px",
+          padding: width <= 480 ? "24px 20px" : width <= 768 ? "32px 28px" : "40px 48px",
+          display: "grid",
+          gridTemplateColumns: width <= 900 ? "1fr" : "320px 1fr",
+          gap: width <= 768 ? "24px" : "40px",
+          alignItems: "center",
+          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
+          color: "#111111",
+        }}>
+          {/* Left: Client Photo */}
+          <div style={{
+            width: "100%",
+            height: width <= 480 ? "260px" : "320px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            backgroundColor: "#9BB6C3",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "center",
+          }}>
+            <img
+              src="/work individual page assets/Raghu Chejarla.svg"
+              alt="Raghu Chejarla"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "top center",
+              }}
+            />
+          </div>
+
+          {/* Right: Content */}
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "20px",
+          }}>
+            {/* Quote */}
+            <p style={{
+              fontFamily: "'Albert Sans', sans-serif",
+              fontSize: width <= 480 ? "15px" : width <= 768 ? "17px" : "18px",
+              lineHeight: "1.6",
+              color: "#222222",
+              fontWeight: 500,
+              margin: 0,
+            }}>
+              &ldquo;Dezu Team has been our strategic branding partner for two of our venture companies. Their speed, creativity and flexibility makes it very effective for fast growing businesses like us.&rdquo;
+            </p>
+
+            {/* Author */}
+            <div>
+              <h4 style={{
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+                fontSize: "18px",
+                fontWeight: 700,
+                color: "#111111",
+                margin: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.5px"
+              }}>
+                — RAGHU CHEJARLA
+              </h4>
+              <p style={{
+                fontFamily: "'Albert Sans', sans-serif",
+                fontSize: "13px",
+                color: "#666666",
+                margin: "4px 0 0 0",
+                fontWeight: 500,
+              }}>
+                CEO, Highcloud Solutions Inc
+              </p>
+            </div>
+
+            {/* Tags */}
+            <div style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "10px",
+              marginTop: "4px"
+            }}>
+              {["REBRANDING", "UI/UX", "CONTENT STRATEGY"].map((tag, idx) => (
+                <span key={idx} style={{
+                  backgroundColor: "#9cff00",
+                  color: "#111111",
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  padding: "6px 14px",
+                  borderRadius: "6px",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.5px"
+                }}>
+                  {tag}
+                </span>
               ))}
             </div>
           </div>

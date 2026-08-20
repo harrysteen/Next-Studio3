@@ -94,7 +94,7 @@ const MotionText = () => {
                   style={{ objectFit: "cover", width: "100%", height: "100%", borderRadius: "8px" }}
                 >
                   <source
-                    src="https://www.dropbox.com/scl/fi/ffqkap8xoe469vfd6u4ua/18069232-uhd_3840_2160_24fps.mp4?rlkey=xylgikojt656pmmy0ua8or8lb&st=f3q4uup0&raw=1"
+                    src="https://www.dropbox.com/scl/fi/2n4huz273anu7h0fofmsg/Studio-Dezu-Website-Movie.mp4?rlkey=cgntjzct6tyq8k6mwksyw5os8&st=lo3k3y51&raw=1"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.

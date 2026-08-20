@@ -12,7 +12,14 @@ import Footer from "../../components/Footer/Footer";
 // (e.g., my-next-studio/public/Silicon.webp)
 const projects = [
   {
-    img: "/ourwork/pontis.webp",
+    img: "/ourwork/highcloudwork.webp",
+    title: "EHAM",
+    category: "Technology",
+    year: "2026",
+    path: "/Eham",
+  },
+  {
+    img: "/work individual page assets/pointis thumbnail.webp?v=2",
     title: "Pontis",
     category: "Education",
     year: "2025",

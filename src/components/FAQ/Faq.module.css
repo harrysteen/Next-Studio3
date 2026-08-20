@@ -218,8 +218,8 @@
   border-radius: 16px;
   overflow: hidden;
   height: auto;
-  aspect-ratio: 16 / 10;
-  max-height: 420px;
+  aspect-ratio: 4 / 3;
+  max-height: 460px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
@@ -237,11 +237,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  display: block;
 }
 
 /* Responsive adjustments */

@@ -473,7 +473,7 @@ export default function Leiutis() {
               textTransform: "uppercase",
               marginBottom: "24px",
               fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-            }}>THE PROJECT SUMMARY</h2>
+            }}>THE PROJECT OVERVIEW</h2>
             <p style={{
               fontSize: width <= 480 ? "16px" : "18px",
               lineHeight: "1.8",
@@ -481,7 +481,7 @@ export default function Leiutis() {
               fontFamily: "'Albert Sans', sans-serif",
               fontWeight: 400,
             }}>
-              Leiutis Is A Pharmaceutical Innovation Company With Track Record Of Successful Commercialized Product Alliance Partnerships Globally.They Create Innovative Products That Provide Advancement In Treatment In Specific Therapeutic Areas.
+              Leiutis is a pharma innovation company that focuses on speciality therapeutics and has a successful track record of successful products and research with global partners. The company had a very intrinsic culture and work system in place that they wanted to communicate to the stakeholders and team members. We worked on designing a creative conceptualisation for the communication material that helped the readers understand the company’s working and SMILE culture in an engaging manner rather than being just an instruction manual.
             </p>
           </div>
 
@@ -505,9 +505,7 @@ export default function Leiutis() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Branding, Content Design, Copy Writing
-                <br />
-                Book Design
+                Brand design, Content Writing, Communication Design
               </p>
             </div>
             <div>
@@ -530,15 +528,191 @@ export default function Leiutis() {
             </div>
           </div>
         </section>
+      {/* FINAL MOCKUP ROW SECTION (IMAGES 16 & 17 & 18) */}
+      <section style={{
+        width: "100%",
+        marginBottom: "80px",
+        padding: "0 5%"
+      }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: width <= 480 ? "1fr" : width <= 768 ? "1fr 1fr" : "1fr 1fr 1fr",
+          gap: "40px",
+          width: "100%"
+        }}>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image
+              src={leiutisImg16}
+              alt="Leiutis Brand Identity Design 16"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image
+              src={leiutisImg17}
+              alt="Leiutis Brand Identity Design 17"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "4/3",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
+          }}>
+            <Image
+              src={leiutisImg18}
+              alt="Leiutis Brand Identity Design 18"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+        </div>
+      </section>
 
-        {/* VIDEO SECTION */}
+      {/* WHAT OUR CLIENTS SAY TESTIMONIAL SECTION */}
+      <section style={{
+        width: "100%",
+        maxWidth: "1100px",
+        margin: width <= 768 ? "40px auto 80px auto" : "60px auto 100px auto",
+      }}>
+        <h2 style={{
+          textAlign: "center",
+          fontSize: width <= 480 ? "26px" : width <= 768 ? "34px" : "42px",
+          fontWeight: 700,
+          textTransform: "uppercase",
+          marginBottom: width <= 768 ? "28px" : "40px",
+          fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+          letterSpacing: "-0.5px",
+          color: "#FFFFFF",
+          lineHeight: 1.2
+        }}>
+          WHAT OUR <span style={{ color: "#9cff00" }}>CLIENTS SAY</span>
+        </h2>
 
+        <div style={{
+          backgroundColor: "#FFFFFF",
+          borderRadius: width <= 480 ? "16px" : "24px",
+          padding: width <= 480 ? "24px 20px" : width <= 768 ? "32px 28px" : "40px 48px",
+          display: "grid",
+          gridTemplateColumns: width <= 900 ? "1fr" : "320px 1fr",
+          gap: width <= 768 ? "24px" : "40px",
+          alignItems: "center",
+          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
+          color: "#111111",
+        }}>
+          {/* Left: Client Photo / Brand Image */}
+          <div style={{
+            width: "100%",
+            height: width <= 480 ? "260px" : "320px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            backgroundColor: "#1b0634",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}>
+            <img
+              src="/ourwork/leiutis.webp"
+              alt="K Chandrasekhar Rao"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
 
-        {/* HOW WE HANDLED THE SITUATION */}
+          {/* Right: Content */}
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "20px",
+          }}>
+            {/* Quote */}
+            <p style={{
+              fontFamily: "'Albert Sans', sans-serif",
+              fontSize: width <= 480 ? "15px" : width <= 768 ? "17px" : "18px",
+              lineHeight: "1.6",
+              color: "#222222",
+              fontWeight: 500,
+              margin: 0,
+            }}>
+              &ldquo;In just a couple of weeks, Studio Dezu gathered on-ground information from various teams and created content systems that helped us organise and communicate effectively. Using this content, they create simple, effective and engaging reading material that helped us communicate the Leiutis culture in a fun and impactful manner. We use these books as a part of our HR and welcome packages.&rdquo;
+            </p>
 
+            {/* Author */}
+            <div>
+              <h4 style={{
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+                fontSize: "18px",
+                fontWeight: 700,
+                color: "#111111",
+                margin: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.5px"
+              }}>
+                — K CHANDRASEKHAR RAO
+              </h4>
+              <p style={{
+                fontFamily: "'Albert Sans', sans-serif",
+                fontSize: "13px",
+                color: "#666666",
+                margin: "4px 0 0 0",
+                fontWeight: 500,
+              }}>
+                CEO and Founder, Leiutis
+              </p>
+            </div>
 
-        {/* SUCCESS IN NUMBERS SECTION */}
-
+            {/* Tags */}
+            <div style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "10px",
+              marginTop: "4px"
+            }}>
+              {["BRAND DESIGN", "CONTENT WRITING", "COMMUNICATION DESIGN"].map((tag, idx) => (
+                <span key={idx} style={{
+                  backgroundColor: "#9cff00",
+                  color: "#111111",
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  padding: "6px 14px",
+                  borderRadius: "6px",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.5px"
+                }}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       </main>
 
       {/* FINAL MOCKUP IMAGE SECTION (FULL WIDTH) */}

@@ -4,7 +4,8 @@ import Link from 'next/link';
 import useResponsive from '../../hooks/useResponsive';
 
 const allProjects = [
-  { id: 'pontis', title: 'Pontis', year: '2025', tags: 'Education, Branding, UI/UX Design', img: '/ourwork/pontis.webp', href: '/Pontis' },
+  { id: 'eham', title: 'EHAM', year: '2026', tags: 'Technology, Strategy, UI/UX, Development', img: '/ourwork/highcloudwork.webp', href: '/Eham' },
+  { id: 'pontis', title: 'Pontis', year: '2025', tags: 'Education, Branding, UI/UX Design', img: '/work individual page assets/pointis thumbnail.webp?v=2', href: '/Pontis' },
   { id: 'evoque', title: 'Evoque Impact', year: '2026', tags: 'Brand Identity, Content Strategy', img: '/ourwork/evoqueimpact.webp', href: '/EvoqueImpact' },
   { id: 'naeemzafar', title: 'Naeem Zafar', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/naeeamzafar.webp', href: '/NaeemZafar' },
   { id: 'tie', title: 'TiE Silicon Valley', year: '2024', tags: 'Rebranding, UI Design', img: '/ourwork/siliconvalley.webp', href: '/TieSiliconValley' },

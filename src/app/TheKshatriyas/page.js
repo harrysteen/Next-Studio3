@@ -38,6 +38,15 @@ export default function TheKshatriyas() {
   const [hoveredBoard, setHoveredBoard] = React.useState(null);
   const [hoveredNavLink, setHoveredNavLink] = React.useState(null);
   const [activeProcess, setActiveProcess] = React.useState(0);
+  const [activeProcessImg, setActiveProcessImg] = React.useState(0);
+
+  const processImages = [
+    "/work individual page assets/kshtriya img1.svg",
+    "/work individual page assets/kashtriya rebranding visual identity.webp",
+    "/work individual page assets/kashtriya ui layout design.webp",
+    "/work individual page assets/kshtriya img2.svg",
+    "/work individual page assets/kashtriya development.webp",
+  ];
 
   // Responsive Styles
   const containerStyle = {
@@ -429,14 +438,13 @@ export default function TheKshatriyas() {
       <section style={heroSectionStyle}>
         <div style={{}}>
           <h1 style={heroTitleStyle}>
-            THE<br />KSHATRIYAS
+            KSHATRIYAS OF <br />NORTH AMERICA
           </h1>
           <span style={heroTaglineStyle}>@USA~2025</span>
         </div>
       </section>
 
       <main style={contentWrapperStyle}>
-
 
         {/* PROJECT OVERVIEW SECTION */}
         <section style={{
@@ -462,7 +470,7 @@ export default function TheKshatriyas() {
               fontFamily: "'Albert Sans', sans-serif",
               fontWeight: 400,
             }}>
-              The Kshatriyas Of N.A Is An Expansive Community Of Kshatriyas Residing In North America. They Have Chapters In All The Major Cities Of The Country. Their Mission Is To Foster An Enduring Connection And Family-Like Communication Within The Community Through Regular Meetups, Cultural Events, And Gatherings Locally And Nationally.
+              KANA is a tightly-knit community of Telugu Kshatriyas in North America with an objective to keep their community and legacy growing by appealing to their younger generations. The challenge was their outdated brand identity that did not connect with their target audience. Our task was to create a brand new visual identity for KANA that seamlessly engages with young adults.
             </p>
           </div>
 
@@ -486,7 +494,7 @@ export default function TheKshatriyas() {
                 color: "#e0e0e0",
                 fontFamily: "'Albert Sans', sans-serif",
               }}>
-                Rebranding, UI/UX Design, Product Design, Development
+                Documentation, Rebranding, UX Strategy, UI Design, Development
               </p>
             </div>
             <div>
@@ -510,36 +518,29 @@ export default function TheKshatriyas() {
           </div>
         </section>
 
-        {/* VIDEO SECTION */}
+        {/* HERO IMAGE SHOWCASE SECTION */}
         <section style={{
           width: "100%",
-          height: width <= 768 ? "400px" : "80vh",
+          height: width <= 768 ? "400px" : "70vh",
           minHeight: "400px",
           borderRadius: "16px",
           marginBottom: "80px",
           position: "relative",
           overflow: "hidden"
         }}>
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <img
+            src="/work individual page assets/kastriya indivudial page hero image.png"
+            alt="Kshatriyas Of North America Showcase"
             style={{
               width: "100%",
               height: "100%",
               objectFit: "cover",
+              objectPosition: "center top"
             }}
-          >
-            <source
-              src="https://www.dropbox.com/scl/fi/ffqkap8xoe469vfd6u4ua/18069232-uhd_3840_2160_24fps.mp4?rlkey=xylgikojt656pmmy0ua8or8lb&st=f3q4uup0&raw=1"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+          />
         </section>
 
-        {/* HOW WE HANDLED THE SITUATION */}
+        {/* WHAT WE WORKED ON */}
         <section style={{
           marginBottom: "120px",
           display: "grid",
@@ -556,112 +557,87 @@ export default function TheKshatriyas() {
               fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
               lineHeight: 1.2
             }}>
-              HOW WE <span style={{ color: "#9cff00" }}>HANDLED</span> <br /> THE SITUATION
+              WHAT WE <span style={{ color: "#9cff00" }}>WORKED ON</span>
             </h2>
 
             <WorkAccordion
               items={[
                 {
-                  title: "RESEARCH & DISCOVERY",
-                  desc: "We Conducted In-Depth Research By Analyzing Competitors, Identifying Key User Pain Points, And Mapping Out Detailed Customer Journeys To Uncover Opportunities For A More Intuitive And Impactful Experience."
+                  title: "DISCOVERY AND DOCUMENTATION",
+                  desc: "KANA’s previous website was a complicated web of information and media from their decade long journey. The primary task was to process and streamline all the existing information. We conducted strategic interviews with key members to understand their vision."
                 },
-                { title: "WIREFRAMING & UX DESIGN", desc: "" },
-                { title: "UI DESIGN & BRANDING", desc: "" },
-                { title: "DEVELOPMENT & TESTING", desc: "" }
+                {
+                  title: "REBRANDING AND VISUAL IDENTITY",
+                  desc: "KANA had a strongly rooted legacy and community connect that had to be conveyed through the new communication. The challenge was to keep some parts of it intact while modernising for a younger audience. We held on to few key elements and brought in fresher colour palettes that complemented. We made sure it was only an enhancement and not a disconnection."
+                },
+                {
+                  title: "UX STRATEGY AND INFORMATION ARCHITECTURE",
+                  desc: "The information repository had to be sifted and structured neatly into the new website. We built a seamless navigation that helped the user view information and media that is intended for them without any sense of clutter or overwhelm. The website turned over eighty pages long and yet will never feel like a hefty experience."
+                },
+                {
+                  title: "UI AND LAYOUT DESIGN",
+                  desc: "Culture and Community played as our design pillars throughout the layout design. We had two goals in mind- a vibrant and consistent visual experience, and continuous engagement through diversely designed sections and elements. This avoided monotony for the users."
+                },
+                {
+                  title: "DEVELOPMENT",
+                  desc: "Built on WordPress, this site runs entirely on the dynamic CMS backend so it can be managed and operated by a non-technical team. This site is structured for speed, responsiveness, browser compatibility, flexibility and ease of management."
+                }
               ]}
               defaultActiveIndex={0}
+              onChange={(idx) => setActiveProcessImg(idx !== null ? idx : 0)}
             />
           </div>
 
-          <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden" }}>
+          <div style={{
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)",
+            backgroundColor: "#1b0634",
+          }}>
             <img
-              src="https://picsum.photos/800/600?random=10"
-              alt="Design Process"
-              style={{ width: "100%", height: "auto", display: "block" }}
+              src={processImages[activeProcessImg ?? 0]}
+              alt="Design Process Showcase"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                objectFit: "cover",
+                transition: "opacity 0.3s ease"
+              }}
             />
           </div>
         </section>
 
-        {/* SUCCESS IN NUMBERS SECTION */}
-        <section style={{ marginBottom: "0px" }}>
+        {/* THE OUTCOME SECTION */}
+        <section style={{ marginBottom: "100px" }}>
           <h2 style={{
             fontSize: width <= 480 ? "32px" : "40px",
             fontWeight: 700,
             textTransform: "uppercase",
-            marginBottom: "40px",
+            marginBottom: "30px",
             fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
             lineHeight: 1.2
           }}>
-            <span style={{ color: "#9cff00" }}>SUCCESS</span> IN <br /> NUMBERS & EXPERIENCE
+            THE <span style={{ color: "#9cff00" }}>OUTCOME</span>
           </h2>
-
           <div style={{
-            display: "grid",
-            gridTemplateColumns: width <= 768 ? "1fr" : "repeat(3, 1fr)",
-            gap: "20px",
+            border: "1px solid rgba(156, 255, 0, 0.3)",
+            borderRadius: "16px",
+            padding: width <= 768 ? "36px 24px" : "50px 40px",
+            backgroundColor: "rgba(27, 6, 52, 0.7)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
           }}>
-            {/* Card 1 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
+            <p style={{
+              fontSize: width <= 480 ? "16px" : "19px",
+              lineHeight: "1.8",
+              color: "#e0e0e0",
+              fontFamily: "'Albert Sans', sans-serif",
+              margin: 0
             }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>95%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>HUMAN-CENTERED <br /> DESIGN</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div style={{
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>87%</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>PROVEN EXPERTISE <br /> RECORD</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
-
-            {/* Card 3 (Spans 2 rows) */}
-            <div style={{
-              gridRow: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between"
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "40px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>100%</div>
-              <div>
-                <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>MEASURABLE <br /> IMPACT</h3>
-                <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                  We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 (Spans 2 cols) */}
-            <div style={{
-              gridColumn: width <= 768 ? "auto" : "span 2",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "12px",
-              padding: "40px 30px",
-              backgroundColor: "rgba(0, 0, 0, 0.2)",
-            }}>
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>25X</div>
-              <h3 style={{ color: "#9cff00", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", fontFamily: "var(--font-albert), 'Albert Sans', sans-serif" }}>STARTUPS&apos;S SCALABLE SOLUTION</h3>
-              <p style={{ fontSize: "14px", color: "#a0a0a0", lineHeight: "1.6", fontFamily: "'Albert Sans', sans-serif" }}>
-                We Design With Your Audience In Mind, Ensuring Every Interaction Is Intuitive, Engaging, And Memorable.
-              </p>
-            </div>
+              KANA launched with a modern communication and brand system that will help younger audience connect and engage with their platforms better. A clean, seamless navigation architecture that we built helps them use the website both as a smart content repository and interaction platform.
+            </p>
           </div>
         </section>
       </main>
@@ -758,22 +734,22 @@ export default function TheKshatriyas() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeRight">
               {[
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/kshtriya img1.svg",
+                "/work individual page assets/kashtriya rebranding visual identity.webp",
+                "/work individual page assets/kashtriya ui layout design.webp",
+                "/work individual page assets/kshtriya img2.svg",
+                "/work individual page assets/kashtriya development.webp",
+                "/work individual page assets/kashtriya.webp"
               ].concat([
-                "/ourwork/ecomallwork.webp",
-                "/ourwork/highcloudwork.webp",
-                "/ourwork/kshatriyaswork.webp",
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp"
+                "/work individual page assets/kshtriya img1.svg",
+                "/work individual page assets/kashtriya rebranding visual identity.webp",
+                "/work individual page assets/kashtriya ui layout design.webp",
+                "/work individual page assets/kshtriya img2.svg",
+                "/work individual page assets/kashtriya development.webp",
+                "/work individual page assets/kashtriya.webp"
               ]).map((src, index) => (
                 <div key={`row1-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="Kshatriya Work Presentation Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
@@ -783,48 +759,146 @@ export default function TheKshatriyas() {
           <div className="marqueeRow">
             <div className="marqueeTrack marqueeLeft">
               {[
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/kashtriya development.webp",
+                "/work individual page assets/kashtriya ui layout design.webp",
+                "/work individual page assets/kshtriya img2.svg",
+                "/work individual page assets/kashtriya rebranding visual identity.webp",
+                "/work individual page assets/kshtriya img1.svg",
+                "/work individual page assets/kashtriya.webp"
               ].concat([
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp",
-                "/tie_herosection_img.jpg",
-                "/tie_silicon_valley_hero.png",
-                "/ourwork/madboxwork.webp"
+                "/work individual page assets/kashtriya development.webp",
+                "/work individual page assets/kashtriya ui layout design.webp",
+                "/work individual page assets/kshtriya img2.svg",
+                "/work individual page assets/kashtriya rebranding visual identity.webp",
+                "/work individual page assets/kshtriya img1.svg",
+                "/work individual page assets/kashtriya.webp"
               ]).map((src, index) => (
                 <div key={`row2-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
+                  <img src={src} alt="Kshatriya Work Presentation Showcase" className="marqueeImg" />
                 </div>
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Row 3 (moving right) */}
-          <div className="marqueeRow">
-            <div className="marqueeTrack marqueeRight">
-              {[
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
-              ].concat([
-                "/ourwork/leiutis.webp",
-                "/ourwork/madboxwork.webp",
-                "/ourwork/mall360.webp",
-                "/ourwork/naeeamzafar.webp",
-                "/ourwork/siliconvalley.webp",
-                "/ourwork/venturawork.webp"
-              ]).map((src, index) => (
-                <div key={`row3-${index}`} className="marqueeItem">
-                  <img src={src} alt="Work Presentation Showcase" className="marqueeImg" />
-                </div>
+      {/* WHAT OUR CLIENTS SAY TESTIMONIAL SECTION */}
+      <section style={{
+        width: "100%",
+        maxWidth: "1100px",
+        margin: width <= 768 ? "40px auto 80px auto" : "60px auto 100px auto",
+      }}>
+        <h2 style={{
+          textAlign: "center",
+          fontSize: width <= 480 ? "26px" : width <= 768 ? "34px" : "42px",
+          fontWeight: 700,
+          textTransform: "uppercase",
+          marginBottom: width <= 768 ? "28px" : "40px",
+          fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+          letterSpacing: "-0.5px",
+          color: "#FFFFFF",
+          lineHeight: 1.2
+        }}>
+          WHAT OUR <span style={{ color: "#9cff00" }}>CLIENTS SAY</span>
+        </h2>
+
+        <div style={{
+          backgroundColor: "#FFFFFF",
+          borderRadius: width <= 480 ? "16px" : "24px",
+          padding: width <= 480 ? "24px 20px" : width <= 768 ? "32px 28px" : "40px 48px",
+          display: "grid",
+          gridTemplateColumns: width <= 900 ? "1fr" : "320px 1fr",
+          gap: width <= 768 ? "24px" : "40px",
+          alignItems: "center",
+          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
+          color: "#111111",
+        }}>
+          {/* Left: Client Photo / Graphic */}
+          <div style={{
+            width: "100%",
+            height: width <= 480 ? "260px" : "320px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            backgroundColor: "#1b0634",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}>
+            <img
+              src="/ourwork/kshatriyaswork.webp"
+              alt="Ravi Kanumuri"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
+
+          {/* Right: Content */}
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "20px",
+          }}>
+            {/* Quote */}
+            <p style={{
+              fontFamily: "'Albert Sans', sans-serif",
+              fontSize: width <= 480 ? "15px" : width <= 768 ? "17px" : "18px",
+              lineHeight: "1.6",
+              color: "#222222",
+              fontWeight: 500,
+              margin: 0,
+            }}>
+              &ldquo;They did a lot of discovery before we started. We also saw several brand iterations before we finalised a version that we really liked. Dezu Team are like our design partners now.&rdquo;
+            </p>
+
+            {/* Author */}
+            <div>
+              <h4 style={{
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+                fontSize: "18px",
+                fontWeight: 700,
+                color: "#111111",
+                margin: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.5px"
+              }}>
+                — RAVI KANUMURI
+              </h4>
+              <p style={{
+                fontFamily: "'Albert Sans', sans-serif",
+                fontSize: "13px",
+                color: "#666666",
+                margin: "4px 0 0 0",
+                fontWeight: 500,
+              }}>
+                Vice President, KANA
+              </p>
+            </div>
+
+            {/* Tags */}
+            <div style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "10px",
+              marginTop: "4px"
+            }}>
+              {["DOCUMENTATION", "REBRANDING", "UI/UX DESIGN", "DEVELOPMENT"].map((tag, idx) => (
+                <span key={idx} style={{
+                  backgroundColor: "#9cff00",
+                  color: "#111111",
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  padding: "6px 14px",
+                  borderRadius: "6px",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.5px"
+                }}>
+                  {tag}
+                </span>
               ))}
             </div>
           </div>

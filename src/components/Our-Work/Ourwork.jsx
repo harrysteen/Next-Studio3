@@ -8,7 +8,8 @@ import styles from './Ourwork.module.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-    { id: 13, title: 'Pontis', year: '2025', tags: 'Education, Branding, UI/UX Design', img: '/ourwork/pontis.webp', col: 1, href: '/Pontis' },
+    { id: 14, title: 'EHAM', year: '2026', tags: 'Technology, Strategy, UI/UX, Development', img: '/ourwork/highcloudwork.webp', col: 1, href: '/Eham' },
+    { id: 13, title: 'Pontis', year: '2025', tags: 'Education, Branding, UI/UX Design', img: '/work individual page assets/pointis thumbnail.webp?v=2', col: 1, href: '/Pontis' },
     { id: 11, title: 'Evoque Impact', year: '2025', tags: 'Finance, UI/UX Design', img: '/ourwork/evoqueimpact.webp', col: 2, href: '/EvoqueImpact' },
     { id: 5, title: 'Naeem Zafar', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/naeeamzafar.webp', col: 3, href: '/NaeemZafar' },
     { id: 4, title: 'TIE Silicon Valley', year: '2024', tags: 'Rebranding, UI/UX Design', img: '/ourwork/siliconvalley.webp', col: 4, href: '/TieSiliconValley' },

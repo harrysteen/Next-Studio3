@@ -644,129 +644,6 @@ export default function NaeemZafar() {
         </section>
       </main>
 
-      {/* WHAT OUR CLIENTS SAY TESTIMONIAL SECTION */}
-      <section style={{
-        width: "90%",
-        maxWidth: "1100px",
-        margin: width <= 768 ? "40px auto 80px auto" : "60px auto 120px auto",
-      }}>
-        <h2 style={{
-          textAlign: "center",
-          fontSize: width <= 480 ? "26px" : width <= 768 ? "34px" : "42px",
-          fontWeight: 700,
-          textTransform: "uppercase",
-          marginBottom: width <= 768 ? "28px" : "40px",
-          fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-          letterSpacing: "-0.5px",
-          color: "#FFFFFF",
-          lineHeight: 1.2
-        }}>
-          WHAT OUR <span style={{ color: "#9cff00" }}>CLIENTS SAY</span>
-        </h2>
-
-        <div style={{
-          backgroundColor: "#FFFFFF",
-          borderRadius: width <= 480 ? "16px" : "24px",
-          padding: width <= 480 ? "24px 20px" : width <= 768 ? "32px 28px" : "40px 48px",
-          display: "grid",
-          gridTemplateColumns: width <= 900 ? "1fr" : "320px 1fr",
-          gap: width <= 768 ? "24px" : "40px",
-          alignItems: "center",
-          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
-          color: "#111111",
-        }}>
-          {/* Left: Client Photo */}
-          <div style={{
-            width: "100%",
-            height: width <= 480 ? "260px" : "320px",
-            borderRadius: "16px",
-            overflow: "hidden",
-            backgroundColor: "#9BB6C3",
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "center",
-          }}>
-            <img
-              src="/work individual page assets/NAEEM ZAFAR.webp"
-              alt="Naeem Zafar"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "top center",
-              }}
-            />
-          </div>
-
-          {/* Right: Content */}
-          <div style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            gap: "20px",
-          }}>
-            {/* Quote */}
-            <p style={{
-              fontFamily: "'Albert Sans', sans-serif",
-              fontSize: width <= 480 ? "15px" : width <= 768 ? "17px" : "18px",
-              lineHeight: "1.6",
-              color: "#222222",
-              fontWeight: 500,
-              margin: 0,
-            }}>
-              &ldquo;Studio Dezu has played a key role in my personal brand transformation. The site contains all my lectures, interviews and presentations in an easily accessible manner. It is definitely striking.&rdquo;
-            </p>
-
-            {/* Author */}
-            <div>
-              <h4 style={{
-                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
-                fontSize: "18px",
-                fontWeight: 700,
-                color: "#111111",
-                margin: 0,
-                textTransform: "uppercase",
-                letterSpacing: "0.5px"
-              }}>
-                — NAEEM ZAFAR
-              </h4>
-              <p style={{
-                fontFamily: "'Albert Sans', sans-serif",
-                fontSize: "13px",
-                color: "#666666",
-                margin: "4px 0 0 0",
-                fontWeight: 500,
-              }}>
-                Professor at UC Berkeley, Silicon-Valley Entrepreneur
-              </p>
-            </div>
-
-            {/* Tags */}
-            <div style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "10px",
-              marginTop: "4px"
-            }}>
-              {["PERSONAL BRANDING", "UI/UX", "CONTENT STRATEGY"].map((tag, idx) => (
-                <span key={idx} style={{
-                  backgroundColor: "#9cff00",
-                  color: "#111111",
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  padding: "6px 14px",
-                  borderRadius: "6px",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.5px"
-                }}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* INFINITE SCROLLING MARQUEE SECTION */}
       <section className="marqueeContainer">
         <style dangerouslySetInnerHTML={{
@@ -932,6 +809,129 @@ export default function NaeemZafar() {
                 <div key={`row3-${index}`} className="marqueeItem">
                   <img src={src} alt="Naeem Zafar Showcase" className="marqueeImg" />
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT OUR CLIENTS SAY TESTIMONIAL SECTION */}
+      <section style={{
+        width: "90%",
+        maxWidth: "1100px",
+        margin: width <= 768 ? "40px auto 80px auto" : "60px auto 120px auto",
+      }}>
+        <h2 style={{
+          textAlign: "center",
+          fontSize: width <= 480 ? "26px" : width <= 768 ? "34px" : "42px",
+          fontWeight: 700,
+          textTransform: "uppercase",
+          marginBottom: width <= 768 ? "28px" : "40px",
+          fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+          letterSpacing: "-0.5px",
+          color: "#FFFFFF",
+          lineHeight: 1.2
+        }}>
+          WHAT OUR <span style={{ color: "#9cff00" }}>CLIENTS SAY</span>
+        </h2>
+
+        <div style={{
+          backgroundColor: "#FFFFFF",
+          borderRadius: width <= 480 ? "16px" : "24px",
+          padding: width <= 480 ? "24px 20px" : width <= 768 ? "32px 28px" : "40px 48px",
+          display: "grid",
+          gridTemplateColumns: width <= 900 ? "1fr" : "320px 1fr",
+          gap: width <= 768 ? "24px" : "40px",
+          alignItems: "center",
+          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
+          color: "#111111",
+        }}>
+          {/* Left: Client Photo */}
+          <div style={{
+            width: "100%",
+            height: width <= 480 ? "260px" : "320px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            backgroundColor: "#9BB6C3",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "center",
+          }}>
+            <img
+              src="/work individual page assets/NAEEM ZAFAR.webp"
+              alt="Naeem Zafar"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "top center",
+              }}
+            />
+          </div>
+
+          {/* Right: Content */}
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "20px",
+          }}>
+            {/* Quote */}
+            <p style={{
+              fontFamily: "'Albert Sans', sans-serif",
+              fontSize: width <= 480 ? "15px" : width <= 768 ? "17px" : "18px",
+              lineHeight: "1.6",
+              color: "#222222",
+              fontWeight: 500,
+              margin: 0,
+            }}>
+              &ldquo;Studio Dezu has played a key role in my personal brand transformation. The site contains all my lectures, interviews and presentations in an easily accessible manner. It is definitely striking.&rdquo;
+            </p>
+
+            {/* Author */}
+            <div>
+              <h4 style={{
+                fontFamily: "var(--font-albert), 'Albert Sans', sans-serif",
+                fontSize: "18px",
+                fontWeight: 700,
+                color: "#111111",
+                margin: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.5px"
+              }}>
+                — NAEEM ZAFAR
+              </h4>
+              <p style={{
+                fontFamily: "'Albert Sans', sans-serif",
+                fontSize: "13px",
+                color: "#666666",
+                margin: "4px 0 0 0",
+                fontWeight: 500,
+              }}>
+                Professor at UC Berkeley, Silicon-Valley Entrepreneur
+              </p>
+            </div>
+
+            {/* Tags */}
+            <div style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "10px",
+              marginTop: "4px"
+            }}>
+              {["PERSONAL BRANDING", "UI/UX", "CONTENT STRATEGY"].map((tag, idx) => (
+                <span key={idx} style={{
+                  backgroundColor: "#9cff00",
+                  color: "#111111",
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  padding: "6px 14px",
+                  borderRadius: "6px",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.5px"
+                }}>
+                  {tag}
+                </span>
               ))}
             </div>
           </div>
