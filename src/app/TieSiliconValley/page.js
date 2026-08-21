@@ -685,10 +685,7 @@ export default function TieSiliconValley() {
           .marqueeRight {
             animation: scrollRight 45s linear infinite;
           }
-          .marqueeWrapper:hover .marqueeLeft,
-          .marqueeWrapper:hover .marqueeRight {
-            animation-play-state: paused;
-          }
+
           .marqueeItem {
             flex-shrink: 0;
             width: 580px;

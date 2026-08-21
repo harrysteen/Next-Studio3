@@ -1,8 +1,7 @@
 .container {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  padding: 100px 5vw;
+  padding: 100px 5vw 80px;
   background-color: var(--bg-color);
   overflow: hidden;
 }
@@ -69,22 +68,22 @@
   gap: 40px;
 }
 
-/* Stagger the columns to create the scattered look */
+/* Stagger the columns for a scattered look */
 .col1 {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .col2 {
-  margin-top: 0px;
-  gap: 250px;
+  margin-top: 80px;
+  gap: 40px;
 }
 
 .col3 {
-  margin-top: 250px;
+  margin-top: 40px;
 }
 
 .col4 {
-  margin-top: 80px;
+  margin-top: 120px;
 }
 
 /* Card Styles */

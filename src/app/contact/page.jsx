@@ -5,8 +5,63 @@ import styles from "./contact.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/harrydezu@gmail.com";
+
 export default function Contact() {
   const [activeTab, setActiveTab] = useState("message");
+  const [formData, setFormData] = useState({
+    name: "", email: "", phone: "", company: "", message: "",
+    services: { branding: false, uiux: false, webDev: false, contentStrategy: false, other: false },
+  });
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    if (type === "checkbox") {
+      setFormData((prev) => ({ ...prev, services: { ...prev.services, [name]: checked } }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    const serviceLabels = { branding: "Branding", uiux: "UI/UX Design", webDev: "Website Development", contentStrategy: "Content Strategy", other: "Other" };
+    const selectedServices = Object.entries(formData.services)
+      .filter(([, v]) => v)
+      .map(([k]) => serviceLabels[k])
+      .join(", ") || "None selected";
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          services: selectedServices,
+          message: formData.message,
+          _subject: `New enquiry from ${formData.name} – Studio Dezu`,
+        }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({
+          name: "", email: "", phone: "", company: "", message: "",
+          services: { branding: false, uiux: false, webDev: false, contentStrategy: false, other: false },
+        });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
 
   return (
     <div className={styles.contactWrapper}>
@@ -14,25 +69,24 @@ export default function Contact() {
 
       <main className={styles.contactMain}>
         <div className={styles.contentContainer}>
-          
+
           {/* LEFT SIDE */}
           <div className={styles.leftColumn}>
             <h1 className={styles.headline}>
-              <span className={styles.highlight}>LET'S START</span> WITH<br/>
-              QUESTIONS. AND END<br/>
-              WITH ALIGNMENT.
+              <span className={styles.highlight}>LET&apos;S START</span> WITH QUESTIONS.<br/>
+              AND END WITH ALIGNMENT.
             </h1>
             <p className={styles.description}>
-              Whether You're Refining An Idea, Scaling A Product, Or<br/>
-              Untangling Complexity, The First Step Is Always The Same<br/>
-              —A Clear Conversation. We'd Love To Talk.
+              We believe in understanding deeply and intentionally. This gives us a headstart
+              on the creative process and the momentum to build the best. Reach out to us today
+              and let&apos;s build some amazing things together!
             </p>
 
             <div className={styles.contactInfo}>
               <div className={styles.infoLine}></div>
               <div>
-                <a href="mailto:Admin@Studiodezu.Com" className={styles.email}>
-                  Admin@Studiodezu.Com
+                <a href="mailto:harrydezu@gmail.com" className={styles.email}>
+                  harrydezu@gmail.com
                 </a>
                 <div className={styles.socialIcons}>
                   {/* LinkedIn */}
@@ -62,78 +116,83 @@ export default function Contact() {
           <div className={styles.rightColumn}>
             <div className={styles.formCard}>
               <div className={styles.tabs}>
-                <button 
-                  className={`${styles.tabBtn} ${activeTab === 'message' ? styles.activeTab : ''}`}
-                  onClick={() => setActiveTab('message')}
+                <button
+                  className={`${styles.tabBtn} ${activeTab === "message" ? styles.activeTab : ""}`}
+                  onClick={() => setActiveTab("message")}
                 >
                   Send Message
                 </button>
-                <button 
-                  className={`${styles.tabBtn} ${activeTab === 'call' ? styles.activeTab : ''}`}
-                  onClick={() => setActiveTab('call')}
+                <button
+                  className={`${styles.tabBtn} ${activeTab === "call" ? styles.activeTab : ""}`}
+                  onClick={() => setActiveTab("call")}
                 >
                   Book A Call
                 </button>
               </div>
 
-              <form className={styles.form}>
-                <div className={styles.row}>
-                  <input type="text" placeholder="Name" className={styles.input} />
-                  <input type="email" placeholder="E-Mail" className={styles.input} />
+              {status === "success" ? (
+                <div style={{ padding: "40px 20px", textAlign: "center", color: "#ABFF4F" }}>
+                  <p style={{ fontSize: "18px", fontWeight: 600, marginBottom: "8px" }}>Message sent! ✓</p>
+                  <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "14px" }}>
+                    We&apos;ll get back to you shortly at harrydezu@gmail.com
+                  </p>
+                  <button
+                    onClick={() => setStatus("idle")}
+                    style={{ marginTop: "20px", background: "none", border: "1px solid #ABFF4F", color: "#ABFF4F", padding: "8px 20px", borderRadius: "4px", cursor: "pointer" }}
+                  >
+                    Send Another
+                  </button>
                 </div>
-                <div className={styles.row}>
-                  <input type="tel" placeholder="Phone Number" className={styles.input} />
-                  <input type="text" placeholder="Company Name" className={styles.input} />
-                </div>
-
-                <div className={styles.servicesGroup}>
-                  <label className={styles.groupLabel}>What Services Are You Interested In?</label>
-                  <div className={styles.checkboxes}>
-                    <label className={styles.checkboxItem}><input type="checkbox"/> Branding</label>
-                    <label className={styles.checkboxItem}><input type="checkbox"/> UI/UX Design</label>
-                    <label className={styles.checkboxItem}><input type="checkbox"/> Website Development</label>
-                    <label className={styles.checkboxItem}><input type="checkbox"/> Content Strategy</label>
-                    <label className={styles.checkboxItem}><input type="checkbox"/> Content Strategy</label>
-                    <label className={styles.checkboxItem}><input type="checkbox"/> Other</label>
+              ) : (
+                <form className={styles.form} onSubmit={handleSubmit}>
+                  <div className={styles.row}>
+                    <input type="text" name="name" placeholder="Name" className={styles.input} value={formData.name} onChange={handleChange} required />
+                    <input type="email" name="email" placeholder="E-Mail" className={styles.input} value={formData.email} onChange={handleChange} required />
                   </div>
-                </div>
+                  <div className={styles.row}>
+                    <input type="tel" name="phone" placeholder="Phone Number" className={styles.input} value={formData.phone} onChange={handleChange} />
+                    <input type="text" name="company" placeholder="Company Name" className={styles.input} value={formData.company} onChange={handleChange} />
+                  </div>
 
-                <textarea 
-                  className={styles.textarea} 
-                  placeholder="Talk About Your Project"
-                ></textarea>
+                  <div className={styles.servicesGroup}>
+                    <label className={styles.groupLabel}>What Services Are You Interested In?</label>
+                    <div className={styles.checkboxes}>
+                      <label className={styles.checkboxItem}><input type="checkbox" name="branding" checked={formData.services.branding} onChange={handleChange}/> Branding</label>
+                      <label className={styles.checkboxItem}><input type="checkbox" name="uiux" checked={formData.services.uiux} onChange={handleChange}/> UI/UX Design</label>
+                      <label className={styles.checkboxItem}><input type="checkbox" name="webDev" checked={formData.services.webDev} onChange={handleChange}/> Website Development</label>
+                      <label className={styles.checkboxItem}><input type="checkbox" name="contentStrategy" checked={formData.services.contentStrategy} onChange={handleChange}/> Content Strategy</label>
+                      <label className={styles.checkboxItem}><input type="checkbox" name="other" checked={formData.services.other} onChange={handleChange}/> Other</label>
+                    </div>
+                  </div>
 
-                <button type="submit" className={styles.submitBtn}>
-                  Send Message
-                </button>
-              </form>
+                  <textarea
+                    className={styles.textarea}
+                    name="message"
+                    placeholder="Talk About Your Project"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
+
+                  {status === "error" && (
+                    <p style={{ color: "#ff6b6b", fontSize: "13px", marginBottom: "8px" }}>
+                      Something went wrong. Please try again or email us directly at harrydezu@gmail.com
+                    </p>
+                  )}
+
+                  <button type="submit" className={styles.submitBtn} disabled={status === "sending"}>
+                    {status === "sending" ? "Sending..." : "Send Message"}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
 
         </div>
 
-        {/* BOTTOM NAV */}
-        <nav className={styles.bottomNav} aria-label="Primary Navigation">
-          <Link href="/work" className={styles.navLink}>Work</Link>
-          <Link href="/team" className={styles.navLink}>Get Your Own Team</Link>
-          <Link href="/about" className={styles.navLink}>About</Link>
-          <Link href="https://dezu.in/" className={styles.navLink}>Dezu</Link>
-        </nav>
+
       </main>
 
-      {/* MAP SECTION */}
-      <section className={styles.mapSection}>
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!4v1774361394113!6m8!1m7!1szRzWzmMIRj2VzhdgCK58pg!2m2!1d17.43829860766246!2d78.39380134227628!3f35.514554811675744!4f6.648000697387715!5f0.7820865974627469" 
-          width="100%" 
-          height="500" 
-          style={{ border: 0 }} 
-          allowFullScreen="" 
-          loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade"
-          className={styles.mapImage}
-        ></iframe>
-      </section>
 
       <Footer />
     </div>

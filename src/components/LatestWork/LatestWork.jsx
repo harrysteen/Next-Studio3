@@ -4,20 +4,23 @@ import Link from 'next/link';
 import useResponsive from '../../hooks/useResponsive';
 
 const allProjects = [
-  { id: 'eham', title: 'EHAM', year: '2026', tags: 'Technology, Strategy, UI/UX, Development', img: '/ourwork/highcloudwork.webp', href: '/Eham' },
-  { id: 'pontis', title: 'Pontis', year: '2025', tags: 'Education, Branding, UI/UX Design', img: '/work individual page assets/pointis thumbnail.webp?v=2', href: '/Pontis' },
   { id: 'evoque', title: 'Evoque Impact', year: '2026', tags: 'Brand Identity, Content Strategy', img: '/ourwork/evoqueimpact.webp', href: '/EvoqueImpact' },
   { id: 'naeemzafar', title: 'Naeem Zafar', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/naeeamzafar.webp', href: '/NaeemZafar' },
   { id: 'tie', title: 'TiE Silicon Valley', year: '2024', tags: 'Rebranding, UI Design', img: '/ourwork/siliconvalley.webp', href: '/TieSiliconValley' },
   { id: 'lifecykul', title: 'Life Cykul', year: '2026', tags: 'Rebranding, Interface Design', img: '/ourwork/lifecykul.webp', href: '/LifeCykul' },
   { id: 'ventura', title: 'Ventura Pranas', year: '2024', tags: 'Branding, UX Research', img: '/ourwork/venturawork.webp', href: '/VenturaPranas' },
   { id: 'highcloud', title: 'HighCloud Solutions', year: '2025', tags: 'Rebranding, UI/UX Design', img: '/ourwork/highcloudwork.webp', href: '/HighCloud' },
+  { id: 'pontis', title: 'Pontis', year: '2025', tags: 'Education, Branding, UI/UX Design', img: '/work individual page assets/pointis thumbnail.webp?v=2', href: '/Pontis' },
+  // { id: 'eham', title: 'EHAM', year: '2026', tags: 'Technology, Strategy, UI/UX, Development', img: '/ourwork/highcloudwork.webp', href: '/Eham' }, // Hidden – can be restored later
   { id: 'leiutis', title: 'Leiutis', year: '2023', tags: 'Content Design', img: '/ourwork/leiutis.webp', href: '/Leiutis' },
   { id: 'kshatriyas', title: 'The Kshatriyas', year: '2025', tags: 'UIUX, Product Design, Development', img: '/ourwork/kshatriyaswork.webp', href: '/TheKshatriyas' },
+  // { id: 'studenttribe', title: 'Student Tribe', year: '2026', tags: 'Education, Branding, UI/UX Design', img: '/ourwork/studenttribe.webp', href: '/StudentTribe' }, // Coming soon
+  // { id: 'qylis', title: 'Qylis', year: '2026', tags: 'Technology, UI/UX Design', img: '/ourwork/qylis.webp', href: '/Qylis' }, // Coming soon
   { id: 'madbox', title: 'Mad Box', year: '2025', tags: 'Branding, Packaging Design', img: '/ourwork/madboxwork.webp', href: '/Madbox' },
   { id: 'ecomall', title: 'Ecomall', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/ecomallwork.webp', href: '/Ecomall' },
   { id: 'mall360', title: 'Mall 360', year: '2025', tags: 'Branding, UI/UX Design', img: '/ourwork/mall360.webp', href: '/Mall360' },
 ];
+
 
 export default function LatestWork({ currentProjectId }) {
   const { width } = useResponsive();

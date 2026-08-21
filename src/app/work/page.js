@@ -12,23 +12,9 @@ import Footer from "../../components/Footer/Footer";
 // (e.g., my-next-studio/public/Silicon.webp)
 const projects = [
   {
-    img: "/ourwork/highcloudwork.webp",
-    title: "EHAM",
-    category: "Technology",
-    year: "2026",
-    path: "/Eham",
-  },
-  {
-    img: "/work individual page assets/pointis thumbnail.webp?v=2",
-    title: "Pontis",
-    category: "Education",
-    year: "2025",
-    path: "/Pontis",
-  },
-  {
     img: "/Evoque impact.webp",
     title: "Evoque Impact",
-    category: "Finance",
+    category: "Technology",
     year: "2025",
     path: "/EvoqueImpact",
   },
@@ -49,7 +35,7 @@ const projects = [
   {
     img: "/life cykul.webp",
     title: "Life Cykul",
-    category: "E-commerce",
+    category: "Technology",
     year: "2025",
     path: "/LifeCykul",
   },
@@ -68,6 +54,21 @@ const projects = [
     path: "/HighCloud",
   },
   {
+    img: "/work individual page assets/pointis thumbnail.webp?v=2",
+    title: "Pontis",
+    category: "Education",
+    year: "2025",
+    path: "/Pontis",
+  },
+  // Hidden – can be restored later
+  // {
+  //   img: "/ourwork/highcloudwork.webp",
+  //   title: "EHAM",
+  //   category: "Technology",
+  //   year: "2026",
+  //   path: "/Eham",
+  // },
+  {
     img: "/leiutis.webp",
     title: "Leiutis",
     category: "Healthcare",
@@ -81,6 +82,21 @@ const projects = [
     year: "2025",
     path: "/TheKshatriyas",
   },
+  // Coming soon
+  // {
+  //   img: "/ourwork/studenttribe.webp",
+  //   title: "Student Tribe",
+  //   category: "Education",
+  //   year: "2026",
+  //   path: "/StudentTribe",
+  // },
+  // {
+  //   img: "/ourwork/qylis.webp",
+  //   title: "Qylis",
+  //   category: "Technology",
+  //   year: "2026",
+  //   path: "/Qylis",
+  // },
   {
     img: "/madboxwork.webp",
     title: "Mad Box",
@@ -103,6 +119,7 @@ const projects = [
     path: "/Mall360",
   },
 ];
+
 
 const categories = [
   "ALL",

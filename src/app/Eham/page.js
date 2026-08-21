@@ -374,10 +374,7 @@ export default function EhamPage() {
           .marqueeRight {
             animation: scrollRight 45s linear infinite;
           }
-          .marqueeWrapper:hover .marqueeLeft,
-          .marqueeWrapper:hover .marqueeRight {
-            animation-play-state: paused;
-          }
+
           .marqueeItem {
             flex-shrink: 0;
             width: 580px;
