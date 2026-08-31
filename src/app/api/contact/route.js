@@ -25,11 +25,14 @@ export async function POST(req) {
     }
 
     // Configure Gmail / Google Workspace SMTP transporter
+    const cleanPass = emailPass.replace(/\s+/g, '');
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true, // SSL
       auth: {
         user: emailUser,
-        pass: emailPass,
+        pass: cleanPass,
       },
     });
 

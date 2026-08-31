@@ -12,6 +12,7 @@ export default function Contact() {
     services: { branding: false, uiux: false, webDev: false, contentStrategy: false, other: false },
   });
   const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -25,6 +26,7 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");
+    setErrorMessage("");
 
     const serviceLabels = { branding: "Branding", uiux: "UI/UX Design", webDev: "Website Development", contentStrategy: "Content Strategy", other: "Other" };
     const selectedServices = Object.entries(formData.services)
@@ -46,7 +48,9 @@ export default function Contact() {
         }),
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.success) {
         setStatus("success");
         setFormData({
           name: "", email: "", phone: "", company: "", message: "",
@@ -54,9 +58,11 @@ export default function Contact() {
         });
       } else {
         setStatus("error");
+        setErrorMessage(data.error || "Failed to send message.");
       }
-    } catch {
+    } catch (err) {
       setStatus("error");
+      setErrorMessage(err?.message || "Failed to connect to server.");
     }
   };
 
@@ -173,7 +179,7 @@ export default function Contact() {
 
                   {status === "error" && (
                     <p style={{ color: "#ff6b6b", fontSize: "13px", marginBottom: "8px" }}>
-                      Something went wrong. Please try again or email us directly at dev@studiodezu.com
+                      {errorMessage ? `Error: ${errorMessage}` : "Something went wrong. Please try again or email us directly at dev@studiodezu.com"}
                     </p>
                   )}
 
