@@ -36,7 +36,7 @@ export async function POST(req) {
     });
 
     const mailOptions = {
-      from: `"Studio Dezu Inquiry" <${emailUser}>`,
+      from: `"${name} (via Studio Dezu)" <${emailUser}>`,
       to: recipientEmail,
       replyTo: email,
       subject: `✨ New Inquiry from ${name} - Studio Dezu`,
