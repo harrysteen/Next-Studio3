@@ -12,24 +12,23 @@ export async function POST(req) {
       );
     }
 
-    const emailUser = process.env.EMAIL_USER || process.env.SMTP_USER;
+    const emailUser = process.env.EMAIL_USER || process.env.SMTP_USER || 'dev@studiodezu.com';
     const emailPass = process.env.EMAIL_PASS || process.env.SMTP_PASS;
     const recipientEmail = process.env.EMAIL_TO || process.env.SMTP_TO || emailUser || 'dev@studiodezu.com';
 
-    if (!emailUser || !emailPass) {
-      console.error('Email credentials (EMAIL_USER / EMAIL_PASS) are not configured in environment variables.');
+    if (!emailPass) {
+      console.error('EMAIL_PASS is missing from environment variables.');
       return NextResponse.json(
         { error: 'Server email credentials are not configured.' },
         { status: 500 }
       );
     }
 
-    // Configure Gmail / Google Workspace SMTP transporter
     const cleanPass = emailPass.replace(/\s+/g, '');
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 465,
-      secure: true, // SSL
+      secure: true,
       auth: {
         user: emailUser,
         pass: cleanPass,
