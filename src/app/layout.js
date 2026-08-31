@@ -1,6 +1,7 @@
 import { Bai_Jamjuree, Albert_Sans, Bakbak_One } from "next/font/google";
 import "./globals.css";
 import BottomNav from "../components/BottomNav/BottomNav";
+import { Analytics } from "@vercel/analytics/next";
 
 const albertSans = Albert_Sans({
   weight: ['300', '400', '500', '600', '700', '800'],
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <BottomNav />
+        <Analytics />
       </body>
     </html>
   );
