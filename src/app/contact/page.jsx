@@ -169,7 +169,7 @@ export default function Contact() {
                 <div style={{ padding: "40px 20px", textAlign: "center", color: "#ABFF4F" }}>
                   <p style={{ fontSize: "18px", fontWeight: 600, marginBottom: "8px" }}>Message sent! ✓</p>
                   <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "14px" }}>
-                    We&apos;ll get back to you shortly at dev@studiodezu.com
+                    We&apos;ll reach out to you shortly.
                   </p>
                   <button
                     type="button"
