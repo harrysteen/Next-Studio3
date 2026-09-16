@@ -118,8 +118,8 @@ export default function Contact() {
             <div className={styles.contactInfo}>
               <div className={styles.infoLine}></div>
               <div>
-                <a href="mailto:dev@studiodezu.com" className={styles.email}>
-                  dev@studiodezu.com
+                <a href="mailto:himajaa@studiodezu.com" className={styles.email}>
+                  himajaa@studiodezu.com
                 </a>
                 <div className={styles.socialIcons}>
                   {/* LinkedIn */}
@@ -290,7 +290,7 @@ export default function Contact() {
 
                   {status === "error" && (
                     <p style={{ color: "#ff6b6b", fontSize: "13px", marginBottom: "8px" }}>
-                      {errorMessage ? `Error: ${errorMessage}` : "Something went wrong. Please try again or email us directly at dev@studiodezu.com"}
+                      {errorMessage ? `Error: ${errorMessage}` : "Something went wrong. Please try again or email us directly at himajaa@studiodezu.com"}
                     </p>
                   )}
 

@@ -14,7 +14,7 @@ export async function POST(req) {
 
     const emailUser = process.env.EMAIL_USER || process.env.SMTP_USER || 'dev@studiodezu.com';
     const emailPass = process.env.EMAIL_PASS || process.env.SMTP_PASS;
-    const recipientEmail = process.env.EMAIL_TO || process.env.SMTP_TO || emailUser || 'dev@studiodezu.com';
+    const recipientEmail = process.env.EMAIL_TO || process.env.SMTP_TO || 'himajaa@studiodezu.com';
 
     if (!emailPass) {
       console.error('EMAIL_PASS is missing from environment variables.');
