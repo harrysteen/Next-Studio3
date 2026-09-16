@@ -22,23 +22,26 @@ const bakbakOne = Bakbak_One({
 });
 
 export const metadata = {
-  title: "Studio Dezu | Premium UI/UX & Digital Design Agency",
-  description: "Studio Dezu is a full-cycle design partner for companies that win. We specialize in UI/UX design, branding, product design, and scalable web development to drive impact and decisive momentum.",
-  keywords: ["UI/UX design", "product design", "branding agency", "web development", "Studio Dezu", "design partner", "SaaS design", "digital agency"],
+  title: {
+    default: "STUDIO DEZU | Design, Product and Technology Company",
+    template: "%s | Studio Dezu",
+  },
+  description: "STUDIO DEZU | Design, Product and Technology Company",
+  keywords: ["Design", "Product Design", "Technology Company", "UI/UX design", "branding agency", "web development", "Studio Dezu", "digital agency"],
   authors: [{ name: "Kumarraju", url: "https://studiodezu.com" }],
-  creator: "Kumarraju from Studio Dezu",
+  creator: "Studio Dezu",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://studiodezu.com",
-    title: "Studio Dezu | UI/UX & Digital Design Agency",
-    description: "A full-cycle design partner for companies that win. Elevate your digital presence with Studio Dezu.",
+    title: "STUDIO DEZU | Design, Product and Technology Company",
+    description: "STUDIO DEZU | Design, Product and Technology Company",
     siteName: "Studio Dezu",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Studio Dezu | UI/UX & Digital Design Agency",
-    description: "A full-cycle design partner for companies that win.",
+    title: "STUDIO DEZU | Design, Product and Technology Company",
+    description: "STUDIO DEZU | Design, Product and Technology Company",
     creator: "@studiodezu",
   },
   robots: {
