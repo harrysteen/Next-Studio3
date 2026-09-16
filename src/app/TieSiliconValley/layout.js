@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "TiE Silicon Valley - Global Entrepreneurship Network Case Study",
-  description: "Explore the TiE Silicon Valley case study: Web platform redesign, digital branding, and event portal by Studio Dezu.",
+  title: "TiE Silicon Valley - Global Entrepreneurs Network",
+  description: "TiE Silicon Valley is the founding chapter of a global entrepreneurs' community based in the Bay Area, USA, supporting founders with network and mentorship.",
 };
 
 export default function TieSiliconValleyLayout({ children }) {

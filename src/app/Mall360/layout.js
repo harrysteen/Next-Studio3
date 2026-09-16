@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Mall360 - Retail & Shopping Experience Case Study",
-  description: "Explore the Mall360 case study: Interactive retail digital experience, product UI/UX, and web portal by Studio Dezu.",
+  title: "Mall360 - Digital Retail & Shopping Experience",
+  description: "Mall360 launched with an engaging e-commerce experience, streamlined UX navigation, and a modern branding identity that drives user engagement.",
 };
 
 export default function Mall360Layout({ children }) {

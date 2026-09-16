@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Eham - Digital Experience & UI/UX Case Study",
-  description: "Explore the Eham case study: Digital product design, UX research, and interface development by Studio Dezu.",
+  title: "EHAM - Tech Talent POD Deployment System",
+  description: "EHAM works as a POD system that deploys select teams based on dynamic requirements. Shaping the messaging and branding of this disruptive service offering.",
 };
 
 export default function EhamLayout({ children }) {

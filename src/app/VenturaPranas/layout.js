@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Ventura Pranas - Tax & Financial Advisory Case Study",
-  description: "Explore the Ventura Pranas case study: Corporate website redesign, UX architecture, and brand positioning by Studio Dezu.",
+  title: "Ventura Pranas - Cross-Border Accounting & Compliance",
+  description: "Ventura Pranas is a known cross-border accounting and compliance firm that primarily works with clients in USA, India and Singapore.",
 };
 
 export default function VenturaPranasLayout({ children }) {

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Madbox - Creative Digital Platform Case Study",
-  description: "Explore the Madbox case study: Visual identity, creative design system, and immersive digital experience by Studio Dezu.",
+  title: "Madbox - New Age Snacking Brand & Packaging",
+  description: "Madbox is a fun and modern snacking company with a chain of outlets in Bangalore and Hyderabad, conveying that new age snacking is both healthy and fun.",
 };
 
 export default function MadboxLayout({ children }) {

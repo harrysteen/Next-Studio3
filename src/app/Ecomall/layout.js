@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Ecomall - E-Commerce Platform Case Study",
-  description: "Explore the Ecomall case study: UI/UX design systems, brand strategy, and responsive web platform crafted by Studio Dezu.",
+  title: "Ecomall - Digital E-Commerce Platform",
+  description: "Ecomall delivered a comprehensive digital e-commerce platform equipped with intuitive customer workflows, UI/UX design systems, and modern user interfaces.",
 };
 
 export default function EcomallLayout({ children }) {

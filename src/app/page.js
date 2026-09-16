@@ -11,6 +11,15 @@ import Testmonials from "../components/testmonials/Testmonials";
 import Transformtext from "../components/Transformtext/Transformtext";
 import Footer from "../components/Footer/Footer";
 
+export const metadata = {
+  title: "STUDIO DEZU | Design, Product and Technology Company",
+  description: "STUDIO DEZU | Design, Product and Technology Company",
+  openGraph: {
+    title: "STUDIO DEZU | Design, Product and Technology Company",
+    description: "STUDIO DEZU | Design, Product and Technology Company",
+  },
+};
+
 import ecomallwork from "../herossection-animation-assets/ecomallwork.webp";
 import highcloudWork from "../herossection-animation-assets/highcloud work.webp";
 import kshatriyasWork from "../herossection-animation-assets/kshatriyas work.webp";

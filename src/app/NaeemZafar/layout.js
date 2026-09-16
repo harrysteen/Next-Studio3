@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Naeem Zafar - Leadership & Entrepreneurship Portfolio Case Study",
-  description: "Explore the Naeem Zafar case study: Executive branding, thought leadership portfolio, and web platform by Studio Dezu.",
+  title: "Naeem Zafar - UC Berkeley Academician & Entrepreneur",
+  description: "Naeem Zafar is a leading academician and entrepreneur teaching at UC Berkeley and Northeastern University who has launched and sold several startups.",
 };
 
 export default function NaeemZafarLayout({ children }) {

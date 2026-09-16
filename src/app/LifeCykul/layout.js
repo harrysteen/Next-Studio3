@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "LifeCykul - Health & Fitness Platform Case Study",
-  description: "Explore the LifeCykul case study: Mobile app UI/UX, product design, and interactive fitness community platform by Studio Dezu.",
+  title: "Lifecykul - Employee Engagement Platform",
+  description: "Lifecykul is a reimagined employee engagement platform that helps companies create several engagement activities for dynamic teams.",
 };
 
 export default function LifeCykulLayout({ children }) {

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Evoque Impact - Brand Strategy & Design Case Study",
-  description: "Explore the Evoque Impact case study: Brand strategy, modern digital interface, and product identity by Studio Dezu.",
+  title: "Evoque Impact - Bay Area Product & Strategy Studio",
+  description: "Evoque Impact is a product, strategy, and Innovation studio based in the Bay Area. Silicon Valley standard branding and cohesive web experience.",
 };
 
 export default function EvoqueImpactLayout({ children }) {

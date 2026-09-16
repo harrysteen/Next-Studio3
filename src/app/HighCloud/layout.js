@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "HighCloud - Cloud Solutions & Tech Platform Case Study",
-  description: "Explore the HighCloud case study: Cloud architecture UI/UX, product dashboard design, and development by Studio Dezu.",
+  title: "HighCloud Solutions - AI-Driven Cloud Technology",
+  description: "HighCloud Solutions is a Minnesota-based forward AI-driven cloud technology company providing services to local government institutions and major clientele.",
 };
 
 export default function HighCloudLayout({ children }) {
